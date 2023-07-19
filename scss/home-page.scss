@@ -1,2 +1,307 @@
-@import "general.scss";
-@import "header.scss";
+@import "general";
+@import "header";
+@import "footer";
+
+.main-wrapper {
+  width: 100%;
+  background-color: #01a1b7;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  &-content {
+    padding-top: 50px;
+
+    &__title {
+      width: 80%;
+      font-size: 50px;
+      color: #ffffff;
+    }
+
+    &__text {
+      width: 50%;
+      margin-top: 20px;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .place-for-pagination {
+      width: 40%;
+      color: #ffffff;
+    }
+
+    &__img {
+      width: 60%;
+      transform: translateY(4px);
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.facts-wrapper {
+  width: 100%;
+  background-color: #f4c93f;
+}
+
+.facts {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+
+  &-card {
+    width: 20%;
+    padding: 10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .card-title {
+      font-size: 30px;
+      color: #01a1b7;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 12px;
+      color: #01a1b7;
+      width: 80%;
+    }
+  }
+}
+
+.services {
+  margin-top: 50px;
+
+  &-text {
+    margin-top: 50px;
+    font-size: 20px;
+    width: 50%;
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card-wrapper {
+      width: 260px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      margin-top: 30px;
+
+      img {
+        width: 70px;
+      }
+
+      p {
+        font-weight: bold;
+        width: 50%;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: #01a1b7;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.specialists-wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  .specialists {
+    &-text {
+      margin-top: 20px;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &-types {
+      margin-top: 50px;
+      font-size: 20px;
+
+      li {
+        font-weight: 500;
+        line-height: 37px;
+      }
+    }
+  }
+
+  .specialists-image {
+    width: 80%;
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.advantages-wrapper {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(197, 198, 198, 0.1);
+}
+
+.advantages {
+  padding-top: 50px;
+
+  &-text {
+    width: 30%;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-content {
+    margin-top: 50px;
+    display: flex;
+
+    &__list {
+      width: 35%;
+
+      li {
+        font-weight: 500;
+        padding: 15px 0 15px 20px;
+      }
+
+      .active {
+        background-color: #ffffff;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+
+    &__text {
+      position: relative;
+      width: 65%;
+      padding: 30px;
+      background-color: #ffffff;
+
+      p {
+        width: 50%;
+        margin-top: 20px;
+        font-weight: 500;
+        line-height: 25px;
+      }
+
+      img {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.partners {
+  margin-top: 50px;
+
+  &-title {
+    font-size: 25px;
+  }
+
+  &-logo {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__img {
+      padding: 15px 100px;
+      border-radius: 5px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+
+.licenses {
+  margin-top: 70px;
+
+  &-title {
+    font-size: 25px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    img {
+      width: 22%;
+    }
+  }
+
+  .place-for-pagination {
+    margin-top: 50px;
+  }
+}
+
+.request-wrapper {
+  width: 100%;
+  margin-top: 150px;
+  background-color: #f4c93f;
+}
+
+.request {
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+
+  &-content {
+    margin-top: 50px;
+    width: 40%;
+
+    &__subtitle {
+      font-size: 20px;
+      margin-top: 20px;
+      width: 80%;
+    }
+
+    &__btn {
+      font-size: 18px;
+      margin-top: 50px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: #ffffff;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &-image {
+    width: 30%;
+    height: 100%;
+    position: relative;
+
+    img {
+      height: 130%;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}
