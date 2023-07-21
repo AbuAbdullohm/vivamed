@@ -48,21 +48,33 @@
     align-items: center;
 
     li {
+      position: relative;
       margin-right: 10px;
       margin-left: 10px;
       font-size: 18px;
+      font-weight: 500;
+
+      &:hover a {
+        font-weight: 600;
+        color: #01a1b7;
+      }
 
       &:first-child {
         margin-left: 0;
       }
 
-      .active {
-        display: block;
-        width: 20px;
-        height: 2px;
-        flex-shrink: 0;
-        background-color: #f4c93f;
-        color: #01a1b7;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 3px;
+        background: #f4c93f;
+      }
+
+      &.active li::before{
+        width: 10px;
       }
     }
   }
@@ -74,16 +86,17 @@
     img {
       width: 15px;
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 18px;
+      left: 15px;
     }
 
     input {
-      height: 30px;
+      height: 40px;
       border-radius: 10px;
       border: 1px solid rgba(0, 0, 0, 0.5);
       outline: none;
       padding-left: 30px;
+      padding-right: 30px;
       color: rgba(0, 0, 0, 0.5);
     }
   }

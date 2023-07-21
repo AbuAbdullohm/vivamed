@@ -1,99 +1,147 @@
 .footer-wrapper {
-    position: relative;
-    width: 100%;
-    background-color: #01a1b7;
-  
-    .background-image {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 400px;
-    }
+  position: relative;
+  width: 100%;
+  background-color: #01a1b7;
+
+  .background-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
   }
-  
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
-  
-    &-address {
-      color: rgba(255, 255, 255, 0.7);
-  
-      img {
-        margin-bottom: 50px;
-      }
-  
-      p {
-        width: 75%;
-        line-height: 30px;
-      }
-    }
-  
-    &-pages {
-      &__title {
-        font-size: 20px;
-        color: #ffffff;
-      }
-  
-      &__links {
-        margin-top: 30px;
-        a {
-          line-height: 25px;
-          color: rgba(255, 255, 255, 0.7);
-        }
-      }
-    }
-  
-    &-specialists {
-      &__title {
-        font-size: 20px;
-        color: #ffffff;
-      }
-  
-      &__links {
-        margin-top: 30px;
-        a {
-          line-height: 25px;
-          color: rgba(255, 255, 255, 0.7);
-        }
-      }
-    }
-  
-    &-social {
-      &__title {
-        font-size: 20px;
-        color: #ffffff;
-      }
-  
-      &__links {
-        margin-top: 30px;
-        a {
-          line-height: 25px;
-          color: rgba(255, 255, 255, 0.7);
-        }
-      }
-    }
-  }
-  
-  .footer-rteco__logo {
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-    padding-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+
+  &-address {
     color: rgba(255, 255, 255, 0.7);
-  
-    p {
-      &:first-child {
-        font-size: 12px;
-      }
-  
-      &:nth-child(2) {
-        font-size: 12px;
-        margin-left: 300px;
-      }
-    }
+
     img {
-      margin-left: 10px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      width: 75%;
+      line-height: 30px;
     }
   }
-  
+
+  &-pages {
+    &__title {
+      font-size: 20px;
+      color: #ffffff;
+
+      &::after {
+        margin-top: 5px;
+        content: "";
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #f4c93f;
+      }
+    }
+
+    &__links {
+      margin-top: 30px;
+      a {
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:hover {
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-specialists {
+    &__title {
+      font-size: 20px;
+      color: #ffffff;
+
+      &::after {
+        margin-top: 5px;
+        content: "";
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #f4c93f;
+      }
+    }
+
+    &__links {
+      margin-top: 30px;
+      a {
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:hover {
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-social {
+    &__title {
+      font-size: 20px;
+      color: #ffffff;
+
+      &::after {
+        margin-top: 5px;
+        content: "";
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #f4c93f;
+      }
+    }
+
+    &__links {
+      margin-top: 30px;
+      a {
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:hover {
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.footer-rteco__logo {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+
+  p {
+    font-size: 12px;
+  }
+
+  .rteco-logo {
+    margin-left: 350px;
+    cursor: pointer;
+    position: relative;
+
+    .color-logo {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover .color-logo {
+      opacity: 1;
+    }
+  }
+}

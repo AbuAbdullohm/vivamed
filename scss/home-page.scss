@@ -105,8 +105,9 @@
       border-radius: 10px;
       background-color: #f4f4f4;
       margin-top: 30px;
+      transition: all 0.3s ease-in-out;
 
-      img {
+      svg {
         width: 70px;
       }
 
@@ -117,9 +118,13 @@
         font-weight: 700;
       }
 
-      &:hover {
+      &:hover{
         background-color: #01a1b7;
         color: #ffffff;
+      }
+
+      &:hover svg path{
+        fill: #ffffff;
       }
     }
   }

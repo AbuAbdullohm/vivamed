@@ -69,20 +69,30 @@ a {
   align-items: center;
 }
 .header-links .navigation-links li {
+  position: relative;
   margin-right: 10px;
   margin-left: 10px;
   font-size: 18px;
+  font-weight: 500;
+}
+.header-links .navigation-links li:hover a {
+  font-weight: 600;
+  color: #01a1b7;
 }
 .header-links .navigation-links li:first-child {
   margin-left: 0;
 }
-.header-links .navigation-links li .active {
-  display: block;
-  width: 20px;
-  height: 2px;
-  flex-shrink: 0;
-  background-color: #f4c93f;
-  color: #01a1b7;
+.header-links .navigation-links li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 0;
+  height: 3px;
+  background: #f4c93f;
+}
+.header-links .navigation-links li.active li::before {
+  width: 10px;
 }
 .header-links .navigation-input {
   position: relative;
@@ -91,15 +101,16 @@ a {
 .header-links .navigation-input img {
   width: 15px;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 18px;
+  left: 15px;
 }
 .header-links .navigation-input input {
-  height: 30px;
+  height: 40px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none;
   padding-left: 30px;
+  padding-right: 30px;
   color: rgba(0, 0, 0, 0.5);
 }
 .header-links .navigation-language {
@@ -121,7 +132,7 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 400px;
+  width: 500px;
 }
 
 .footer {
@@ -143,6 +154,14 @@ a {
   font-size: 20px;
   color: #ffffff;
 }
+.footer-pages__title::after {
+  margin-top: 5px;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: #f4c93f;
+}
 .footer-pages__links {
   margin-top: 30px;
 }
@@ -150,9 +169,21 @@ a {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
 }
+.footer-pages__links a:hover {
+  color: #ffffff;
+  font-weight: 500;
+}
 .footer-specialists__title {
   font-size: 20px;
   color: #ffffff;
+}
+.footer-specialists__title::after {
+  margin-top: 5px;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: #f4c93f;
 }
 .footer-specialists__links {
   margin-top: 30px;
@@ -161,9 +192,21 @@ a {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
 }
+.footer-specialists__links a:hover {
+  color: #ffffff;
+  font-weight: 500;
+}
 .footer-social__title {
   font-size: 20px;
   color: #ffffff;
+}
+.footer-social__title::after {
+  margin-top: 5px;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: #f4c93f;
 }
 .footer-social__links {
   margin-top: 30px;
@@ -171,6 +214,10 @@ a {
 .footer-social__links a {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
+}
+.footer-social__links a:hover {
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .footer-rteco__logo {
@@ -180,15 +227,22 @@ a {
   padding-bottom: 20px;
   color: rgba(255, 255, 255, 0.7);
 }
-.footer-rteco__logo p:first-child {
+.footer-rteco__logo p {
   font-size: 12px;
 }
-.footer-rteco__logo p:nth-child(2) {
-  font-size: 12px;
-  margin-left: 300px;
+.footer-rteco__logo .rteco-logo {
+  margin-left: 350px;
+  cursor: pointer;
+  position: relative;
 }
-.footer-rteco__logo img {
-  margin-left: 10px;
+.footer-rteco__logo .rteco-logo .color-logo {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.footer-rteco__logo .rteco-logo:hover .color-logo {
+  opacity: 1;
 }
 
 .main-wrapper {
@@ -282,8 +336,9 @@ a {
   border-radius: 10px;
   background-color: #f4f4f4;
   margin-top: 30px;
+  transition: all 0.3s ease-in-out;
 }
-.services-cards .card-wrapper img {
+.services-cards .card-wrapper svg {
   width: 70px;
 }
 .services-cards .card-wrapper p {
@@ -295,6 +350,9 @@ a {
 .services-cards .card-wrapper:hover {
   background-color: #01a1b7;
   color: #ffffff;
+}
+.services-cards .card-wrapper:hover svg path {
+  fill: #ffffff;
 }
 
 .specialists-wrapper {

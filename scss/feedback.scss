@@ -29,15 +29,15 @@
 
     display: flex;
 
-    .card-column{
-        width: 50%;
+    .card-column {
+      width: 50%;
     }
   }
 }
 
 .card {
   width: 95%;
-  margin-top: 20px;
+  margin-top: 30px;
   height: fit-content;
   padding: 30px;
   border-radius: 10px;
@@ -60,26 +60,137 @@
   }
 }
 
+.form-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  background: rgba(197, 198, 198, 0.1);
+}
 
-.licenses {
-    margin-top: 70px;
-    margin-bottom: 70px;
-  
-    &-title {
-      font-size: 25px;
+.form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &-title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &-input {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__name {
+      width: 400px;
+      height: 40px;
     }
-  
-    &-content {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 30px;
-  
-      img {
-        width: 22%;
+
+    &__phone {
+      width: 400px;
+      height: 40px;
+    }
+
+    &__email {
+      width: 400px;
+      height: 40px;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 5px 15px;
+
+      border-radius: 10px;
+      background: #fff;
+      border: none;
+      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+
+      &::placeholder {
+        opacity: 0.7;
       }
     }
-  
-    .place-for-pagination {
-      margin-top: 50px;
+  }
+
+  &-comment {
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      padding: 15px 20px;
+
+      border-radius: 10px;
+      background: #fff;
+      border: none;
+      outline: none;
+      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+      resize: none;
+
+      &::placeholder {
+        opacity: 0.7;
+      }
     }
   }
+
+  &-button {
+    display: flex;
+    margin-top: 30px;
+
+    &__submit {
+      button {
+        background: #f4c93f;
+        border-radius: 10px;
+        padding: 15px 25px;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+    &__file {
+      font-size: 16px;
+      line-height: 20px;
+      border: 2px solid #000;
+      margin: 0 0 0 20px;
+      padding: 9px 20px;
+
+      input {
+        width: 0;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.licenses {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  &-title {
+    font-size: 25px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    img {
+      width: 22%;
+    }
+  }
+
+  .place-for-pagination {
+    margin-top: 50px;
+  }
+}

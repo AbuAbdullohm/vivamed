@@ -245,7 +245,7 @@ a {
   opacity: 1;
 }
 
-.feedback-page__title {
+.cooperation-page__title {
   margin-top: 30px;
   display: flex;
   align-items: flex-start;
@@ -253,140 +253,108 @@ a {
   font-size: 16px;
   font-weight: 500;
 }
-.feedback-page__title img {
+.cooperation-page__title img {
   margin-right: 10px;
 }
 
-.feedback {
+.cooperation {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
-.feedback-title {
-  font-size: 32px;
-  font-weight: 700;
-}
-.feedback-cards {
-  margin-top: 50px;
-  display: flex;
-}
-.feedback-cards .card-column {
-  width: 50%;
-}
-
-.card {
-  width: 95%;
+.cooperation-text {
   margin-top: 30px;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
-  display: flex;
-}
-.card-content {
-  margin-left: 20px;
-}
-.card-content__title {
-  font-size: 18px;
-  font-weight: 700;
-}
-.card-content__text {
-  font-size: 14px;
+  width: 60%;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 38px;
+  opacity: 0.7;
 }
 
-.form-wrapper {
-  margin-top: 50px;
-  width: 100%;
-  background: rgba(197, 198, 198, 0.1);
+.cooperation-form .form {
+  margin-top: 30px;
+  padding: 30px 50px;
+  border-radius: 10px;
+  background: rgba(197, 198, 198, 0.2);
 }
-
-.form {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.form-title {
+.cooperation-form .form-title {
   font-size: 32px;
   font-weight: 700;
 }
-.form-input {
-  margin-top: 50px;
+.cooperation-form .form-input {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form-input__name {
-  width: 400px;
-  height: 40px;
+.cooperation-form .form-input__name {
+  width: 48%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
 }
-.form-input__phone {
-  width: 400px;
-  height: 40px;
+.cooperation-form .form-input__phone {
+  width: 48%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
 }
-.form-input__email {
-  width: 400px;
-  height: 40px;
+.cooperation-form .form-input__message {
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  font-weight: 700;
 }
-.form-input input {
+.cooperation-form .form-input__message textarea {
+  width: 100%;
+  margin-top: 10px;
+  height: 100%;
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  outline: none;
+  resize: none;
+}
+.cooperation-form .form-input input {
+  margin-top: 10px;
   width: 100%;
   height: 100%;
   padding: 5px 15px;
-  border-radius: 10px;
-  background: #fff;
-  border: none;
-  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
-}
-.form-input input::-moz-placeholder {
-  opacity: 0.7;
-}
-.form-input input::placeholder {
-  opacity: 0.7;
-}
-.form-comment {
-  margin-top: 30px;
-  width: 100%;
-  height: 100px;
-}
-.form-comment textarea {
-  width: 100%;
-  height: 100%;
-  padding: 15px 20px;
-  border-radius: 10px;
-  background: #fff;
-  border: none;
   outline: none;
+  border-radius: 10px;
+  background: #fff;
+  border: none;
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
-  resize: none;
 }
-.form-comment textarea::-moz-placeholder {
+.cooperation-form .form-input input::-moz-placeholder {
   opacity: 0.7;
 }
-.form-comment textarea::placeholder {
+.cooperation-form .form-input input::placeholder {
   opacity: 0.7;
 }
-.form-button {
+.cooperation-form .form-button {
   display: flex;
-  margin-top: 30px;
+  margin-top: 70px;
 }
-.form-button__submit button {
-  background: #f4c93f;
+.cooperation-form .form-button__submit button {
+  background: #01a1b7;
   border-radius: 10px;
   padding: 15px 25px;
   border: none;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  color: #ffffff;
 }
-.form-button__file {
+.cooperation-form .form-button__file {
   font-size: 16px;
   line-height: 20px;
   border: 2px solid #000;
   margin: 0 0 0 20px;
   padding: 9px 20px;
 }
-.form-button__file input {
+.cooperation-form .form-button__file input {
   width: 0;
   opacity: 0;
   top: 0;
@@ -413,4 +381,4 @@ a {
 }
 .licenses .place-for-pagination {
   margin-top: 50px;
-}/*# sourceMappingURL=feedback.css.map */
+}/*# sourceMappingURL=cooperation.css.map */

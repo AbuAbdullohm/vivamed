@@ -1,0 +1,160 @@
+@import "general";
+@import "header";
+@import "footer";
+
+.cooperation-page__title {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  font-family: "Montserrat" sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.cooperation {
+  margin-top: 50px;
+
+  &-text {
+    margin-top: 30px;
+    width: 60%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38px;
+    opacity: 0.7;
+  }
+}
+
+.cooperation-form {
+  .form {
+    margin-top: 30px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    background: rgba(197, 198, 198, 0.2);
+
+    &-title {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    &-input {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__name {
+        width: 48%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &__phone {
+        width: 48%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &__message {
+        margin-top: 50px;
+        width: 100%;
+        height: 100px;
+        font-size: 16px;
+        font-weight: 700;
+
+        textarea {
+          width: 100%;
+          margin-top: 10px;
+          height: 100%;
+          box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+          border: none;
+          padding:15px;
+          outline: none;
+          resize: none;
+        }
+      }
+
+      input {
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 5px 15px;
+        outline: none;
+        border-radius: 10px;
+        background: #fff;
+        border: none;
+        box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+
+        &::placeholder {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-button {
+      display: flex;
+      margin-top: 70px;
+
+      &__submit {
+        button {
+          background: #01a1b7;
+          border-radius: 10px;
+          padding: 15px 25px;
+          border: none;
+          font-weight: 700;
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+          color: #ffffff;
+        }
+      }
+
+      &__file {
+        font-size: 16px;
+        line-height: 20px;
+        border: 2px solid #000;
+        margin: 0 0 0 20px;
+        padding: 9px 20px;
+
+        input {
+          width: 0;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.licenses {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  &-title {
+    font-size: 25px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    img {
+      width: 22%;
+    }
+  }
+
+  .place-for-pagination {
+    margin-top: 50px;
+  }
+}
