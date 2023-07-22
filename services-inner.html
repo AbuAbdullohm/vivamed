@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/diagnostics.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/services.css" />
+    <title>Services inner</title>
   </head>
 
   <body>
@@ -61,30 +61,26 @@
       </div>
     </div>
 
-    <h4 class="diagnostics-page__title container">
+    <h4 class="services-page__title container">
       <img src="./images/icon-home.png" alt="home icon" />
-      / Диагностика / МРТ
+      / Услуги / ЛОР
     </h4>
 
     <div class="information container">
-      <h2 class="information-title">MPT</h2>
+      <h2 class="information-title">ЛОР услуги</h2>
       <div class="information-text">
         <p>
-          Магнитно-резонансная томография – один из наиболее информативных и
-          безопасных методов исследования внутренних органов и тканей с
-          использованием эффекта резонансного отклика атомных ядер при
-          возбуждении их различными сочетаниями электромагнитных волн в
-          постоянном магнитном поле (1,5 Тесла).
-          <br /><br />
-          При проведении МРТ пациент помещается в сильное магнитное поле. После
-          этого идет подача радиочастотного импульса, который меняет внутреннюю
-          намагниченность. Именно ее изменения считываются и обрабатываются
-          компьютером с последующим получением детального изображения,
-          позволяющего выявить мельчайшие нарушения в организме пациента.
+          Несмотря на широкий выбор методов консервативной терапии в лечении
+          ЛОР-органов, их применение не всегда приводит к устранению инфекции и
+          требует хирургического вмешательства для достижения полного
+          выздоровления. Кроме того, врожденные и приобретенные искривления
+          носовой перегородки, гипертрофии носовых раковин, врожденная
+          склонность к разрастанию лимфоидной ткани, некоторые последствия травм
+          могут быть устранены только с помощью операции. <br /><br />
+          Хирург-отоларинголог — врач высшей квалификационной категории, который
+          занимается хирургическим лечением патологий ЛОР-органов. В компетенцию
+          специалиста входят такие оперативные вмешательства как:
         </p>
-        <div class="information-text__image">
-          <img src="./images/diagnostics/MRT-other.png" alt="MRT other" />
-        </div>
       </div>
     </div>
 
@@ -92,7 +88,7 @@
       <div class="accordion-wrapper">
         <div class="accordion" id="accordion">
           <div class="accordion-header">
-            <h1 class="accordion-header__title">МРТ головного мозга</h1>
+            <h1 class="accordion-header__title">Биопсия ЛОР-органов</h1>
             <div class="accordion-header__image">
               <img
                 class="plus-button"
@@ -352,15 +348,5 @@
         alt="logo background"
       />
     </div>
-
-    <script>
-      const accordion = document.getElementById("accordion");
-
-      for (i = 0; (i = accordion.length); i++) {
-        accordion[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-        });
-      }
-    </script>
   </body>
 </html>

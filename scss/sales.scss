@@ -1,0 +1,252 @@
+@import "general";
+@import "header";
+@import "footer";
+
+.sales-page__title {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  font-family: "Montserrat" sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  img {
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+}
+
+.sales-main__wrapper {
+  width: 100%;
+  background: #01a1b7;
+}
+
+.sales-main {
+  display: flex;
+  padding: 30px 0 0;
+  margin-top: 30px;
+
+  .main-content {
+    width: 60%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 30px;
+
+    &__title {
+      width: 85%;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 57px;
+    }
+
+    &__text {
+      width: 70%;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 38px;
+      margin-bottom: auto;
+      margin-top: 30px;
+      opacity: 0.8;
+    }
+
+    .place-for-pagination {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      cursor: pointer;
+
+      p {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .line {
+        display: block;
+        width: 200px;
+        height: 3px;
+        background: #ffffff;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.sales-card__wrapper {
+  width: 100%;
+  background: rgba(197, 198, 198, 0.2);
+}
+
+.sales-cards {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .filter-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+      background: transparent;
+      margin-right: 10px;
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .active {
+      border: 3px solid #f4c93f;
+      color: #000000;
+      background: #f4c93f;
+    }
+  }
+
+  .place-for-pagination {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    cursor: pointer;
+
+    svg path {
+      stroke: #000000;
+    }
+
+    p {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .line {
+      display: block;
+      width: 200px;
+      height: 2px;
+      background: #000000;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.cards-wrapper {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .card {
+    margin-top: 30px;
+    width: 49%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+
+    &-image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      padding: 30px 40px 0;
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        width: 70%;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      &__sale {
+        color: #c62a2a;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+    }
+
+    &-text {
+      padding: 0 40px 30px;
+      opacity: 0.6;
+      font-weight: 600;
+
+      p {
+        margin-top: 30px;
+      }
+
+      .color-blue {
+        color: #3e91dd;
+      }
+    }
+  }
+}
+
+.licenses {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  &-title {
+    font-size: 25px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    img {
+      width: 22%;
+    }
+  }
+
+  .place-for-pagination {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    cursor: pointer;
+
+    svg path {
+      stroke: #000000;
+    }
+
+    p {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .line {
+      display: block;
+      width: 200px;
+      height: 2px;
+      background: #000000;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}

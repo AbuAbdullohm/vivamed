@@ -2,7 +2,7 @@
 @import "header";
 @import "footer";
 
-.diagnostics-page__title {
+.services-page__title {
   margin-top: 30px;
   display: flex;
   align-items: flex-start;
@@ -15,145 +15,6 @@
   }
 }
 
-.diagnostics {
-  margin-top: 50px;
-
-  &title {
-    font-size: 32px;
-    font-weight: 700;
-  }
-
-  .inform {
-    position: relative;
-    margin-top: 100px;
-    border-radius: 20px;
-    background: #01a1b7;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 20px 0;
-
-    &-image {
-      img {
-        height: 110%;
-        position: absolute;
-        bottom: 0;
-      }
-    }
-
-    &-content {
-      width: 50%;
-      padding-bottom: 50px;
-
-      &__title {
-        font-size: 28px;
-        font-weight: 700;
-        color: #ffffff;
-      }
-
-      &__text {
-        width: 80%;
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 38px;
-        color: #ffffff;
-      }
-    }
-  }
-}
-
-.equipments {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .equipment-item {
-    width: 49%;
-    margin-top: 30px;
-    border-radius: 10px;
-
-    &__image {
-      position: relative;
-      height: 450px;
-      text-align: center;
-      background-color: #c5c6c6;
-      padding: 20px;
-      border-radius: 10px;
-      img {
-        width: max-content;
-      }
-
-      &--title {
-        position: absolute;
-        bottom: 20px;
-        font-size: 22px;
-        font-weight: 700;
-      }
-
-      &:hover {
-        background-color: #f4c93f;
-      }
-    }
-
-    &__text {
-      margin-top: 30px;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 25px;
-    }
-  }
-}
-
-.licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
-
-  &-title {
-    font-size: 25px;
-  }
-
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-
-    img {
-      width: 22%;
-    }
-  }
-
-  .place-for-pagination {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    cursor: pointer;
-
-    svg path {
-      stroke: #000000;
-    }
-
-    p {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .line {
-      display: block;
-      width: 200px;
-      height: 2px;
-      background: #000000;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-  }
-}
-
-// diagnostics-inner.html styles//
-
 .information {
   margin-top: 30px;
 
@@ -163,7 +24,6 @@
     justify-content: space-between;
 
     p {
-      width: 50%;
       font-size: 20px;
       font-weight: 500;
       line-height: 34px;

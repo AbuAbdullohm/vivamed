@@ -245,7 +245,7 @@ a {
   opacity: 1;
 }
 
-.diagnostics-page__title {
+.services-page__title {
   margin-top: 30px;
   display: flex;
   align-items: flex-start;
@@ -253,126 +253,8 @@ a {
   font-size: 16px;
   font-weight: 500;
 }
-.diagnostics-page__title img {
+.services-page__title img {
   margin-right: 10px;
-}
-
-.diagnostics {
-  margin-top: 50px;
-}
-.diagnosticstitle {
-  font-size: 32px;
-  font-weight: 700;
-}
-.diagnostics .inform {
-  position: relative;
-  margin-top: 100px;
-  border-radius: 20px;
-  background: #01a1b7;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 20px 0;
-}
-.diagnostics .inform-image img {
-  height: 110%;
-  position: absolute;
-  bottom: 0;
-}
-.diagnostics .inform-content {
-  width: 50%;
-  padding-bottom: 50px;
-}
-.diagnostics .inform-content__title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #ffffff;
-}
-.diagnostics .inform-content__text {
-  width: 80%;
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 38px;
-  color: #ffffff;
-}
-
-.equipments {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.equipments .equipment-item {
-  width: 49%;
-  margin-top: 30px;
-  border-radius: 10px;
-}
-.equipments .equipment-item__image {
-  position: relative;
-  height: 450px;
-  text-align: center;
-  background-color: #c5c6c6;
-  padding: 20px;
-  border-radius: 10px;
-}
-.equipments .equipment-item__image img {
-  width: -moz-max-content;
-  width: max-content;
-}
-.equipments .equipment-item__image--title {
-  position: absolute;
-  bottom: 20px;
-  font-size: 22px;
-  font-weight: 700;
-}
-.equipments .equipment-item__image:hover {
-  background-color: #f4c93f;
-}
-.equipments .equipment-item__text {
-  margin-top: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 25px;
-}
-
-.licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-.licenses-title {
-  font-size: 25px;
-}
-.licenses-content {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.licenses-content img {
-  width: 22%;
-}
-.licenses .place-for-pagination {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  cursor: pointer;
-}
-.licenses .place-for-pagination svg path {
-  stroke: #000000;
-}
-.licenses .place-for-pagination p {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.licenses .place-for-pagination .line {
-  display: block;
-  width: 200px;
-  height: 2px;
-  background: #000000;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .information {
@@ -384,7 +266,6 @@ a {
   justify-content: space-between;
 }
 .information-text p {
-  width: 50%;
   font-size: 20px;
   font-weight: 500;
   line-height: 34px;
@@ -515,4 +396,4 @@ a {
   background: #000000;
   margin-left: 15px;
   margin-right: 15px;
-}/*# sourceMappingURL=diagnostics.css.map */
+}/*# sourceMappingURL=services.css.map */

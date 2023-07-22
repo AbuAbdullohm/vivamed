@@ -116,6 +116,31 @@
 
   .place-for-pagination {
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    cursor: pointer;
+
+    svg path {
+      stroke: #000000;
+    }
+
+    p {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .line {
+      display: block;
+      width: 200px;
+      height: 2px;
+      background: #000000;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 }
 
@@ -123,8 +148,6 @@
 
 .analysis-description {
   margin-top: 50px;
-
-
 
   .description-text {
     margin-top: 30px;
@@ -141,7 +164,7 @@
 .accordion {
   margin-top: 30px;
   padding-top: 20px;
-//   padding-bottom: 20px;
+  //   padding-bottom: 20px;
   border-top: 3px solid #c7c7c7;
   border-bottom: 3px solid #c7c7c7;
 
@@ -176,7 +199,6 @@
     transition: 0.3s;
     // padding: 30px;
     height: 0;
-
 
     p {
       width: 90%;
