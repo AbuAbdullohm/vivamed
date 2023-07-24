@@ -9,6 +9,10 @@
     right: 0;
     width: 500px;
     pointer-events: none;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -17,20 +21,41 @@
   justify-content: space-between;
   padding-top: 50px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
   &-address {
     color: rgba(255, 255, 255, 0.7);
 
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
     img {
       margin-bottom: 50px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
 
     p {
       width: 75%;
       line-height: 30px;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 
   &-pages {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
     &__title {
       font-size: 20px;
       color: #ffffff;
@@ -55,11 +80,19 @@
           color: #ffffff;
           font-weight: 500;
         }
+
+        @media screen and (max-width: 768px) {
+          line-height: 30px;
+        }
       }
     }
   }
 
   &-specialists {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
     &__title {
       font-size: 20px;
       color: #ffffff;
@@ -84,6 +117,10 @@
         &:hover {
           color: #ffffff;
           font-weight: 500;
+        }
+
+        @media screen and (max-width: 768px) {
+          line-height: 30px;
         }
       }
     }
@@ -114,6 +151,10 @@
           color: #ffffff;
           font-weight: 500;
         }
+
+        @media screen and (max-width: 768px) {
+          line-height: 30px;
+        }
       }
     }
   }
@@ -126,14 +167,36 @@
   padding-bottom: 20px;
   color: rgba(255, 255, 255, 0.7);
 
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
   p {
     font-size: 12px;
+
+    @media screen and (max-width: 768px) {
+      color: #ffffff;
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .rteco-logo {
+    position: relative;
     margin-left: 350px;
     cursor: pointer;
-    position: relative;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 1100px) {
+      margin-left: 50px;
+    }
+    
 
     .color-logo {
       position: absolute;

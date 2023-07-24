@@ -5,6 +5,10 @@
 .main-wrapper {
   width: 100%;
   background-color: #01a1b7;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 60px;
+  }
 }
 
 .main {
@@ -18,6 +22,11 @@
       width: 80%;
       font-size: 50px;
       color: #ffffff;
+
+      @media screen and (max-width: 768px) {
+        width: 90%;
+        font-size: 35px;
+      }
     }
 
     &__text {
@@ -25,6 +34,11 @@
       margin-top: 20px;
       font-size: 20px;
       color: rgba(255, 255, 255, 0.5);
+
+      @media screen and (max-width: 768px) {
+        width: 95%;
+        line-height: 30px;
+      }
     }
   }
 
@@ -33,11 +47,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+
     .place-for-pagination {
       display: flex;
       align-items: center;
       color: #ffffff;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
       p {
         padding: 10px;
@@ -61,6 +85,10 @@
       width: 60%;
       transform: translateY(4px);
 
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
       img {
         width: 100%;
       }
@@ -78,9 +106,21 @@
   padding: 20px;
   justify-content: space-between;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
   &-card {
     width: 20%;
     padding: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+      margin-top: 30px;
+    }
 
     img {
       width: 40px;
@@ -94,7 +134,7 @@
     }
 
     .card-text {
-      font-size: 12px;
+      font-size: 14px;
       color: #01a1b7;
       width: 80%;
     }
@@ -105,30 +145,59 @@
   margin-top: 50px;
 
   &-text {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 20px;
     width: 50%;
+    color: rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 600;
+    }
   }
 
   &-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 10px;
 
     .card-wrapper {
       width: 300px;
       height: 150px;
       display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
       border-radius: 10px;
       background-color: #f4f4f4;
       margin-top: 30px;
       transition: all 0.3s ease-out;
       cursor: pointer;
 
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: 500px) {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+
       svg {
         width: 70px;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+        }
       }
 
       p {
@@ -136,10 +205,18 @@
         width: 50%;
         font-size: 18px;
         font-weight: 700;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+        }
       }
 
       &:hover {
         background-color: #01a1b7;
+        color: #ffffff;
+      }
+
+      &:hover p {
         color: #ffffff;
       }
 
@@ -155,22 +232,57 @@
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .specialists {
+    &-title {
+      @media screen and (max-width: 768px) {
+        font-size: 25px;
+      }
+    }
     &-text {
       margin-top: 20px;
       font-size: 24px;
       color: rgba(0, 0, 0, 0.5);
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     &-types {
       margin-top: 50px;
       font-size: 20px;
 
+      
+      
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+        max-width: 500px ;
+        display: flex;
+        overflow-y: auto;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-top: 20px;
+        max-width: 400px ;
+        display: flex;
+        overflow-y: auto;
+      }
+
       li {
         font-size: 24px;
         font-weight: 500;
         line-height: 37px;
         cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+          margin-right: 15px;
+          padding-bottom: 10px;
+        }
       }
     }
   }
@@ -178,6 +290,11 @@
   .specialists-image {
     width: 80%;
     align-self: center;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin-top: 20px;
+    }
 
     img {
       width: 100%;
@@ -190,6 +307,16 @@
   margin-top: 50px;
   padding-bottom: 50px;
   background-color: rgba(197, 198, 198, 0.1);
+
+  .container {
+    @media screen and (max-width: 768px) {
+      width: 95%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 30px;
+  }
 }
 
 .advantages {
@@ -199,23 +326,50 @@
     width: 30%;
     margin-top: 20px;
     color: rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
   }
 
   &-content {
     margin-top: 50px;
     display: flex;
+    z-index: 1;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     &__list {
       width: 35%;
 
+      @media screen and (max-width: 500px) {
+        max-width: 450px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 500px;
+
+        display: flex;
+        overflow-y: auto;
+      }
+
       li {
         font-weight: 500;
         padding: 15px 0 15px 20px;
+
+        @media screen and (max-width: 768px) {
+          padding: 0 10px;
+        }
       }
 
       .active {
         background-color: #ffffff;
         border-radius: 10px 0 0 10px;
+
+        @media screen and (max-width: 768px) {
+          background-color: transparent;
+        }
       }
     }
 
@@ -225,17 +379,31 @@
       padding: 30px;
       background-color: #ffffff;
 
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+      }
+
       p {
         width: 50%;
         margin-top: 20px;
         font-weight: 500;
         line-height: 25px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
       }
 
       img {
         position: absolute;
         right: 10px;
         bottom: 0;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
   }
@@ -253,6 +421,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 500px) {
+      width: 400px;
+      flex-wrap: nowrap;
+      overflow-y: auto;
+      overflow-wrap:normal;
+      padding: 30px 0;
+    }
 
     &__img {
       padding: 15px 100px;
@@ -266,7 +443,7 @@
 }
 
 .licenses {
-  margin-top: 70px;
+  margin-top: 50px;
 
   &-title {
     font-size: 25px;
@@ -277,8 +454,17 @@
     justify-content: space-between;
     margin-top: 30px;
 
+    @media screen and (max-width: 500px) {
+      width: 400px;
+      overflow-y: auto;
+    }
+
     img {
       width: 22%;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
 
@@ -289,7 +475,11 @@
     color: #000000;
     cursor: pointer;
 
-    svg path{
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
+
+    svg path {
       stroke: #000000;
     }
 
@@ -316,6 +506,10 @@
   width: 100%;
   margin-top: 150px;
   background-color: #f4c93f;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 30px;
+  }
 }
 
 .request {
@@ -323,20 +517,35 @@
   height: 300px;
   justify-content: space-between;
 
+  @media screen and (max-width: 1100px) {
+      justify-content: space-evenly;
+  }
+
   &-content {
     margin-top: 50px;
     width: 40%;
 
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+    }
+    @media screen and (max-width: 1100px) {
+      width: 70%;
+
+    }
+
     &__subtitle {
       font-size: 20px;
       margin-top: 20px;
-      width: 80%;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.5);
+
     }
 
     &__btn {
       font-size: 18px;
-      margin-top: 50px;
-      padding: 5px 10px;
+      margin-top: 30px;
+      padding: 10px 20px;
       border-radius: 10px;
       color: #ffffff;
       background-color: transparent;
@@ -349,6 +558,10 @@
     width: 30%;
     height: 100%;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
 
     img {
       height: 130%;

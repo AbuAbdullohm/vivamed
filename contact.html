@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="header-links__wrapper">
+    <div class="header-links__wrapper" id="myHeader">
       <div class="header-links container">
         <ul class="navigation-links">
           <li><a href="./about-us.html">О нас</a></li>
@@ -578,5 +578,22 @@
         alt="logo background"
       />
     </div>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>

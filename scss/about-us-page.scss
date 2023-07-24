@@ -5,6 +5,10 @@
 .about {
   margin-top: 30px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
+
   &-title {
     display: flex;
     align-items: flex-start;
@@ -30,6 +34,10 @@
   &-content {
     margin-top: 50px;
 
+    @media screen and (max-width: 768px) {
+      margin-top: 20px;
+    }
+
     &__title {
       color: #000;
 
@@ -40,12 +48,15 @@
 
     &__text {
       margin-top: 30px;
-
       font-family: "Montserrat" sans-serif;
       font-size: 18px;
       font-weight: 500;
       line-height: 25px;
       opacity: 0.8;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 10px;
+      }
     }
 
     &__image {
@@ -56,6 +67,10 @@
 
       img {
         width: 70%;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -63,6 +78,10 @@
 
 .mission {
   margin-top: 50px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
 
   &-title {
     font-family: "Montserrat" sans-serif;
@@ -84,6 +103,10 @@
       font-weight: 500;
       line-height: 25px;
       opacity: 0.8;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &__image {
@@ -100,6 +123,10 @@
         rgba(1, 161, 183, 0) 2.43%,
         #01a1b7 100%
       );
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }
@@ -108,6 +135,10 @@
   margin-top: 50px;
   width: 100%;
   background: rgba(197, 198, 198, 0.1);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .advantages {
@@ -118,6 +149,10 @@
     font-family: "Montserrat" sans-serif;
     font-size: 32px;
     font-weight: 700;
+
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   .underline {
@@ -156,11 +191,20 @@
       align-items: center;
       justify-content: center;
       background-color: #01a1b7;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &-content {
       margin-left: 20px;
       width: 450px;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
 
       &__title {
         font-family: "Montserrat" sans-serif;
