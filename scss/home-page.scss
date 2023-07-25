@@ -256,18 +256,16 @@
       margin-top: 50px;
       font-size: 20px;
 
-      
-      
       @media screen and (max-width: 768px) {
         margin-top: 20px;
-        max-width: 500px ;
+        max-width: 500px;
         display: flex;
         overflow-y: auto;
       }
 
       @media screen and (max-width: 500px) {
         margin-top: 20px;
-        max-width: 400px ;
+        max-width: 400px;
         display: flex;
         overflow-y: auto;
       }
@@ -342,7 +340,7 @@
     }
 
     &__list {
-      width: 35%;
+      width: 40%;
 
       @media screen and (max-width: 500px) {
         max-width: 300px;
@@ -427,7 +425,7 @@
       width: 300px;
       flex-wrap: nowrap;
       overflow-y: auto;
-      overflow-wrap:normal;
+      overflow-wrap: normal;
       padding: 30px 0;
     }
 
@@ -518,10 +516,10 @@
   justify-content: space-between;
 
   @media screen and (max-width: 1100px) {
-      justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   @media screen and (max-width: 1100px) {
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   &-content {
@@ -534,7 +532,6 @@
     }
     @media screen and (max-width: 1100px) {
       width: 70%;
-
     }
 
     &__subtitle {
@@ -542,7 +539,6 @@
       margin-top: 20px;
       width: 100%;
       color: rgba(0, 0, 0, 0.5);
-
     }
 
     &__btn {

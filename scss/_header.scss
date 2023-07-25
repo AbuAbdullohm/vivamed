@@ -30,7 +30,7 @@
   }
 
   &-contact {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #01a1b7;
     margin-right: auto;
@@ -47,10 +47,8 @@
 
   &-buttons {
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1350px) {
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
@@ -72,7 +70,7 @@
       border-radius: 10px;
       outline: none;
 
-      @media screen and (max-width: 1300px) {
+      @media screen and (max-width: 1350px) {
         margin-top: 5px;
         text-align: center;
       }

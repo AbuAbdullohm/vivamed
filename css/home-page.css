@@ -61,7 +61,7 @@ a {
   }
 }
 .header-contact {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #01a1b7;
   margin-right: auto;
@@ -77,10 +77,8 @@ a {
 }
 .header-buttons {
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
   .header-buttons {
     display: grid;
     grid-template-columns: auto auto;
@@ -105,7 +103,7 @@ a {
   border-radius: 10px;
   outline: none;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
   .header-buttons a {
     margin-top: 5px;
     text-align: center;
@@ -771,7 +769,7 @@ a {
   }
 }
 .advantages-content__list {
-  width: 35%;
+  width: 40%;
 }
 @media screen and (max-width: 500px) {
   .advantages-content__list {
