@@ -389,7 +389,7 @@ a {
   align-items: center;
   margin-top: 100px;
   padding-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 }
 @media screen and (max-width: 1100px) {
   .footer-rteco__logo {
@@ -400,7 +400,7 @@ a {
   }
 }
 .footer-rteco__logo p {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media screen and (max-width: 768px) {
   .footer-rteco__logo p {
@@ -622,6 +622,18 @@ a {
   font-weight: 500;
 }
 
+.open .accordion-header__price {
+  margin-right: 36px;
+}
+.open .accordion-header__image .plus-button {
+  display: none;
+}
+.open .accordion-content {
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px;
+}
+
 .accordion-wrapper {
   margin-top: 50px;
   padding: 30px;
@@ -635,15 +647,14 @@ a {
 
 .accordion {
   margin-top: 30px;
-  padding-top: 20px;
+  padding: 10px 20px;
   border-top: 3px solid #c7c7c7;
   border-bottom: 3px solid #c7c7c7;
 }
 .accordion-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   padding: 10px 0;
 }
@@ -670,22 +681,18 @@ a {
 .accordion-header__image .minus-button {
   position: absolute;
   transform: translateX(-36px);
+  transition: all 0.5s ease;
 }
 .accordion-content {
-  margin-top: 20px;
   position: relative;
   overflow: hidden;
-  transition: 0.3s;
+  transition: all 0.5s ease;
   height: 0;
 }
 .accordion-content p {
-  width: 90%;
+  width: 100%;
   font-size: 16px;
   font-weight: 500;
   line-height: 31px;
-  opacity: 0.5;
-}
-.accordion-content.accordion.active {
-  height: 200px;
-  padding: 30px;
+  opacity: 0.8;
 }/*# sourceMappingURL=labaratory.css.map */

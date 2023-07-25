@@ -126,6 +126,7 @@
             </p>
           </div>
         </div>
+
         <div class="accordion" id="accordion">
           <div class="accordion-header">
             <h1 class="accordion-header__title">МРТ головного мозга</h1>
@@ -158,6 +159,7 @@
             </p>
           </div>
         </div>
+
         <div class="accordion" id="accordion">
           <div class="accordion-header">
             <h1 class="accordion-header__title">МРТ головного мозга</h1>
@@ -357,14 +359,6 @@
       />
     </div>
 
-    <script>
-      const accordion = document.getElementById("accordion");
-
-      for (i = 0; (i = accordion.length); i++) {
-        accordion[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-        });
-      }
-    </script>
+    <script src="./js/accardion.js"></script>
   </body>
 </html>

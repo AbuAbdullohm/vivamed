@@ -442,7 +442,7 @@
         </div>
       </div>
 
-      <div class="contact-form">
+      <div class="contact-form" id="contact-form">
         <h1 class="contact-form__title">Оставить сообщение</h1>
         <form>
           <div class="form-input">
@@ -585,21 +585,6 @@
       />
     </div>
 
-    <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
+    <script src="./js/accardion.js"></script>
   </body>
 </html>

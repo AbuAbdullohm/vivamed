@@ -233,7 +233,7 @@
       }
     }
 
-    &__image{
+    &__image {
       @media screen and (max-width: 768px) {
         display: none;
       }
@@ -248,6 +248,19 @@
   @media screen and (max-width: 768px) {
     margin-top: 30px;
   }
+
+  
+}
+
+.open{
+  .accordion-content{
+    padding-top: 30px;
+  }
+  .accordion-header__image{
+    .plus-button{
+      display: none;
+    }
+  }
 }
 
 .accordion {
@@ -257,7 +270,7 @@
 
   &-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     cursor: pointer;
 
@@ -265,6 +278,7 @@
       position: relative;
 
       .minus-button {
+        transition: all 0.5s linear;
         position: absolute;
         transform: translateX(-36px);
       }
@@ -276,7 +290,8 @@
     overflow: hidden;
     width: 90%;
     transition: 0.3s;
-    padding: 30px;
+    height: 0;
+    transition: all 0.5s linear;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -284,6 +299,7 @@
     }
 
     p {
+      padding-left: 50px;
       width: 90%;
       font-size: 16px;
       font-weight: 500;

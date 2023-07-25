@@ -389,7 +389,7 @@ a {
   align-items: center;
   margin-top: 100px;
   padding-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 }
 @media screen and (max-width: 1100px) {
   .footer-rteco__logo {
@@ -400,7 +400,7 @@ a {
   }
 }
 .footer-rteco__logo p {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media screen and (max-width: 768px) {
   .footer-rteco__logo p {

@@ -598,7 +598,9 @@
           <p class="request-content__subtitle">
             Наши спецалисты самые лучшие и опытные в своём деле
           </p>
-          <button class="request-content__btn">Оставить заявку</button>
+          <a href="./contact.html#contact-form">
+            <button class="request-content__btn">Оставить заявку</button></a
+          >
         </div>
         <div class="request-image">
           <img src="./images/home/image-3.png" alt="image 3" />
@@ -689,21 +691,6 @@
       />
     </div>
 
-    <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
+    <script src="./js/accardion.js"></script>
   </body>
 </html>

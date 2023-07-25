@@ -143,6 +143,7 @@
 
     &__links {
       margin-top: 30px;
+
       a {
         line-height: 25px;
         color: rgba(255, 255, 255, 0.7);
@@ -165,7 +166,7 @@
   align-items: center;
   margin-top: 100px;
   padding-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 
   @media screen and (max-width: 1100px) {
     width: 100%;
@@ -175,7 +176,7 @@
   }
 
   p {
-    font-size: 12px;
+    font-size: 14px;
 
     @media screen and (max-width: 768px) {
       color: #ffffff;
@@ -199,7 +200,7 @@
 
     img {
       @media screen and (max-width: 500px) {
-        width: 90%; 
+        width: 90%;
       }
     }
 

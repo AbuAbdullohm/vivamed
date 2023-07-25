@@ -198,6 +198,22 @@
   }
 }
 
+.open {
+  .accordion-header__price {
+    margin-right: 36px;
+  }
+  .accordion-header__image {
+    .plus-button {
+      display: none;
+    }
+  }
+
+  .accordion-content {
+    height: max-content;
+    padding: 10px;
+  }
+}
+
 .accordion-wrapper {
   margin-top: 50px;
   padding: 30px;
@@ -210,16 +226,14 @@
 }
 .accordion {
   margin-top: 30px;
-  padding-top: 20px;
-  //   padding-bottom: 20px;
+  padding: 10px 20px;
   border-top: 3px solid #c7c7c7;
   border-bottom: 3px solid #c7c7c7;
 
   &-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     padding: 10px 0;
 
@@ -246,29 +260,24 @@
       .minus-button {
         position: absolute;
         transform: translateX(-36px);
+        transition: all 0.5s ease;
       }
     }
   }
 
   &-content {
-    margin-top: 20px;
     position: relative;
     overflow: hidden;
 
-    transition: 0.3s;
+    transition: all 0.5s ease;
     height: 0;
 
     p {
-      width: 90%;
+      width: 100%;
       font-size: 16px;
       font-weight: 500;
       line-height: 31px;
-      opacity: 0.5;
-    }
-
-    &.accordion.active {
-      height: 200px;
-      padding: 30px;
+      opacity: 0.8;
     }
   }
 }
