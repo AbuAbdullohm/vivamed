@@ -80,14 +80,21 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .header-buttons {
-    display: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 }
 @media screen and (max-width: 1100px) {
   .header-buttons {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-buttons {
+    display: none;
   }
 }
 .header-buttons a {
@@ -98,10 +105,15 @@ a {
   border-radius: 10px;
   outline: none;
 }
+@media screen and (max-width: 1300px) {
+  .header-buttons a {
+    margin-top: 5px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1100px) {
   .header-buttons a {
     padding: 5px;
-    margin-top: 5px;
   }
 }
 .header-mobicon {
@@ -184,6 +196,12 @@ a {
   padding: 5px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
 .header-links .navigation-input img {
   width: 15px;
   position: absolute;
@@ -196,13 +214,22 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none;
   padding-left: 30px;
-  padding-right: 30px;
   color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input input {
+    width: 150px;
+  }
 }
 .header-links .navigation-language {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-language {
+    margin-top: 10px;
+  }
 }
 .header-links .navigation-language img {
   margin-left: 5px;
@@ -400,6 +427,11 @@ a {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 500px) {
+  .footer-rteco__logo .rteco-logo img {
+    width: 90%;
+  }
+}
 .footer-rteco__logo .rteco-logo .color-logo {
   position: absolute;
   left: 0;
@@ -576,6 +608,11 @@ a {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .advantages-content .card {
+    align-items: start;
+  }
+}
 .advantages-content .card-image {
   width: 100px;
   height: 100px;
@@ -585,9 +622,15 @@ a {
   justify-content: center;
   background-color: #01a1b7;
 }
+@media screen and (max-width: 768px) {
+  .advantages-content .card-image {
+    width: 80px;
+    height: 60px;
+  }
+}
 .advantages-content .card-image img {
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 50%;
 }
 .advantages-content .card-content {
   margin-left: 20px;
@@ -609,6 +652,14 @@ a {
   font-size: 12px;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .advantages-content .card-content__text {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
 
 .doctor-quote {
   width: 90%;
@@ -623,6 +674,13 @@ a {
   align-items: start;
   padding: 50px;
 }
+@media screen and (max-width: 768px) {
+  .doctor-quote {
+    padding: 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .doctor-quote img {
   height: 40px;
 }
@@ -634,6 +692,11 @@ a {
   font-size: 18px;
   font-weight: 500;
   line-height: 25px;
+}
+@media screen and (max-width: 768px) {
+  .doctor-quote__text {
+    width: 100%;
+  }
 }
 .doctor-quote__author {
   margin-top: 20px;
@@ -678,17 +741,39 @@ a {
   margin-left: 15px;
   margin-right: 15px;
 }
+@media screen and (max-width: 500px) {
+  .gallery .place-for-pagination .line {
+    width: 100px;
+  }
+}
 
 .gallery-images {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 500px) {
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .gallery-images .image-wrapper1 {
   width: 50%;
 }
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 .gallery-images .image-wrapper1 img {
   width: 95%;
+}
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper1 img {
+    width: 100%;
+  }
 }
 .gallery-images .image-wrapper2 {
   display: flex;
@@ -696,9 +781,19 @@ a {
   justify-content: space-between;
   width: 50%;
 }
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper2 {
+    width: 100%;
+  }
+}
 .gallery-images .image-wrapper2 .image-wrapper__child1 {
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper2 .image-wrapper__child1 {
+    margin-bottom: 10px;
+  }
 }
 .gallery-images .image-wrapper2 .image-wrapper__child1 img {
   width: 100%;
@@ -708,9 +803,21 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper2 .image-wrapper__child2 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .gallery-images .image-wrapper2 .image-wrapper__child2 img {
   width: 48%;
   height: 95%;
+}
+@media screen and (max-width: 500px) {
+  .gallery-images .image-wrapper2 .image-wrapper__child2 img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .recomendation-wrapper {
@@ -730,9 +837,14 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .recomendation-card {
+    flex-wrap: wrap;
+  }
+}
 .recomendation .card {
   width: 31%;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -741,6 +853,16 @@ a {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+}
+@media screen and (max-width: 768px) {
+  .recomendation .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .recomendation .card {
+    width: 95%;
+  }
 }
 .recomendation .card-name {
   font-family: "Montserrat" sans-serif;
@@ -788,4 +910,9 @@ a {
   background: #000000;
   margin-left: 15px;
   margin-right: 15px;
+}
+@media screen and (max-width: 500px) {
+  .recomendation .place-for-pagination .line {
+    width: 100px;
+  }
 }/*# sourceMappingURL=about-us-page.css.map */

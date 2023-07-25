@@ -32,17 +32,33 @@
     justify-content: space-between;
     padding: 30px 20px 0;
 
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
+
     &-image {
       img {
         height: 110%;
         position: absolute;
         bottom: 0;
+
+        @media screen and (max-width: 1100px) {
+          height: 50%;
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        display: none;
       }
     }
 
     &-content {
       width: 50%;
       padding-bottom: 50px;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
 
       &__title {
         font-size: 28px;
@@ -51,12 +67,17 @@
       }
 
       &__text {
-        width: 80%;
+        width: 70%;
         margin-top: 20px;
         font-size: 18px;
         font-weight: 500;
         line-height: 38px;
         color: #ffffff;
+        display: flex;
+
+        @media screen and (max-width: 1100px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -67,10 +88,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .equipment-item {
     width: 49%;
     margin-top: 30px;
     border-radius: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     &__image {
       position: relative;
@@ -79,8 +108,18 @@
       background-color: #c5c6c6;
       padding: 20px;
       border-radius: 10px;
+
+      @media screen and (max-width: 100px) {
+        height: 300px;
+      }
+
       img {
         width: max-content;
+
+        @media screen and (max-width: 1100px) {
+          width: 80%;
+          height: 90%;
+        }
       }
 
       &--title {
@@ -105,8 +144,7 @@
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 
   &-title {
     font-size: 25px;
@@ -117,8 +155,17 @@
     justify-content: space-between;
     margin-top: 30px;
 
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      overflow-y: auto;
+    }
+
     img {
       width: 22%;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
 
@@ -128,6 +175,10 @@
     align-items: center;
     color: #000000;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
 
     svg path {
       stroke: #000000;
@@ -157,10 +208,18 @@
 .information {
   margin-top: 30px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+  }
+
   &-text {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+    }
 
     p {
       width: 50%;
@@ -168,6 +227,16 @@
       font-weight: 500;
       line-height: 34px;
       opacity: 0.5;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
+    }
+
+    &__image{
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }
@@ -175,6 +244,10 @@
 .information-box {
   margin-top: 100px;
   padding: 30px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
 }
 
 .accordion {
@@ -205,12 +278,21 @@
     transition: 0.3s;
     padding: 30px;
 
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 15px;
+    }
+
     p {
       width: 90%;
       font-size: 16px;
       font-weight: 500;
       line-height: 31px;
       opacity: 0.5;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &.accordion.active {
@@ -224,11 +306,19 @@
   margin-top: 100px;
   margin-bottom: 100px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+
   .items-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .item {
       width: 32%;
@@ -236,6 +326,15 @@
       background: #fff;
       padding: 30px;
       box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+
+      @media screen and (max-width: 768px) {
+        width: 70%;
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
 
       &-image {
         width: 100%;
@@ -311,6 +410,10 @@
       background: #000000;
       margin-left: 15px;
       margin-right: 15px;
+
+      @media screen and (max-width: 500px) {
+        width: 100px;
+      }
     }
   }
 }

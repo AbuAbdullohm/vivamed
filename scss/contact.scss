@@ -13,15 +13,28 @@
   img {
     margin-right: 10px;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 120px;
+  }
+
 }
 
 .contact-map {
   position: relative;
   margin-top: 100px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+
   &__card {
     transform: scale(0);
     transition: all 1s ease;
+
+    @media screen and (max-width: 500px) {
+      transform: translateY(80px) scale(1);
+    }
   }
 
   &:hover .contact-map__card {
@@ -43,8 +56,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //   transform: scale(0);
   transition: all 0.5s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    left: 20px;
+    width: 400px;
+  }
+  @media screen and (max-width: 500px) {
+    position: relative;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    height: 400px;
+  }
 
   &-text {
     font-size: 20px;
@@ -72,9 +96,17 @@
   display: flex;
   justify-content: space-around;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &-section {
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 20px;
+    }
     &__title {
       font-size: 25px;
+      margin-bottom: 20px;
     }
 
     &__text {
@@ -89,6 +121,19 @@
       margin-top: 30px;
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 1100px) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+      }
 
       .inform-title {
         font-size: 20px;
@@ -119,6 +164,10 @@
         font-size: 24px;
         font-weight: 700;
         margin-top: 10px;
+
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -128,6 +177,15 @@
     padding: 40px;
     border-radius: 10px;
     background: rgba(197, 198, 198, 0.2);
+
+    @media screen and (max-width: 1100px) {
+      width: 70%;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     &__title {
       font-size: 24px;
@@ -178,6 +236,10 @@
       justify-content: space-between;
       margin-top: 30px;
 
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+      }
+
       .submit {
         width: 50%;
         font-size: 18px;
@@ -186,6 +248,12 @@
         border-radius: 10px;
         background: #01a1b7;
         color: #ffffff;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          padding: 15px;
+          margin-bottom: 20px;
+        }
       }
 
       .form-file {
@@ -193,6 +261,11 @@
         padding: 5px;
         font-size: 12px;
         border-radius: 10px;
+
+        @media screen and (max-width: 500px) {
+          padding: 10px;
+          text-align: center;
+        }
 
         label {
           font-size: 16px;

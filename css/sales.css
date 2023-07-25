@@ -80,14 +80,21 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .header-buttons {
-    display: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 }
 @media screen and (max-width: 1100px) {
   .header-buttons {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-buttons {
+    display: none;
   }
 }
 .header-buttons a {
@@ -98,10 +105,15 @@ a {
   border-radius: 10px;
   outline: none;
 }
+@media screen and (max-width: 1300px) {
+  .header-buttons a {
+    margin-top: 5px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1100px) {
   .header-buttons a {
     padding: 5px;
-    margin-top: 5px;
   }
 }
 .header-mobicon {
@@ -184,6 +196,12 @@ a {
   padding: 5px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
 .header-links .navigation-input img {
   width: 15px;
   position: absolute;
@@ -196,13 +214,22 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none;
   padding-left: 30px;
-  padding-right: 30px;
   color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input input {
+    width: 150px;
+  }
 }
 .header-links .navigation-language {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-language {
+    margin-top: 10px;
+  }
 }
 .header-links .navigation-language img {
   margin-left: 5px;
@@ -400,6 +427,11 @@ a {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 500px) {
+  .footer-rteco__logo .rteco-logo img {
+    width: 90%;
+  }
+}
 .footer-rteco__logo .rteco-logo .color-logo {
   position: absolute;
   left: 0;
@@ -411,7 +443,7 @@ a {
 }
 
 .sales-page__title {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -444,11 +476,21 @@ a {
   justify-content: space-around;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 1100px) {
+  .sales-main .main-content {
+    width: 100%;
+  }
+}
 .sales-main .main-content__title {
   width: 85%;
   font-size: 28px;
   font-weight: 700;
   line-height: 57px;
+}
+@media screen and (max-width: 1100px) {
+  .sales-main .main-content__title {
+    width: 100%;
+  }
 }
 .sales-main .main-content__text {
   width: 70%;
@@ -458,6 +500,11 @@ a {
   margin-bottom: auto;
   margin-top: 30px;
   opacity: 0.8;
+}
+@media screen and (max-width: 1100px) {
+  .sales-main .main-content__text {
+    width: 100%;
+  }
 }
 .sales-main .main-content .place-for-pagination {
   margin-bottom: 50px;
@@ -480,6 +527,11 @@ a {
   background: #ffffff;
   margin-left: 15px;
   margin-right: 15px;
+}
+@media screen and (max-width: 1100px) {
+  .sales-main__image {
+    display: none;
+  }
 }
 
 .sales-card__wrapper {
@@ -507,6 +559,12 @@ a {
   font-weight: 600;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 500px) {
+  .sales-cards .filter-buttons .button {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
 }
 .sales-cards .filter-buttons .active {
   border: 3px solid #f4c93f;
@@ -538,6 +596,11 @@ a {
   margin-left: 15px;
   margin-right: 15px;
 }
+@media screen and (max-width: 500px) {
+  .sales-cards .place-for-pagination .line {
+    width: 100px;
+  }
+}
 
 .cards-wrapper {
   margin-top: 30px;
@@ -545,12 +608,27 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 768px) {
+  .cards-wrapper {
+    justify-content: center;
+  }
+}
 .cards-wrapper .card {
   margin-top: 30px;
   width: 49%;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+}
+@media screen and (max-width: 768px) {
+  .cards-wrapper .card {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cards-wrapper .card {
+    width: 100%;
+  }
 }
 .cards-wrapper .card-image {
   width: 100%;
@@ -563,10 +641,25 @@ a {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1100px) {
+  .cards-wrapper .card-title {
+    padding: 10px 20px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards-wrapper .card-title {
+    padding: 10px;
+  }
+}
 .cards-wrapper .card-title__title {
   width: 70%;
   font-size: 20px;
   font-weight: 700;
+}
+@media screen and (max-width: 500px) {
+  .cards-wrapper .card-title__title {
+    font-size: 16px;
+  }
 }
 .cards-wrapper .card-title__sale {
   color: #c62a2a;
@@ -574,21 +667,45 @@ a {
   font-weight: 700;
   line-height: 32px;
 }
+@media screen and (max-width: 1100px) {
+  .cards-wrapper .card-title__sale {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards-wrapper .card-title__sale {
+    font-size: 24px;
+  }
+}
 .cards-wrapper .card-text {
   padding: 0 40px 30px;
   opacity: 0.6;
   font-weight: 600;
 }
+@media screen and (max-width: 1100px) {
+  .cards-wrapper .card-text {
+    padding: 0 20px 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards-wrapper .card-text {
+    padding: 0 10px 10px;
+  }
+}
 .cards-wrapper .card-text p {
   margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .cards-wrapper .card-text p {
+    margin-top: 20px;
+  }
 }
 .cards-wrapper .card-text .color-blue {
   color: #3e91dd;
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 }
 .licenses-title {
   font-size: 25px;
@@ -598,8 +715,19 @@ a {
   justify-content: space-between;
   margin-top: 30px;
 }
+@media screen and (max-width: 500px) {
+  .licenses-content {
+    width: 300px;
+    overflow-y: auto;
+  }
+}
 .licenses-content img {
   width: 22%;
+}
+@media screen and (max-width: 500px) {
+  .licenses-content img {
+    width: 80%;
+  }
 }
 .licenses .place-for-pagination {
   margin-top: 50px;
@@ -607,6 +735,11 @@ a {
   align-items: center;
   color: #000000;
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .licenses .place-for-pagination {
+    margin-top: 30px;
+  }
 }
 .licenses .place-for-pagination svg path {
   stroke: #000000;
@@ -625,4 +758,9 @@ a {
   background: #000000;
   margin-left: 15px;
   margin-right: 15px;
+}
+@media screen and (max-width: 500px) {
+  .licenses .place-for-pagination .line {
+    width: 100px;
+  }
 }/*# sourceMappingURL=sales.css.map */

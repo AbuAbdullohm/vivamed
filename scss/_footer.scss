@@ -196,7 +196,12 @@
     @media screen and (max-width: 1100px) {
       margin-left: 50px;
     }
-    
+
+    img {
+      @media screen and (max-width: 500px) {
+        width: 90%; 
+      }
+    }
 
     .color-logo {
       position: absolute;

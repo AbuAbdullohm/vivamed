@@ -22,14 +22,27 @@
     margin-top: 30px;
     display: flex;
 
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+    }
+
     &__video {
       width: 60%;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
     }
 
     &__text {
       width: 40%;
       padding: 10px;
       margin-left: 20px;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+        margin-left: 0;
+      }
 
       h1 {
         font-size: 24px;
@@ -62,6 +75,10 @@
     display: flex;
     justify-content: flex-end;
 
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
     img {
       width: 80%;
     }
@@ -78,6 +95,18 @@
     .analysis-item {
       width: 40%;
       list-style-type: disc;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      &:last-child {
+        margin-left: 20px;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
 
       li {
         font-size: 16px;
@@ -97,8 +126,7 @@
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 
   &-title {
     font-size: 25px;
@@ -109,8 +137,17 @@
     justify-content: space-between;
     margin-top: 30px;
 
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      overflow-y: auto;
+    }
+
     img {
       width: 22%;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
 
@@ -120,6 +157,10 @@
     align-items: center;
     color: #000000;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
 
     svg path {
       stroke: #000000;
@@ -160,6 +201,12 @@
 .accordion-wrapper {
   margin-top: 50px;
   padding: 30px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+
+    margin-bottom: 30px;
+  }
 }
 .accordion {
   margin-top: 30px;
@@ -178,6 +225,18 @@
 
     &__title {
       margin-right: auto;
+
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     &__image {
@@ -197,7 +256,6 @@
     overflow: hidden;
 
     transition: 0.3s;
-    // padding: 30px;
     height: 0;
 
     p {

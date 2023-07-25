@@ -25,6 +25,15 @@
     font-weight: 500;
     line-height: 38px;
     opacity: 0.7;
+
+    @media screen and (max-width: 1100px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+      line-height: 25px;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -35,9 +44,20 @@
     border-radius: 10px;
     background: rgba(197, 198, 198, 0.2);
 
+    @media screen and (max-width: 1100px) {
+      padding: 20px 30px;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 20px;
+    }
+
     &-title {
       font-size: 32px;
       font-weight: 700;
+
+      @media screen and (max-width: 500px) {
+        font-size: 24px;
+      }
     }
 
     &-input {
@@ -46,11 +66,20 @@
       align-items: center;
       justify-content: space-between;
 
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
       &__name {
         width: 48%;
         height: 50px;
         font-size: 16px;
         font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 50px;
+        }
       }
 
       &__phone {
@@ -58,6 +87,11 @@
         height: 50px;
         font-size: 16px;
         font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
 
       &__message {
@@ -102,6 +136,11 @@
       display: flex;
       margin-top: 70px;
 
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        margin-top: 50px;
+      }
+
       &__submit {
         button {
           background: #01a1b7;
@@ -113,6 +152,11 @@
           font-weight: 500;
           cursor: pointer;
           color: #ffffff;
+
+          @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-bottom: 20px;
+          }
         }
       }
 
@@ -122,6 +166,12 @@
         border: 2px solid #000;
         margin: 0 0 0 20px;
         padding: 9px 20px;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          margin-left: 0;
+          text-align: center;
+        }
 
         input {
           width: 0;
@@ -138,8 +188,7 @@
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 
   &-title {
     font-size: 25px;
@@ -150,8 +199,17 @@
     justify-content: space-between;
     margin-top: 30px;
 
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      overflow-y: auto;
+    }
+
     img {
       width: 22%;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
 
@@ -161,6 +219,10 @@
     align-items: center;
     color: #000000;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
 
     svg path {
       stroke: #000000;
@@ -181,6 +243,10 @@
       background: #000000;
       margin-left: 15px;
       margin-right: 15px;
+
+      @media screen and (max-width: 500px) {
+        width: 100px;
+      }
     }
   }
 }

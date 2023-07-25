@@ -80,14 +80,21 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .header-buttons {
-    display: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 }
 @media screen and (max-width: 1100px) {
   .header-buttons {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-buttons {
+    display: none;
   }
 }
 .header-buttons a {
@@ -98,10 +105,15 @@ a {
   border-radius: 10px;
   outline: none;
 }
+@media screen and (max-width: 1300px) {
+  .header-buttons a {
+    margin-top: 5px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1100px) {
   .header-buttons a {
     padding: 5px;
-    margin-top: 5px;
   }
 }
 .header-mobicon {
@@ -184,6 +196,12 @@ a {
   padding: 5px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
 .header-links .navigation-input img {
   width: 15px;
   position: absolute;
@@ -196,13 +214,22 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none;
   padding-left: 30px;
-  padding-right: 30px;
   color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-input input {
+    width: 150px;
+  }
 }
 .header-links .navigation-language {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media screen and (max-width: 1100px) {
+  .header-links .navigation-language {
+    margin-top: 10px;
+  }
 }
 .header-links .navigation-language img {
   margin-left: 5px;
@@ -400,6 +427,11 @@ a {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 500px) {
+  .footer-rteco__logo .rteco-logo img {
+    width: 90%;
+  }
+}
 .footer-rteco__logo .rteco-logo .color-logo {
   position: absolute;
   left: 0;
@@ -434,8 +466,18 @@ a {
   margin-top: 50px;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .feedback-cards {
+    flex-direction: column;
+  }
+}
 .feedback-cards .card-column {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .feedback-cards .card-column {
+    width: 100%;
+  }
 }
 
 .card {
@@ -448,12 +490,35 @@ a {
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
   display: flex;
 }
+@media screen and (max-width: 1100px) {
+  .card {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
 .card-content {
   margin-left: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .card-content {
+    margin-left: 0;
+  }
 }
 .card-content__title {
   font-size: 18px;
   font-weight: 700;
+}
+@media screen and (max-width: 1100px) {
+  .card-content__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .card-content__text {
   font-size: 14px;
@@ -481,17 +546,39 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .form-input {
+    flex-direction: column;
+  }
+}
 .form-input__name {
   width: 400px;
   height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .form-input__name {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .form-input__phone {
   width: 400px;
   height: 40px;
 }
+@media screen and (max-width: 768px) {
+  .form-input__phone {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .form-input__email {
   width: 400px;
   height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .form-input__email {
+    width: 100%;
+  }
 }
 .form-input input {
   width: 100%;
@@ -534,6 +621,11 @@ a {
   display: flex;
   margin-top: 30px;
 }
+@media screen and (max-width: 500px) {
+  .form-button {
+    flex-direction: column;
+  }
+}
 .form-button__submit button {
   background: #f4c93f;
   border-radius: 10px;
@@ -544,12 +636,25 @@ a {
   font-weight: 500;
   cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+  .form-button__submit button {
+    padding: 20px 30px;
+  }
+}
 .form-button__file {
   font-size: 16px;
   line-height: 20px;
   border: 2px solid #000;
   margin: 0 0 0 20px;
   padding: 9px 20px;
+}
+@media screen and (max-width: 500px) {
+  .form-button__file {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 45%;
+    text-align: center;
+  }
 }
 .form-button__file input {
   width: 0;
@@ -562,8 +667,7 @@ a {
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 }
 .licenses-title {
   font-size: 25px;
@@ -573,8 +677,19 @@ a {
   justify-content: space-between;
   margin-top: 30px;
 }
+@media screen and (max-width: 500px) {
+  .licenses-content {
+    width: 300px;
+    overflow-y: auto;
+  }
+}
 .licenses-content img {
   width: 22%;
+}
+@media screen and (max-width: 500px) {
+  .licenses-content img {
+    width: 80%;
+  }
 }
 .licenses .place-for-pagination {
   margin-top: 50px;
@@ -582,6 +697,11 @@ a {
   align-items: center;
   color: #000000;
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .licenses .place-for-pagination {
+    margin-top: 30px;
+  }
 }
 .licenses .place-for-pagination svg path {
   stroke: #000000;
@@ -600,4 +720,9 @@ a {
   background: #000000;
   margin-left: 15px;
   margin-right: 15px;
+}
+@media screen and (max-width: 500px) {
+  .licenses .place-for-pagination .line {
+    width: 100px;
+  }
 }/*# sourceMappingURL=feedback.css.map */

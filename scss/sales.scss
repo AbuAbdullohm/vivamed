@@ -3,7 +3,7 @@
 @import "footer";
 
 .sales-page__title {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -38,11 +38,19 @@
     justify-content: space-around;
     padding-bottom: 30px;
 
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+    }
+
     &__title {
       width: 85%;
       font-size: 28px;
       font-weight: 700;
       line-height: 57px;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
     }
 
     &__text {
@@ -53,6 +61,10 @@
       margin-bottom: auto;
       margin-top: 30px;
       opacity: 0.8;
+
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
     }
 
     .place-for-pagination {
@@ -78,6 +90,12 @@
         margin-left: 15px;
         margin-right: 15px;
       }
+    }
+  }
+
+  &__image {
+    @media screen and (max-width: 1100px) {
+      display: none;
     }
   }
 }
@@ -107,6 +125,11 @@
       font-weight: 600;
       line-height: 22px;
       color: rgba(0, 0, 0, 0.6);
+
+      @media screen and (max-width: 500px) {
+        font-size: 16px;
+        padding: 5px 10px;
+      }
     }
 
     .active {
@@ -142,6 +165,10 @@
       background: #000000;
       margin-left: 15px;
       margin-right: 15px;
+
+      @media screen and (max-width: 500px) {
+        width: 100px;
+      }
     }
   }
 }
@@ -153,12 +180,24 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   .card {
     margin-top: 30px;
     width: 49%;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
 
     &-image {
       width: 100%;
@@ -173,10 +212,21 @@
       display: flex;
       justify-content: space-between;
 
+      @media screen and (max-width: 1100px) {
+        padding: 10px 20px 0;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 10px;
+      }
+
       &__title {
         width: 70%;
         font-size: 20px;
         font-weight: 700;
+
+        @media screen and (max-width: 500px) {
+          font-size: 16px;
+        }
       }
 
       &__sale {
@@ -184,6 +234,14 @@
         font-size: 36px;
         font-weight: 700;
         line-height: 32px;
+
+        @media screen and (max-width: 1100px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+        }
       }
     }
 
@@ -192,8 +250,20 @@
       opacity: 0.6;
       font-weight: 600;
 
+      @media screen and (max-width: 1100px) {
+        padding: 0 20px 10px;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 0 10px 10px;
+      }
+
       p {
         margin-top: 30px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 20px;
+        }
       }
 
       .color-blue {
@@ -204,8 +274,7 @@
 }
 
 .licenses {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 50px;
 
   &-title {
     font-size: 25px;
@@ -216,8 +285,17 @@
     justify-content: space-between;
     margin-top: 30px;
 
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      overflow-y: auto;
+    }
+
     img {
       width: 22%;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
 
@@ -227,6 +305,10 @@
     align-items: center;
     color: #000000;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
 
     svg path {
       stroke: #000000;
@@ -247,6 +329,10 @@
       background: #000000;
       margin-left: 15px;
       margin-right: 15px;
+
+      @media screen and (max-width: 500px) {
+        width: 100px;
+      }
     }
   }
 }
