@@ -625,18 +625,20 @@ a {
 .open .accordion-header__price {
   margin-right: 36px;
 }
+@media screen and (max-width: 768px) {
+  .open .accordion-header__price {
+    margin-right: 20px;
+  }
+}
 .open .accordion-header__image .plus-button {
   display: none;
 }
 .open .accordion-content {
-  height: -moz-max-content;
-  height: max-content;
-  padding: 10px;
+  margin: 10px;
 }
 
 .accordion-wrapper {
   margin-top: 50px;
-  padding: 30px;
 }
 @media screen and (max-width: 768px) {
   .accordion-wrapper {
@@ -646,10 +648,15 @@ a {
 }
 
 .accordion {
-  margin-top: 30px;
-  padding: 10px 20px;
+  margin-bottom: 30px;
+  padding: 10px;
   border-top: 3px solid #c7c7c7;
   border-bottom: 3px solid #c7c7c7;
+}
+@media screen and (max-width: 768px) {
+  .accordion {
+    margin-bottom: 15px;
+  }
 }
 .accordion-header {
   display: flex;
@@ -660,10 +667,11 @@ a {
 }
 .accordion-header__title {
   margin-right: auto;
+  font-size: 26px;
 }
 @media screen and (max-width: 768px) {
   .accordion-header__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .accordion-header h2 {
@@ -674,20 +682,41 @@ a {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 500px) {
+  .accordion-header h2 {
+    display: none;
+  }
+}
 .accordion-header__image {
   margin: 0 20px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .accordion-header__image img {
+    width: 20px;
+  }
 }
 .accordion-header__image .minus-button {
   position: absolute;
   transform: translateX(-36px);
   transition: all 0.5s ease;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__image .minus-button {
+    transform: translateX(-20px);
+  }
+}
 .accordion-content {
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
   height: 0;
+  width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .accordion-content {
+    width: 100%;
+  }
 }
 .accordion-content p {
   width: 100%;

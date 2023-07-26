@@ -25,7 +25,6 @@ accordion.forEach((item, index) => {
 
     if (item.classList.contains("open")) {
       myContent.style.height = `${myContent.scrollHeight}px`;
-      plusBtn.style.display = `hidden`;
     } else {
       myContent.style.height = "0px";
     }

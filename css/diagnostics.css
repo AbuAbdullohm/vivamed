@@ -550,6 +550,11 @@ a {
     height: 300px;
   }
 }
+.equipments .equipment-item__image a {
+  width: -moz-max-content;
+  width: max-content;
+  height: 450px;
+}
 .equipments .equipment-item__image img {
   width: -moz-max-content;
   width: max-content;
@@ -675,11 +680,19 @@ a {
 @media screen and (max-width: 768px) {
   .information-box {
     margin-top: 30px;
+    padding: 0;
   }
 }
 
 .open .accordion-content {
-  padding-top: 30px;
+  margin-top: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .open .accordion-content {
+    margin-top: 15px;
+  }
 }
 .open .accordion-header__image .plus-button {
   display: none;
@@ -696,13 +709,28 @@ a {
   justify-content: space-between;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__title {
+    font-size: 24px;
+  }
+}
 .accordion-header__image {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .accordion-header__image img {
+    width: 30px;
+  }
 }
 .accordion-header__image .minus-button {
   transition: all 0.5s linear;
   position: absolute;
   transform: translateX(-36px);
+}
+@media screen and (max-width: 768px) {
+  .accordion-header__image .minus-button {
+    transform: translateX(-30px);
+  }
 }
 .accordion-content {
   position: relative;
@@ -715,7 +743,6 @@ a {
 @media screen and (max-width: 768px) {
   .accordion-content {
     width: 100%;
-    padding: 15px;
   }
 }
 .accordion-content p {
@@ -729,6 +756,9 @@ a {
 @media screen and (max-width: 768px) {
   .accordion-content p {
     width: 100%;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 .accordion-content.accordion.active {

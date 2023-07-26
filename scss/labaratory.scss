@@ -201,6 +201,10 @@
 .open {
   .accordion-header__price {
     margin-right: 36px;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 20px;
+    }
   }
   .accordion-header__image {
     .plus-button {
@@ -209,26 +213,27 @@
   }
 
   .accordion-content {
-    height: max-content;
-    padding: 10px;
+    margin: 10px;
   }
 }
 
 .accordion-wrapper {
   margin-top: 50px;
-  padding: 30px;
 
   @media screen and (max-width: 768px) {
     padding: 0;
-
     margin-bottom: 30px;
   }
 }
 .accordion {
-  margin-top: 30px;
-  padding: 10px 20px;
+  margin-bottom: 30px;
+  padding: 10px;
   border-top: 3px solid #c7c7c7;
   border-bottom: 3px solid #c7c7c7;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+  }
 
   &-header {
     display: flex;
@@ -237,11 +242,13 @@
     cursor: pointer;
     padding: 10px 0;
 
+
     &__title {
       margin-right: auto;
+      font-size: 26px;
 
       @media screen and (max-width: 768px) {
-        font-size: 22px;
+        font-size: 20px;
       }
     }
 
@@ -251,16 +258,30 @@
       @media screen and (max-width: 768px) {
         font-size: 18px;
       }
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
 
     &__image {
       margin: 0 20px;
       position: relative;
 
+      img{
+        @media screen and (max-width: 768px) {
+          width: 20px;
+        }
+      }
+
       .minus-button {
         position: absolute;
         transform: translateX(-36px);
         transition: all 0.5s ease;
+
+        @media screen and (max-width: 768px) {
+          transform: translateX(-20px);
+        }
       }
     }
   }
@@ -268,9 +289,13 @@
   &-content {
     position: relative;
     overflow: hidden;
-
     transition: all 0.5s ease;
     height: 0;
+    width: 80%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     p {
       width: 100%;
