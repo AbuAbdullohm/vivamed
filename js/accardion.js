@@ -7,7 +7,6 @@ const sticky = header.offsetTop;
 
 function myFunction() {
   const mainWrapper = document.querySelector(".main-wrapper");
-  // const aboutPage = document.querySelector(".about");
 
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
@@ -21,12 +20,11 @@ function myFunction() {
 const accordion = document.querySelectorAll(".accordion");
 
 accordion.forEach((item, index) => {
-  let header = item.querySelector(".accordion-header");
+  const header = item.querySelector(".accordion-header");
   header.addEventListener("click", () => {
     item.classList.toggle("open");
 
     let myContent = item.querySelector(".accordion-content");
-    let plusBtn = item.querySelector(".icon-plus");
 
     if (item.classList.contains("open")) {
       myContent.style.height = `${myContent.scrollHeight + 10}px`;

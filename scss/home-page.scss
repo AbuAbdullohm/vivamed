@@ -2,9 +2,11 @@
 @import "header";
 @import "footer";
 
+
 .main-wrapper {
   width: 100%;
   background-color: #01a1b7;
+  transition: all 1 linear;
 }
 
 .main {
@@ -21,7 +23,7 @@
   @media screen and (max-width: 768px) {
     height: 400px;
   }
-  
+
   @media screen and (max-width: 500px) {
     height: 500px;
   }

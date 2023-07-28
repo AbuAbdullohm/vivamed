@@ -2,6 +2,7 @@
 @import "header";
 @import "footer";
 
+
 .about {
   margin-top: 30px;
 
@@ -146,8 +147,8 @@
   padding-bottom: 50px;
 
   &-title {
-    font-family: "Montserrat" sans-serif;
-    font-size: 32px;
+    font-family: "Montserrat";
+    font-size: 36px;
     font-weight: 700;
 
     @media screen and (max-width: 768px) {
@@ -166,10 +167,15 @@
   &-text {
     margin-top: 50px;
     font-family: "Montserrat" sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25px;
     opacity: 0.8;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -188,8 +194,8 @@
     }
 
     &-image {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -202,8 +208,8 @@
       }
 
       img {
-        width: 50%;
-        height: 50%;
+        width: 48px;
+        height: 48px;
       }
     }
 
@@ -217,15 +223,15 @@
 
       &__title {
         font-family: "Montserrat" sans-serif;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 700;
       }
 
       &__text {
-        width: 70%;
         font-family: Montserrat;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 500;
+        line-height: 26px;
 
         @media screen and (max-width: 768px) {
           width: 100%;
@@ -263,13 +269,12 @@
   }
 
   &__text {
-    width: 70%;
-    margin-top: 20px;
+    width: 90%;
     color: #fff;
     font-family: "Montserrat" sans-serif;
-    font-size: 18px;
     font-weight: 500;
-    line-height: 25px;
+    font-size: 24px;
+    line-height: 38px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -280,8 +285,8 @@
     margin-top: 20px;
     color: #fff;
     font-family: "Montserrat" sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 25px;
   }
 }
@@ -414,8 +419,12 @@
 .recomendation {
   &-title {
     font-family: "Montserrat" sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
+
+    @media screen and (max-width:768px){
+      font-size: 28px;
+    }
   }
 
   &-card {
@@ -424,7 +433,7 @@
     justify-content: space-between;
 
     @media screen and (max-width: 768px) {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
   }
 
@@ -441,7 +450,7 @@
     box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
 
     @media screen and (max-width: 768px) {
-      width: 50%;
+      width: 80%;
     }
 
     @media screen and (max-width: 500px) {
@@ -468,7 +477,7 @@
       margin-top: 20px;
       text-align: center;
       font-family: "Montserrat" sans-serif;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       line-height: 22px;
     }

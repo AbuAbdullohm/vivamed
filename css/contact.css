@@ -30,6 +30,10 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+button {
+  cursor: pointer;
+}
+
 .header-wrapper {
   width: 100%;
   background: rgba(1, 161, 183, 0.05);
@@ -42,10 +46,6 @@ a {
     position: fixed;
     top: 0;
   }
-}
-
-.header.sticky {
-  padding-bottom: 30px;
 }
 
 .header {
@@ -130,10 +130,11 @@ a {
 }
 
 .header-links__wrapper {
+  position: relative;
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  z-index: 999;
+  z-index: 99;
 }
 
 .sticky {
@@ -141,6 +142,12 @@ a {
   top: 0;
   width: 100%;
   transition: bottom 0.5s ease;
+  z-index: 999;
+}
+@media screen and (max-width: 1024px) {
+  .sticky {
+    margin-top: 78px;
+  }
 }
 
 .header-links {
@@ -179,12 +186,10 @@ a {
     margin-right: 10px;
   }
 }
-.header-links .navigation-links li .active {
-  transition: all 2s ease-out;
-}
 .header-links .navigation-links li .menu-link {
   position: relative;
   padding-bottom: 7px;
+  transition: all 0.5s ease-in-out;
 }
 .header-links .navigation-links li .menu-link::before {
   content: "";
@@ -193,7 +198,10 @@ a {
   width: 0;
   height: 3px;
   background: #f4c93f;
-  transition: all 0.5s linear;
+  transition: all 0.5s ease-in-out;
+}
+.header-links .navigation-links li .menu-link::before {
+  transition: all 0.5s ease-in-out;
 }
 .header-links .navigation-links li:hover a {
   color: #01a1b7;
@@ -680,6 +688,9 @@ a {
 .contact-section__inform .inform-social a {
   margin-bottom: 5px;
 }
+.contact-section__inform .inform-social a:hover {
+  color: #01a1b7;
+}
 .contact-section__numbers {
   margin-top: 30px;
 }
@@ -768,6 +779,10 @@ a {
   border-radius: 10px;
   background: #01a1b7;
   color: #ffffff;
+  transition: 0.5s;
+}
+.contact-form .form-buttons .submit:hover {
+  background: #2f00ff;
 }
 @media screen and (max-width: 500px) {
   .contact-form .form-buttons .submit {
