@@ -7,7 +7,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 500px;
+    width: 39%;
     pointer-events: none;
 
     @media screen and (max-width: 768px) {
@@ -18,8 +18,7 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 76px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -34,7 +33,7 @@
     }
 
     img {
-      margin-bottom: 50px;
+      margin-bottom: 80px;
 
       @media screen and (max-width: 768px) {
         margin-bottom: 20px;
@@ -43,7 +42,10 @@
 
     p {
       width: 75%;
-      line-height: 30px;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
 
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -52,8 +54,10 @@
   }
 
   &-pages {
+    margin-left: 10%;
     @media screen and (max-width: 768px) {
       margin-bottom: 20px;
+      margin-left: 0;
     }
 
     &__title {
@@ -71,14 +75,25 @@
     }
 
     &__links {
-      margin-top: 30px;
+      margin-top: 45px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+      li {
+        margin-top: 10px;
+        @media screen and (max-width: 768px) {
+          margin-top: 0;
+        }
+      }
       a {
-        line-height: 25px;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
         color: rgba(255, 255, 255, 0.7);
 
         &:hover {
           color: #ffffff;
-          font-weight: 500;
         }
 
         @media screen and (max-width: 768px) {
@@ -89,8 +104,10 @@
   }
 
   &-specialists {
+    margin-left: 10%;
     @media screen and (max-width: 768px) {
       margin-bottom: 20px;
+      margin-left: 0;
     }
 
     &__title {
@@ -110,13 +127,26 @@
     &__links {
       margin-top: 30px;
       padding: 5px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+
+      li {
+        margin-top: 10px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 0;
+        }
+      }
       a {
-        line-height: 25px;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
         color: rgba(255, 255, 255, 0.7);
 
         &:hover {
           color: #ffffff;
-          font-weight: 500;
         }
 
         @media screen and (max-width: 768px) {
@@ -127,6 +157,12 @@
   }
 
   &-social {
+    margin-left: 10%;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+
     &__title {
       font-size: 20px;
       color: #ffffff;
@@ -142,19 +178,31 @@
     }
 
     &__links {
-      margin-top: 30px;
+      margin-top: 45px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 0;
+        }
+      }
 
       a {
-        line-height: 25px;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
         color: rgba(255, 255, 255, 0.7);
 
         &:hover {
           color: #ffffff;
-          font-weight: 500;
         }
 
         @media screen and (max-width: 768px) {
-          line-height: 30px;
+          line-height: 20px;
         }
       }
     }
@@ -164,7 +212,7 @@
 .footer-rteco__logo {
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 115px;
   padding-bottom: 20px;
   color: #ffffff;
 
@@ -188,7 +236,7 @@
 
   .rteco-logo {
     position: relative;
-    margin-left: 350px;
+    margin-left: 310px;
     cursor: pointer;
 
     @media screen and (max-width: 768px) {

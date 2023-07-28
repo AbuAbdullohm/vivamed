@@ -213,7 +213,7 @@
   }
 
   .accordion-content {
-    margin: 10px;
+    box-sizing: border-box;
   }
 }
 
@@ -225,6 +225,7 @@
     margin-bottom: 30px;
   }
 }
+
 .accordion {
   margin-bottom: 30px;
   padding: 10px;
@@ -242,7 +243,6 @@
     cursor: pointer;
     padding: 10px 0;
 
-
     &__title {
       margin-right: auto;
       font-size: 26px;
@@ -254,6 +254,7 @@
 
     h2 {
       font-size: 28px;
+      margin-right: 36px;
 
       @media screen and (max-width: 768px) {
         font-size: 18px;
@@ -264,23 +265,36 @@
       }
     }
 
-    &__image {
+    &__icon {
       margin: 0 20px;
       position: relative;
+      color: #01a1b7;
 
-      img{
-        @media screen and (max-width: 768px) {
-          width: 20px;
+      .icon-plus {
+        position: relative;
+        width: 38px;
+        height: 38px;
+        border: 3px solid #01a1b7;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        justify-content: center;
+
+        .plus {
+          position: absolute;
+          width: 4px;
+          height: 20px;
+          border-radius: 5px;
+          background: #01a1b7;
+          transition: all 0.5s linear;
         }
-      }
 
-      .minus-button {
-        position: absolute;
-        transform: translateX(-36px);
-        transition: all 0.5s ease;
-
-        @media screen and (max-width: 768px) {
-          transform: translateX(-20px);
+        .minus {
+          width: 20px;
+          height: 4px;
+          border-radius: 5px;
+          background: #01a1b7;
         }
       }
     }
@@ -292,6 +306,7 @@
     transition: all 0.5s ease;
     height: 0;
     width: 80%;
+    padding: 0 10px 0;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -306,3 +321,4 @@
     }
   }
 }
+

@@ -2,14 +2,19 @@ window.onscroll = function () {
   myFunction();
 };
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+const header = document.getElementById("myHeader");
+const sticky = header.offsetTop;
 
 function myFunction() {
+  const mainWrapper = document.querySelector(".main-wrapper");
+  // const aboutPage = document.querySelector(".about");
+
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    mainWrapper.style.paddingTop = "65px";
   } else {
     header.classList.remove("sticky");
+    mainWrapper.style.paddingTop = "0";
   }
 }
 
@@ -21,14 +26,15 @@ accordion.forEach((item, index) => {
     item.classList.toggle("open");
 
     let myContent = item.querySelector(".accordion-content");
-    let plusBtn = item.querySelector(".plus-button");
+    let plusBtn = item.querySelector(".icon-plus");
 
     if (item.classList.contains("open")) {
-      myContent.style.height = `${myContent.scrollHeight}px`;
-    } else {
-      myContent.style.height = "0px";
-    }
+      myContent.style.height = `${myContent.scrollHeight + 10}px`;
 
-    console.log(myContent);
+      item.querySelector(".plus").style.transform = "rotate(90deg)";
+    } else {
+      myContent.style.height = "0";
+      item.querySelector(".plus").style.transform = "rotate(0)";
+    }
   });
 });

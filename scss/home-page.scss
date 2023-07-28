@@ -5,34 +5,63 @@
 .main-wrapper {
   width: 100%;
   background-color: #01a1b7;
-
-  @media screen and (max-width: 768px) {
-    padding-top: 60px;
-  }
 }
 
 .main {
+  height: 800px;
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  transition: padding-top 1s linear;
+
+  @media screen and (max-width: 1100px) {
+    padding-top: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    height: 500px;
+  }
 
   &-content {
-    padding-top: 80px;
+    padding-top: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 50px;
+    }
 
     &__title {
-      width: 80%;
-      font-size: 50px;
       color: #ffffff;
+      font-family: Montserrat;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 68px;
 
+      @media screen and (max-width: 1100px) {
+        width: 90%;
+        font-size: 50px;
+        line-height: 60px;
+      }
       @media screen and (max-width: 768px) {
         width: 90%;
-        font-size: 35px;
+        font-size: 36px;
+        line-height: 40px;
       }
     }
 
     &__text {
       width: 50%;
       margin-top: 20px;
-      font-size: 20px;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 38px;
       color: rgba(255, 255, 255, 0.5);
 
       @media screen and (max-width: 768px) {
@@ -40,23 +69,17 @@
         line-height: 30px;
       }
     }
-  }
-
-  &-image {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media screen and (max-width: 500px) {
-      width: 100%;
-    }
 
     .place-for-pagination {
       display: flex;
       align-items: center;
       color: #ffffff;
       cursor: pointer;
+      margin-top: 320px;
 
+      @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+      }
       @media screen and (max-width: 768px) {
         width: 100%;
         margin-top: 20px;
@@ -64,7 +87,7 @@
       }
 
       p {
-        padding: 10px;
+        padding: 10px 20px;
         display: flex;
         align-items: center;
         font-size: 24px;
@@ -73,24 +96,51 @@
 
       .line {
         display: block;
-        width: 200px;
+        width: 300px;
         height: 3px;
         background: #ffffff;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 30px;
+        margin-right: 40px;
+
+        @media screen and (max-width: 1400px) {
+          width: 200px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 200px;
+        }
+        @media screen and (max-width: 1400px) {
+          width: 100px;
+        }
       }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
     }
 
     &__img {
-      width: 60%;
-      transform: translateY(4px);
+      display: flex;
+      justify-content: flex-end;
 
       @media screen and (max-width: 768px) {
         display: none;
       }
 
       img {
-        width: 100%;
+        width: 95%;
+
+        @media screen and (max-width: 1400px) {
+          width: 70%;
+        }
       }
     }
   }
@@ -114,7 +164,7 @@
 
   &-card {
     width: 20%;
-    padding: 10px;
+    padding: 20px 0 40px 40px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -123,38 +173,60 @@
     }
 
     img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
     }
 
     .card-title {
-      font-size: 30px;
+      font-family: "Montserrat";
+      font-size: 36px;
+      font-weight: 700;
       color: #01a1b7;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .card-text {
-      font-size: 14px;
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
       color: #01a1b7;
-      width: 80%;
     }
   }
 }
 
 .services {
-  margin-top: 50px;
+  margin-top: 100px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
+
+  &-title {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
+  }
 
   &-text {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
     margin-top: 20px;
-    font-size: 20px;
     width: 50%;
     color: rgba(0, 0, 0, 0.5);
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1100px) {
       width: 100%;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 25px;
       font-weight: 600;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
     }
   }
 
@@ -162,7 +234,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 100px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+    }
 
     .card-wrapper {
       width: 300px;
@@ -171,13 +247,15 @@
       justify-content: center;
       border-radius: 10px;
       background-color: #f4f4f4;
-      margin-top: 30px;
+      margin-bottom: 30px;
       transition: all 0.5s ease-in-out;
       cursor: pointer;
 
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
       @media screen and (max-width: 500px) {
         width: 100%;
-        margin-top: 20px;
       }
 
       a {
@@ -228,23 +306,31 @@
 }
 
 .specialists-wrapper {
-  margin-top: 50px;
+  margin-top: 95px;
   display: flex;
   align-items: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 50px;
   }
 
   .specialists {
     &-title {
+      font-family: "Montserrat";
+      font-size: 36px;
+      font-weight: 700;
+
       @media screen and (max-width: 768px) {
         font-size: 25px;
       }
     }
     &-text {
-      margin-top: 20px;
+      font-family: "Montserrat";
       font-size: 24px;
+      font-weight: 500;
+      line-height: 38px;
+      margin-top: 20px;
       color: rgba(0, 0, 0, 0.5);
 
       @media screen and (max-width: 768px) {
@@ -253,8 +339,7 @@
     }
 
     &-types {
-      margin-top: 50px;
-      font-size: 20px;
+      margin-top: 60px;
 
       @media screen and (max-width: 768px) {
         margin-top: 20px;
@@ -271,9 +356,11 @@
       }
 
       li {
+        font-family: Montserrat;
+        font-size: 24px;
         font-size: 24px;
         font-weight: 500;
-        line-height: 37px;
+        line-height: 49px;
         cursor: pointer;
 
         @media screen and (max-width: 768px) {
@@ -286,7 +373,7 @@
   }
 
   .specialists-image {
-    width: 80%;
+    width: 100%;
     align-self: center;
 
     @media screen and (max-width: 768px) {
@@ -302,9 +389,13 @@
 
 .advantages-wrapper {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 90px;
   padding-bottom: 50px;
   background-color: rgba(197, 198, 198, 0.1);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 
   .container {
     @media screen and (max-width: 768px) {
@@ -318,10 +409,25 @@
 }
 
 .advantages {
-  padding-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 50px;
+  }
+
+  &-title {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
+  }
 
   &-text {
-    width: 30%;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+    width: 35%;
     margin-top: 20px;
     color: rgba(0, 0, 0, 0.5);
 
@@ -331,16 +437,18 @@
   }
 
   &-content {
-    margin-top: 50px;
+    margin-top: 85px;
+
     display: flex;
     z-index: 1;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
+      margin-top: 50px;
     }
 
     &__list {
-      width: 40%;
+      width: 50%;
 
       @media screen and (max-width: 500px) {
         max-width: 300px;
@@ -353,11 +461,17 @@
       }
 
       li {
+        font-family: Montserrat;
+        font-size: 20px;
         font-weight: 500;
-        padding: 15px 0 15px 20px;
+        padding: 20px 0 20px 30px;
 
         @media screen and (max-width: 768px) {
           padding: 0 10px;
+        }
+
+        p {
+          width: 80%;
         }
       }
 
@@ -374,8 +488,14 @@
     &__text {
       position: relative;
       width: 65%;
-      padding: 30px;
+      padding: 50px 30px 0 30px;
       background-color: #ffffff;
+
+      h1 {
+        font-family: "Montserrat";
+        font-size: 32px;
+        font-weight: 700;
+      }
 
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -384,10 +504,12 @@
       }
 
       p {
-        width: 50%;
-        margin-top: 20px;
+        width: 70%;
+        font-family: Montserrat;
+        font-size: 20px;
         font-weight: 500;
-        line-height: 25px;
+        line-height: 31px;
+        margin-top: 20px;
 
         @media screen and (max-width: 768px) {
           width: 100%;
@@ -408,61 +530,76 @@
 }
 
 .partners {
-  margin-top: 50px;
+  margin-top: 100px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 
   &-title {
-    font-size: 25px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
   }
 
   &-logo {
-    margin-top: 50px;
+    margin-top: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+      flex-direction: column;
+    }
+
     @media screen and (max-width: 500px) {
-      width: 300px;
-      flex-wrap: nowrap;
       overflow-y: auto;
       overflow-wrap: normal;
       padding: 30px 0;
     }
 
     &__img {
-      padding: 15px 100px;
+      padding: 25px 140px;
       border-radius: 5px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       img {
-        width: 70px;
+        width: 96px;
       }
     }
   }
 }
 
 .licenses {
-  margin-top: 50px;
+  margin-top: 100px;
 
-  &-title {
-    font-size: 25px;
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
   }
 
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+  &-title {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
+  }
 
-    @media screen and (max-width: 500px) {
-      width: 300px;
-      overflow-y: auto;
+  .swiper {
+    margin-top: 100px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
     }
 
-    img {
-      width: 22%;
+    &-wrapper {
+      padding: 0 50px;
+      display: flex;
+    }
 
-      @media screen and (max-width: 500px) {
-        width: 80%;
-      }
+    &-button-prev,
+    &-button-next {
+      color: #000000;
     }
   }
 
@@ -502,9 +639,12 @@
 
 .request-wrapper {
   width: 100%;
-  margin-top: 150px;
+  margin-top: 345px;
   background-color: #f4c93f;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
   @media screen and (max-width: 500px) {
     margin-top: 30px;
   }
@@ -512,44 +652,65 @@
 
 .request {
   display: flex;
-  height: 300px;
+  height: 435px;
   justify-content: space-between;
 
   @media screen and (max-width: 1100px) {
     justify-content: space-evenly;
   }
-  @media screen and (max-width: 1100px) {
-    justify-content: flex-start;
+  @media screen and (max-width: 768px) {
+    height: 320px;
   }
 
   &-content {
     margin-top: 50px;
     width: 40%;
 
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-top: 10px;
-    }
     @media screen and (max-width: 1100px) {
       width: 70%;
     }
 
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin-top: 10px;
+    }
+
+    &__title {
+      margin-top: 50px;
+      font-family: "Montserrat";
+      font-size: 36px;
+      font-weight: 700;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+    }
+
     &__subtitle {
-      font-size: 20px;
+      font-family: "Montserrat";
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 38px;
       margin-top: 20px;
-      width: 100%;
       color: rgba(0, 0, 0, 0.5);
     }
 
     &__btn {
+      font-family: "Montserrat";
       font-size: 18px;
-      margin-top: 30px;
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 65px;
       padding: 10px 20px;
       border-radius: 10px;
       color: #ffffff;
       background-color: transparent;
       border: 1px solid #ffffff;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -567,9 +728,9 @@
     }
 
     img {
+      position: absolute;
       height: 130%;
       bottom: 0;
-      position: absolute;
     }
   }
 }

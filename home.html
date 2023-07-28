@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/home-page.css" />
     <title>Home</title>
   </head>
@@ -41,14 +45,16 @@
     <div class="header-links__wrapper" id="myHeader">
       <div class="header-links container">
         <ul class="navigation-links">
-          <li><a href="./about-us.html">О нас</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#specialists">Врачи</a></li>
-          <li><a href="./diagnostics.html">Диагностика</a></li>
-          <li><a href="./labaratory.html">Лабаратория</a></li>
-          <li><a href="./sales.html">Акции</a></li>
-          <li><a href="./feedback.html">Отзывы</a></li>
-          <li><a href="./contact.html">Контакты</a></li>
+          <li><a class="menu-link" href="./about-us.html">О нас</a></li>
+          <li><a class="menu-link" href="#services">Услуги</a></li>
+          <li><a class="menu-link" href="#specialists">Врачи</a></li>
+          <li>
+            <a class="menu-link" href="./diagnostics.html">Диагностика</a>
+          </li>
+          <li><a class="menu-link" href="./labaratory.html">Лабаратория</a></li>
+          <li><a class="menu-link" href="./sales.html">Акции</a></li>
+          <li><a class="menu-link" href="./feedback.html">Отзывы</a></li>
+          <li><a class="menu-link" href="./contact.html">Контакты</a></li>
         </ul>
         <div class="navigation-input">
           <img src="./images/icon-search.png" alt="search icon" />
@@ -75,8 +81,6 @@
             По всем направлением наши спецалисты готовы помочь и ответить на все
             ваши вопросы
           </p>
-        </div>
-        <div class="main-image">
           <div class="place-for-pagination">
             <svg
               width="14"
@@ -109,6 +113,8 @@
               />
             </svg>
           </div>
+        </div>
+        <div class="main-image">
           <div class="main-image__img">
             <img src="./images/home/image-1.png" alt="image 1" />
           </div>
@@ -506,13 +512,13 @@
         </p>
         <div class="advantages-content">
           <ul class="advantages-content__list">
-            <li >1 .Профессионализм</li>
-            <li class="active">2 .Широкий спектр услуг</li>
-            <li>3 .Современное оборудование</li>
-            <li>4 .Высокий уровень обслуживания</li>
-            <li>5 .Постоянное развитие в научно-практической сфере</li>
-            <li>6 .Акции и специальные предложения</li>
-            <li>7 .Терапевтическое и хирургические стационары</li>
+            <li class="active"><p>1 .Профессионализм</p></li>
+            <li><p>2 .Широкий спектр услуг</p></li>
+            <li><p>3 .Современное оборудование</p></li>
+            <li><p>4 .Высокий уровень обслуживания</p></li>
+            <li><p>5 .Постоянное развитие в научно-практической сфере</p></li>
+            <li><p>6 .Акции и специальные предложения</p></li>
+            <li><p>7 .Терапевтическое и хирургические стационары</p></li>
           </ul>
           <div class="advantages-content__text">
             <h1>Наши услуги</h1>
@@ -531,9 +537,12 @@
       </div>
     </div>
 
-    <div class="partners container">
-      <h1 class="partners-title">Партнёры</h1>
+    <div class="partners ">
+      <h1 class="partners-title container">Партнёры</h1>
       <div class="partners-logo">
+        <div class="partners-logo__img">
+          <img src="./images/home/starbucks-logo.png" alt="starbucks-logo" />
+        </div>
         <div class="partners-logo__img">
           <img src="./images/home/starbucks-logo.png" alt="starbucks-logo" />
         </div>
@@ -551,43 +560,30 @@
 
     <div class="licenses container">
       <h1 class="licenses-title">Лицензии и сертификаты</h1>
-      <div class="licenses-content">
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-      </div>
-      <div class="place-for-pagination">
-        <svg
-          width="14"
-          height="22"
-          viewBox="0 0 14 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="Vector 2"
-            d="M12 2L3 11L12 20"
-            stroke="white"
-            stroke-width="3"
-          />
-        </svg>
 
-        <p>12 <span class="line"></span>19</p>
-        <svg
-          width="14"
-          height="22"
-          viewBox="0 0 14 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="Vector 3"
-            d="M2 2L11 11L2 20"
-            stroke="white"
-            stroke-width="3"
-          />
-        </svg>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/home/certificate.png" alt="certificate" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/certificate.png" alt="certificate" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/certificate.png" alt="certificate" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/certificate.png" alt="certificate" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./images/home/certificate.png" alt="certificate" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
 
@@ -692,5 +688,21 @@
     </div>
 
     <script src="./js/accardion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 4,
+
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
