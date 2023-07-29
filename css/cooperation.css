@@ -128,6 +128,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-mobicon {
+    width: 30px;
+  }
+}
 
 .header-links__wrapper {
   position: relative;
@@ -348,7 +353,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-pages__links {
@@ -399,7 +404,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-specialists__links {
@@ -450,7 +455,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-social__links {
@@ -541,7 +546,7 @@ button {
 }
 
 .cooperation-page__title {
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -553,14 +558,25 @@ button {
 }
 
 .cooperation {
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.cooperation-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1100px) {
+  .cooperation-title {
+    font-size: 28px;
+  }
 }
 .cooperation-text {
-  margin-top: 30px;
-  width: 60%;
-  font-size: 20px;
+  margin-top: 50px;
+  font-family: "Montserrat";
+  font-size: 24px;
   font-weight: 500;
   line-height: 38px;
+  width: 70%;
   opacity: 0.7;
 }
 @media screen and (max-width: 1100px) {
@@ -568,17 +584,26 @@ button {
     width: 90%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .cooperation-text {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 30px;
     margin-top: 10px;
   }
 }
 
+.cooperation-form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1100px) {
+  .cooperation-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 .cooperation-form .form {
-  margin-top: 30px;
-  padding: 30px 50px;
+  padding: 40px;
   border-radius: 10px;
   background: rgba(197, 198, 198, 0.2);
 }
@@ -593,16 +618,16 @@ button {
   }
 }
 .cooperation-form .form-title {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .cooperation-form .form-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 .cooperation-form .form-input {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -613,35 +638,44 @@ button {
   }
 }
 .cooperation-form .form-input__name {
-  width: 48%;
-  height: 50px;
-  font-size: 16px;
+  width: 45%;
+  height: 52px;
+  font-family: "Montserrat";
+  font-size: 20px;
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .cooperation-form .form-input__name {
     width: 100%;
     margin-bottom: 50px;
+    font-size: 16px;
   }
 }
 .cooperation-form .form-input__phone {
   width: 48%;
   height: 50px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .cooperation-form .form-input__phone {
     width: 100%;
     margin-bottom: 20px;
+    font-size: 16px;
   }
 }
 .cooperation-form .form-input__message {
-  margin-top: 50px;
+  margin-top: 65px;
   width: 100%;
-  height: 100px;
-  font-size: 16px;
+  height: 115px;
+  font-size: 20px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .cooperation-form .form-input__message {
+    font-size: 16px;
+    margin-top: 30px;
+  }
 }
 .cooperation-form .form-input__message textarea {
   width: 100%;
@@ -654,11 +688,14 @@ button {
   outline: none;
   resize: none;
   opacity: 0.7;
+  font-size: 18px;
 }
 .cooperation-form .form-input input {
   margin-top: 10px;
   width: 100%;
   height: 100%;
+  font-family: "Montserrat" sans-serif;
+  font-size: 18px;
   padding: 5px 15px;
   outline: none;
   border-radius: 10px;
@@ -674,7 +711,7 @@ button {
 }
 .cooperation-form .form-button {
   display: flex;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 @media screen and (max-width: 500px) {
   .cooperation-form .form-button {
@@ -685,11 +722,10 @@ button {
 .cooperation-form .form-button__submit button {
   background: #01a1b7;
   border-radius: 10px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   border: none;
-  font-weight: 700;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   color: #ffffff;
 }
@@ -703,8 +739,8 @@ button {
   font-size: 16px;
   line-height: 20px;
   border: 2px solid #000;
-  margin: 0 0 0 20px;
-  padding: 9px 20px;
+  margin-left: 10px;
+  padding: 5px 20px;
 }
 @media screen and (max-width: 500px) {
   .cooperation-form .form-button__file {
@@ -721,65 +757,4 @@ button {
   right: 0;
   bottom: 0;
   cursor: pointer;
-}
-
-.licenses {
-  margin-top: 50px;
-}
-.licenses-title {
-  font-size: 25px;
-}
-.licenses-content {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-@media screen and (max-width: 500px) {
-  .licenses-content {
-    width: 300px;
-    overflow-y: auto;
-  }
-}
-.licenses-content img {
-  width: 22%;
-}
-@media screen and (max-width: 500px) {
-  .licenses-content img {
-    width: 80%;
-  }
-}
-.licenses .place-for-pagination {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  cursor: pointer;
-}
-@media screen and (max-width: 500px) {
-  .licenses .place-for-pagination {
-    margin-top: 30px;
-  }
-}
-.licenses .place-for-pagination svg path {
-  stroke: #000000;
-}
-.licenses .place-for-pagination p {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.licenses .place-for-pagination .line {
-  display: block;
-  width: 200px;
-  height: 2px;
-  background: #000000;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-@media screen and (max-width: 500px) {
-  .licenses .place-for-pagination .line {
-    width: 100px;
-  }
 }/*# sourceMappingURL=cooperation.css.map */

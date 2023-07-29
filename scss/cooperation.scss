@@ -3,7 +3,7 @@
 @import "footer";
 
 .cooperation-page__title {
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -16,31 +16,49 @@
 }
 
 .cooperation {
-  margin-top: 50px;
+  margin-top: 30px;
+
+  &-title {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
+
+    @media screen and (max-width: 1100px) {
+      font-size: 28px;
+    }
+  }
 
   &-text {
-    margin-top: 30px;
-    width: 60%;
-    font-size: 20px;
+    margin-top: 50px;
+    font-family: "Montserrat";
+    font-size: 24px;
     font-weight: 500;
     line-height: 38px;
+    width: 70%;
     opacity: 0.7;
 
     @media screen and (max-width: 1100px) {
       width: 90%;
     }
-    @media screen and (max-width: 500px) {
-      font-size: 16px;
-      line-height: 25px;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 30px;
       margin-top: 10px;
     }
   }
 }
 
 .cooperation-form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+  @media screen and (max-width: 1100px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .form {
-    margin-top: 30px;
-    padding: 30px 50px;
+    padding: 40px;
     border-radius: 10px;
     background: rgba(197, 198, 198, 0.2);
 
@@ -52,16 +70,17 @@
     }
 
     &-title {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
 
-      @media screen and (max-width: 500px) {
-        font-size: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
       }
     }
 
     &-input {
-      margin-top: 20px;
+      margin-top: 40px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,35 +90,43 @@
       }
 
       &__name {
-        width: 48%;
-        height: 50px;
-        font-size: 16px;
+        width: 45%;
+        height: 52px;
+        font-family: "Montserrat";
+        font-size: 20px;
         font-weight: 700;
 
         @media screen and (max-width: 768px) {
           width: 100%;
           margin-bottom: 50px;
+          font-size: 16px;
         }
       }
 
       &__phone {
         width: 48%;
         height: 50px;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
 
         @media screen and (max-width: 768px) {
           width: 100%;
           margin-bottom: 20px;
+          font-size: 16px;
         }
       }
 
       &__message {
-        margin-top: 50px;
+        margin-top: 65px;
         width: 100%;
-        height: 100px;
-        font-size: 16px;
+        height: 115px;
+        font-size: 20px;
         font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          margin-top: 30px;
+        }
 
         textarea {
           width: 100%;
@@ -112,6 +139,7 @@
           outline: none;
           resize: none;
           opacity: 0.7;
+          font-size: 18px;
         }
       }
 
@@ -119,6 +147,8 @@
         margin-top: 10px;
         width: 100%;
         height: 100%;
+        font-family: "Montserrat" sans-serif;
+        font-size: 18px;
         padding: 5px 15px;
         outline: none;
         border-radius: 10px;
@@ -134,7 +164,7 @@
 
     &-button {
       display: flex;
-      margin-top: 70px;
+      margin-top: 60px;
 
       @media screen and (max-width: 500px) {
         flex-direction: column;
@@ -145,11 +175,10 @@
         button {
           background: #01a1b7;
           border-radius: 10px;
-          padding: 15px 25px;
+          padding: 10px 25px;
           border: none;
-          font-weight: 700;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 700;
           cursor: pointer;
           color: #ffffff;
 
@@ -164,8 +193,8 @@
         font-size: 16px;
         line-height: 20px;
         border: 2px solid #000;
-        margin: 0 0 0 20px;
-        padding: 9px 20px;
+        margin-left: 10px;
+        padding: 5px 20px;
 
         @media screen and (max-width: 500px) {
           width: 100%;
@@ -182,70 +211,6 @@
           bottom: 0;
           cursor: pointer;
         }
-      }
-    }
-  }
-}
-
-.licenses {
-  margin-top: 50px;
-
-  &-title {
-    font-size: 25px;
-  }
-
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-
-    @media screen and (max-width: 500px) {
-      width: 300px;
-      overflow-y: auto;
-    }
-
-    img {
-      width: 22%;
-
-      @media screen and (max-width: 500px) {
-        width: 80%;
-      }
-    }
-  }
-
-  .place-for-pagination {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    cursor: pointer;
-
-    @media screen and (max-width: 500px) {
-      margin-top: 30px;
-    }
-
-    svg path {
-      stroke: #000000;
-    }
-
-    p {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .line {
-      display: block;
-      width: 200px;
-      height: 2px;
-      background: #000000;
-      margin-left: 15px;
-      margin-right: 15px;
-
-      @media screen and (max-width: 500px) {
-        width: 100px;
       }
     }
   }

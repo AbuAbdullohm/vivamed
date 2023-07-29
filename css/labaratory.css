@@ -128,6 +128,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-mobicon {
+    width: 30px;
+  }
+}
 
 .header-links__wrapper {
   position: relative;
@@ -348,7 +353,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-pages__links {
@@ -399,7 +404,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-specialists__links {
@@ -450,7 +455,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-social__links {
@@ -541,31 +546,42 @@ button {
 }
 
 .labaratory-page__title {
-  margin-top: 30px;
+  margin-top: 90px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
+@media screen and (max-width: 1100px) {
+  .labaratory-page__title {
+    margin-top: 100px;
+  }
+}
 .labaratory-page__title img {
   margin-right: 10px;
 }
 
 .labaratory {
-  margin-top: 50px;
+  margin-top: 35px;
+}
+.labaratory-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
 }
 .labaratory-content {
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
 }
 @media screen and (max-width: 1100px) {
   .labaratory-content {
     flex-direction: column;
+    margin-top: 30px;
   }
 }
 .labaratory-content__video {
-  width: 60%;
+  width: 50%;
 }
 @media screen and (max-width: 1100px) {
   .labaratory-content__video {
@@ -573,9 +589,9 @@ button {
   }
 }
 .labaratory-content__text {
-  width: 40%;
-  padding: 10px;
-  margin-left: 20px;
+  width: 50%;
+  padding: 5px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 1100px) {
   .labaratory-content__text {
@@ -599,13 +615,18 @@ button {
   position: relative;
   width: 100%;
   background: rgba(197, 198, 198, 0.1);
-  margin-top: 50px;
+  margin-top: 100px;
   padding-bottom: 50px;
+}
+@media screen and (max-width: 1100px) {
+  .analysis-wrapper {
+    margin-top: 50px;
+  }
 }
 .analysis-wrapper .analysis-image {
   position: absolute;
   right: 0;
-  top: 250px;
+  top: 420px;
   z-index: -1;
   display: flex;
   justify-content: flex-end;
@@ -616,11 +637,26 @@ button {
   }
 }
 .analysis-wrapper .analysis-image img {
-  width: 80%;
+  width: 100%;
 }
 
 .analysis {
-  padding-top: 50px;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1100px) {
+  .analysis {
+    padding-top: 50px;
+  }
+}
+.analysis-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .analysis-title {
+    font-size: 28px;
+  }
 }
 .analysis-types {
   display: flex;
@@ -644,12 +680,20 @@ button {
   }
 }
 .analysis-types .analysis-item li {
-  font-size: 16px;
+  margin-bottom: 15px;
+  font-family: "Montserrat";
+  font-size: 20px;
   font-weight: 500;
-  line-height: 37px;
-  opacity: 0.5;
+  line-height: 36.5px;
   text-transform: uppercase;
+  opacity: 0.5;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .analysis-types .analysis-item li {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
 }
 .analysis-types .analysis-item li:hover {
   opacity: 1;
@@ -657,15 +701,33 @@ button {
 }
 
 .licenses {
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 1100px) {
+  .licenses {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 .licenses-title {
-  font-size: 25px;
+  font-size: 36px;
+}
+@media screen and (max-width: 768px) {
+  .licenses-title {
+    width: 3px;
+    height: 15px;
+  }
 }
 .licenses-content {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1100px) {
+  .licenses-content {
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   .licenses-content {
@@ -682,11 +744,16 @@ button {
   }
 }
 .licenses .place-for-pagination {
-  margin-top: 50px;
+  margin-top: 110px;
   display: flex;
   align-items: center;
   color: #000000;
   cursor: pointer;
+}
+@media screen and (max-width: 11000px) {
+  .licenses .place-for-pagination {
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   .licenses .place-for-pagination {
@@ -713,13 +780,34 @@ button {
 }
 
 .analysis-description {
-  margin-top: 50px;
+  margin-top: 110px;
+}
+@media screen and (max-width: 1100px) {
+  .analysis-description {
+    margin-top: 50px;
+  }
+}
+.analysis-description .description-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .analysis-description .description-title {
+    font-size: 28px;
+  }
 }
 .analysis-description .description-text {
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   font-weight: 500;
+  padding: 10px;
+}
+@media screen and (max-width: 500px) {
+  .analysis-description .description-text {
+    font-size: 16px;
+  }
 }
 
 .open .accordion-header__price {
@@ -738,10 +826,12 @@ button {
 }
 
 .accordion-wrapper {
-  margin-top: 50px;
+  margin-top: 90px;
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 768px) {
   .accordion-wrapper {
+    margin-top: 50px;
     padding: 0;
     margin-bottom: 30px;
   }
@@ -749,9 +839,8 @@ button {
 
 .accordion {
   margin-bottom: 30px;
-  padding: 10px;
-  border-top: 3px solid #c7c7c7;
-  border-bottom: 3px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
 }
 @media screen and (max-width: 768px) {
   .accordion {
@@ -763,11 +852,17 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   cursor: pointer;
-  padding: 10px 0;
+  padding: 20px 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .accordion-header {
+    padding: 10px 0;
+  }
 }
 .accordion-header__title {
   margin-right: auto;
-  font-size: 26px;
+  font-size: 24px;
+  font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .accordion-header__title {
@@ -775,8 +870,9 @@ button {
   }
 }
 .accordion-header h2 {
-  font-size: 28px;
+  font-size: 24px;
   margin-right: 36px;
+  font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .accordion-header h2 {
@@ -804,6 +900,13 @@ button {
   font-size: 24px;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #01a1b7;
+  }
+}
 .accordion-header__icon .icon-plus .plus {
   position: absolute;
   width: 4px;
@@ -812,19 +915,30 @@ button {
   background: #01a1b7;
   transition: all 0.5s linear;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .plus {
+    width: 3px;
+    height: 15px;
+  }
+}
 .accordion-header__icon .icon-plus .minus {
   width: 20px;
   height: 4px;
   border-radius: 5px;
   background: #01a1b7;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .minus {
+    width: 15px;
+    height: 3px;
+  }
+}
 .accordion-content {
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
   height: 0;
-  width: 80%;
-  padding: 0 10px 0;
+  width: 55%;
 }
 @media screen and (max-width: 768px) {
   .accordion-content {
@@ -835,6 +949,7 @@ button {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
-  line-height: 31px;
+  line-height: 20px;
+  margin-bottom: 20px;
   opacity: 0.8;
 }/*# sourceMappingURL=labaratory.css.map */

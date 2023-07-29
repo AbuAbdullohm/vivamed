@@ -128,6 +128,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-mobicon {
+    width: 30px;
+  }
+}
 
 .header-links__wrapper {
   position: relative;
@@ -348,7 +353,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-pages__links {
@@ -399,7 +404,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-specialists__links {
@@ -450,7 +455,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-social__links {
@@ -541,7 +546,7 @@ button {
 }
 
 .diagnostics-page__title {
-  margin-top: 30px;
+  margin-top: 90px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -553,25 +558,37 @@ button {
 }
 
 .diagnostics {
-  margin-top: 50px;
+  margin-top: 40px;
 }
-.diagnosticstitle {
-  font-size: 32px;
+.diagnostics-title {
+  font-size: 36px;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .diagnostics-title {
+    font-size: 30px;
+  }
+}
 .diagnostics .inform {
+  height: 454px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 140px;
   border-radius: 20px;
   background: #01a1b7;
   display: flex;
-  justify-content: space-between;
-  padding: 30px 20px 0;
+  padding: 30px 15px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .diagnostics .inform {
     margin-top: 30px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 20px 10px;
   }
+}
+.diagnostics .inform-image {
+  width: 547px;
+  height: 390px;
 }
 .diagnostics .inform-image img {
   height: 110%;
@@ -589,7 +606,8 @@ button {
   }
 }
 .diagnostics .inform-content {
-  width: 50%;
+  width: 55%;
+  margin-left: 10px;
   padding-bottom: 50px;
 }
 @media screen and (max-width: 1100px) {
@@ -598,14 +616,19 @@ button {
   }
 }
 .diagnostics .inform-content__title {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  .diagnostics .inform-content__title {
+    font-size: 30px;
+  }
+}
 .diagnostics .inform-content__text {
-  width: 70%;
+  width: 90%;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 38px;
   color: #ffffff;
@@ -614,6 +637,11 @@ button {
 @media screen and (max-width: 1100px) {
   .diagnostics .inform-content__text {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .diagnostics .inform-content__text {
+    font-size: 18px;
   }
 }
 
@@ -639,10 +667,10 @@ button {
 }
 .equipments .equipment-item__image {
   position: relative;
-  height: 450px;
+  height: 518px;
   text-align: center;
   background-color: #c5c6c6;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }
 @media screen and (max-width: 100px) {
@@ -667,30 +695,33 @@ button {
 }
 .equipments .equipment-item__image--title {
   position: absolute;
-  bottom: 20px;
-  font-size: 22px;
+  bottom: 30px;
+  font-size: 24px;
   font-weight: 700;
 }
 .equipments .equipment-item__image:hover {
   background-color: #f4c93f;
 }
 .equipments .equipment-item__text {
+  width: 95%;
   margin-top: 30px;
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .licenses {
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 95px;
 }
 .licenses-title {
-  font-size: 25px;
+  font-size: 36px;
 }
 .licenses-content {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 500px) {
   .licenses-content {
@@ -707,7 +738,7 @@ button {
   }
 }
 .licenses .place-for-pagination {
-  margin-top: 50px;
+  margin-top: 110px;
   display: flex;
   align-items: center;
   color: #000000;
@@ -738,11 +769,21 @@ button {
 }
 
 .information {
-  margin-top: 30px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 500px) {
+  .information {
+    margin-top: 20px;
+  }
+}
+.information-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
 }
 @media screen and (max-width: 768px) {
-  .information {
-    margin-top: 80px;
+  .information-title {
+    font-size: 28px;
   }
 }
 .information-text {
@@ -755,16 +796,27 @@ button {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 768px) {
+  .information-text {
+    margin-top: 20px;
+  }
+}
 .information-text p {
-  width: 50%;
-  font-size: 20px;
+  width: 55%;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 38px;
   opacity: 0.5;
 }
 @media screen and (max-width: 1100px) {
   .information-text p {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .information-text p {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -774,8 +826,7 @@ button {
 }
 
 .information-box {
-  margin-top: 100px;
-  padding: 30px;
+  margin-top: 85px;
 }
 @media screen and (max-width: 768px) {
   .information-box {
@@ -785,7 +836,7 @@ button {
 }
 
 .open .accordion-content {
-  margin-top: 30px;
+  margin-top: 25px;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -799,9 +850,13 @@ button {
 }
 
 .accordion {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 3px solid #c7c7c7;
+  padding: 20px 0;
+  border-bottom: 1px solid #c7c7c7;
+}
+@media screen and (max-width: 1100px) {
+  .accordion {
+    padding: 10px 0;
+  }
 }
 .accordion-header {
   display: flex;
@@ -811,17 +866,19 @@ button {
 }
 .accordion-header__title {
   position: relative;
-  padding-left: 40px;
-  font-size: 28px;
+  padding-left: 35px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
 }
 @media screen and (max-width: 768px) {
   .accordion-header__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .accordion-header__title::before {
   position: absolute;
-  left: 20px;
+  left: 15px;
   top: 40%;
   content: "";
   width: 7px;
@@ -835,7 +892,6 @@ button {
   }
 }
 .accordion-header__icon {
-  margin: 0 20px;
   position: relative;
   color: #01a1b7;
 }
@@ -850,6 +906,13 @@ button {
   font-size: 24px;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #01a1b7;
+  }
+}
 .accordion-header__icon .icon-plus .plus {
   position: absolute;
   width: 4px;
@@ -858,11 +921,23 @@ button {
   background: #01a1b7;
   transition: all 0.5s linear;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .plus {
+    width: 3px;
+    height: 15px;
+  }
+}
 .accordion-header__icon .icon-plus .minus {
   width: 20px;
   height: 4px;
   border-radius: 5px;
   background: #01a1b7;
+}
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .minus {
+    width: 15px;
+    height: 3px;
+  }
 }
 .accordion-content {
   position: relative;
@@ -899,23 +974,33 @@ button {
 }
 
 .tool {
-  margin-top: 100px;
+  margin-top: 102px;
   margin-bottom: 100px;
 }
 @media screen and (max-width: 768px) {
   .tool {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.tool-title {
+  font-size: 36px;
+}
+@media screen and (max-width: 768px) {
+  .tool-title {
+    font-size: 28px;
   }
 }
 .tool .items-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
   .tool .items-wrapper {
     flex-direction: column;
+    margin-top: 50px;
   }
 }
 .tool .items-wrapper .item {
@@ -937,9 +1022,15 @@ button {
   }
 }
 .tool .items-wrapper .item-image {
-  width: 100%;
-  height: 300px;
-  text-align: center;
+  height: 325px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .tool .items-wrapper .item-image {
+    height: 250px;
+  }
 }
 .tool .items-wrapper .item-image img {
   width: 70%;
@@ -952,19 +1043,34 @@ button {
 .tool .items-wrapper .item-title {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 25px;
+  padding: 7px 30px;
   transform: translateX(-30px);
   color: #ffffff;
   background: #01a1b7;
   border-radius: 0 15px 15px 0;
 }
 .tool .items-wrapper .item-facts {
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
   padding-left: 15px;
 }
+@media screen and (max-width: 768px) {
+  .tool .items-wrapper .item-facts {
+    margin-top: 30px;
+  }
+}
 .tool .items-wrapper .item-facts li {
-  margin-top: 10px;
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media screen and (max-width: 768px) {
+  .tool .items-wrapper .item-facts li {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 .tool .items-wrapper .item-facts li::before {
   position: absolute;
@@ -972,17 +1078,22 @@ button {
   margin-top: 5px;
   transform: translateX(-20px);
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #01a1b7;
 }
 .tool .place-for-pagination {
-  margin-top: 50px;
+  margin-top: 95px;
   display: flex;
   align-items: center;
   color: #000000;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .tool .place-for-pagination {
+    margin-top: 20px;
+  }
 }
 .tool .place-for-pagination svg path {
   stroke: #000000;

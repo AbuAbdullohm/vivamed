@@ -128,6 +128,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-mobicon {
+    width: 30px;
+  }
+}
 
 .header-links__wrapper {
   position: relative;
@@ -348,7 +353,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-pages__links {
@@ -399,7 +404,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-specialists__links {
@@ -450,7 +455,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-social__links {
@@ -541,7 +546,7 @@ button {
 }
 
 .contact-page__title {
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -559,7 +564,7 @@ button {
 
 .contact-map {
   position: relative;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 @media screen and (max-width: 768px) {
   .contact-map {
@@ -570,34 +575,41 @@ button {
   transform: scale(0);
   transition: all 1s ease;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .contact-map__card {
-    transform: translateY(80px) scale(1);
+    transform: translateY(120px) scale(1);
   }
 }
 .contact-map:hover .contact-map__card {
   transform: translateY(-450px) scale(1);
 }
+@media screen and (max-width: 768px) {
+  .contact-map:hover .contact-map__card {
+    transform: translateY(120px) scale(1);
+  }
+}
 
 .contact-map__card .card {
   position: absolute;
-  top: -50px;
+  top: -90px;
   left: 50px;
   width: 495px;
-  height: 550px;
+  height: 625px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.15);
-  padding: 50px;
+  padding: 30px 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 768px) {
   .contact-map__card .card {
-    left: 20px;
-    width: 400px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    padding: 15px 20px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -606,15 +618,16 @@ button {
     width: 100%;
     left: 0;
     padding: 20px;
-    height: 400px;
   }
+}
+.contact-map__card .card-title {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
 }
 .contact-map__card .card-text {
   font-size: 20px;
   font-weight: 500;
-}
-.contact-map__card .card-text svg {
-  margin-right: 10px;
 }
 .contact-map__card .card-social a {
   margin-right: 30px;
@@ -624,14 +637,21 @@ button {
 }
 
 .contact {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 185px;
+  margin-bottom: 110px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .contact {
     flex-direction: column;
+    margin-top: 420px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -640,30 +660,45 @@ button {
   }
 }
 .contact-section__title {
-  font-size: 25px;
-  margin-bottom: 20px;
+  font-family: "Montserrat" sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .contact-section__title {
+    font-size: 28px;
+  }
 }
 .contact-section__text {
   width: 80%;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 38px;
+}
+@media screen and (max-width: 768px) {
+  .contact-section__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 .contact-section__inform {
-  display: flex;
-  margin-top: 30px;
+  width: 80%;
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 1100px) {
   .contact-section__inform {
     flex-direction: column;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
   .contact-section__inform {
     flex-direction: row;
     margin-bottom: 20px;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -674,10 +709,11 @@ button {
 .contact-section__inform .inform-title {
   font-size: 20px;
   font-weight: 700;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .contact-section__inform .inform-text {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 5px;
 }
@@ -686,18 +722,22 @@ button {
   flex-direction: column;
 }
 .contact-section__inform .inform-social a {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .contact-section__inform .inform-social a:hover {
   color: #01a1b7;
 }
 .contact-section__numbers {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .contact-section__numbers h1 {
   font-size: 24px;
   font-weight: 700;
   margin-top: 10px;
+}
+.contact-section__numbers h1 svg {
+  width: 24px;
+  height: 24px;
 }
 @media screen and (max-width: 500px) {
   .contact-section__numbers h1 {
@@ -705,7 +745,7 @@ button {
   }
 }
 .contact-form {
-  width: 40%;
+  width: 52%;
   padding: 40px;
   border-radius: 10px;
   background: rgba(197, 198, 198, 0.2);
@@ -722,21 +762,31 @@ button {
   }
 }
 .contact-form__title {
-  font-size: 24px;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .contact-form__title {
+    font-size: 28px;
+  }
+}
+.contact-form form {
+  margin-top: 50px;
 }
 .contact-form .form-input {
   display: flex;
   flex-direction: column;
-  height: 70px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .contact-form .form-input input {
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   outline: none;
-  height: 100%;
-  margin-top: 10px;
+  height: 56px;
+  margin-top: 15px;
+  font-size: 18px;
 }
 .contact-form .form-input input::-moz-placeholder {
   opacity: 0.7;
@@ -745,11 +795,11 @@ button {
   opacity: 0.7;
 }
 .contact-form label {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
 .contact-form .form-message {
-  height: 150px;
+  height: 210px;
 }
 .contact-form .form-message textarea {
   width: 100%;
@@ -760,11 +810,12 @@ button {
   padding: 15px;
   outline: none;
   resize: none;
+  font-size: 20px;
 }
 .contact-form .form-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 500px) {
   .contact-form .form-buttons {
@@ -772,8 +823,8 @@ button {
   }
 }
 .contact-form .form-buttons .submit {
-  width: 50%;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 15px 80px;
   font-weight: 700;
   border: none;
   border-radius: 10px;
@@ -793,8 +844,7 @@ button {
 }
 .contact-form .form-buttons .form-file {
   border: 2px solid #000;
-  padding: 5px;
-  font-size: 12px;
+  padding: 5px 20px;
   border-radius: 10px;
 }
 @media screen and (max-width: 500px) {
@@ -804,7 +854,7 @@ button {
   }
 }
 .contact-form .form-buttons .form-file label {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
 }
 .contact-form .form-buttons .form-file input {

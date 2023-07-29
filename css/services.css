@@ -128,6 +128,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-mobicon {
+    width: 30px;
+  }
+}
 
 .header-links__wrapper {
   position: relative;
@@ -348,7 +353,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-pages__links {
@@ -399,7 +404,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-specialists__links {
@@ -450,7 +455,7 @@ button {
   content: "";
   display: block;
   width: 35px;
-  height: 5px;
+  height: 3px;
   background: #f4c93f;
 }
 .footer-social__links {
@@ -541,7 +546,7 @@ button {
 }
 
 .services-page__title {
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -555,21 +560,43 @@ button {
 .information {
   margin-top: 30px;
 }
+.information-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1100px) {
+  .information-title {
+    font-size: 30px;
+  }
+}
 .information-text {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
 .information-text p {
-  font-size: 20px;
+  font-family: "Montserrat";
+  font-size: 24px;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 38px;
   opacity: 0.5;
+}
+@media screen and (max-width: 1100px) {
+  .information-text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .information-text p {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .information-box {
-  margin-top: 100px;
-  padding: 30px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .information-box {
@@ -577,7 +604,7 @@ button {
   }
 }
 .information-box .open .accordion-content {
-  margin-top: 20px;
+  margin-top: 30px;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -591,9 +618,13 @@ button {
 }
 
 .accordion {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 3px solid #c7c7c7;
+  padding: 20px 0;
+  border-bottom: 1px solid #c7c7c7;
+}
+@media screen and (max-width: 768px) {
+  .accordion {
+    padding: 10px 0;
+  }
 }
 .accordion-header {
   display: flex;
@@ -602,14 +633,25 @@ button {
   cursor: pointer;
 }
 .accordion-header__title {
+  width: 55%;
   position: relative;
   padding-left: 40px;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .accordion-header__title {
-    font-size: 24px;
-    padding-left: 20px;
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .accordion-header__title {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 .accordion-header__title::before {
@@ -622,13 +664,12 @@ button {
   background: #000000;
   border-radius: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .accordion-header__title::before {
-    left: 0;
+    left: 10px;
   }
 }
 .accordion-header__icon {
-  margin: 0 20px;
   position: relative;
   color: #01a1b7;
 }
@@ -643,6 +684,13 @@ button {
   font-size: 24px;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #01a1b7;
+  }
+}
 .accordion-header__icon .icon-plus .plus {
   position: absolute;
   width: 4px;
@@ -651,11 +699,23 @@ button {
   background: #01a1b7;
   transition: all 0.5s linear;
 }
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .plus {
+    width: 3px;
+    height: 15px;
+  }
+}
 .accordion-header__icon .icon-plus .minus {
   width: 20px;
   height: 4px;
   border-radius: 5px;
   background: #01a1b7;
+}
+@media screen and (max-width: 768px) {
+  .accordion-header__icon .icon-plus .minus {
+    width: 15px;
+    height: 3px;
+  }
 }
 .accordion-content {
   position: relative;
@@ -673,7 +733,6 @@ button {
   }
 }
 .accordion-content p {
-  width: 90%;
   font-size: 16px;
   font-weight: 500;
   line-height: 31px;
@@ -682,6 +741,8 @@ button {
 @media screen and (max-width: 768px) {
   .accordion-content p {
     width: 100%;
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 .accordion-content.accordion.active {
@@ -693,21 +754,37 @@ button {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1100px) {
+  .tool {
+    margin-top: 50px;
+  }
+}
+.tool-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1100px) {
+  .tool-title {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width: 500px) {
   .tool-title {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 .tool .items-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 100px;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1100px) {
   .tool .items-wrapper {
     flex-direction: column;
+    margin-top: 50px;
   }
 }
 .tool .items-wrapper .item {
@@ -719,7 +796,7 @@ button {
 }
 @media screen and (max-width: 1100px) {
   .tool .items-wrapper .item {
-    width: 50%;
+    width: 70%;
     margin-bottom: 30px;
   }
 }
@@ -736,16 +813,16 @@ button {
 }
 .tool .items-wrapper .item-image {
   width: 100%;
-  height: 300px;
+  height: 325px;
   text-align: center;
 }
 .tool .items-wrapper .item-image img {
   width: 70%;
-  height: 70%;
+  height: 100%;
 }
 @media screen and (max-width: 500px) {
   .tool .items-wrapper .item-image img {
-    height: 50%;
+    height: 90%;
   }
 }
 .tool .items-wrapper .item-image img:last-child {
@@ -755,19 +832,25 @@ button {
 .tool .items-wrapper .item-title {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 25px;
+  padding: 10px 20px;
   transform: translateX(-30px);
   color: #ffffff;
   background: #01a1b7;
   border-radius: 0 15px 15px 0;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 700;
 }
 .tool .items-wrapper .item-facts {
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
 }
 .tool .items-wrapper .item-facts li {
-  margin-top: 10px;
+  margin-bottom: 22px;
 }
 .tool .items-wrapper .item-facts li::before {
   position: absolute;
@@ -775,13 +858,13 @@ button {
   margin-top: 5px;
   transform: translateX(-20px);
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #01a1b7;
 }
 .tool .place-for-pagination {
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   align-items: center;
   color: #000000;
