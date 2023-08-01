@@ -3,7 +3,7 @@
 @import "footer";
 
 .cooperation-page__title {
-  margin-top: 100px;
+  margin-top: 40px;
   display: flex;
   align-items: flex-start;
   font-family: "Montserrat" sans-serif;
@@ -51,7 +51,7 @@
 .cooperation-form {
   margin-top: 100px;
   margin-bottom: 100px;
-  
+
   @media screen and (max-width: 1100px) {
     margin-top: 50px;
     margin-bottom: 50px;

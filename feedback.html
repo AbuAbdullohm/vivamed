@@ -468,5 +468,28 @@
     </div>
 
     <script src="./js/accardion.js"></script>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      const header = document.getElementById("myHeader");
+      const sticky = header.offsetTop;
+
+      function myFunction() {
+        const mainWrapper = document.querySelector(".main-wrapper");
+        const feedbackPage = document.querySelector(
+          ".feedback-page__title"
+        );
+
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          feedbackPage.style.paddingTop = "65px";
+        } else {
+          header.classList.remove("sticky");
+          feedbackPage.style.paddingTop = "0";
+        }
+      }
+    </script>
   </body>
 </html>

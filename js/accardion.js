@@ -1,22 +1,3 @@
-window.onscroll = function () {
-  myFunction();
-};
-
-const header = document.getElementById("myHeader");
-const sticky = header.offsetTop;
-
-function myFunction() {
-  const mainWrapper = document.querySelector(".main-wrapper");
-
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-    mainWrapper.style.paddingTop = "65px";
-  } else {
-    header.classList.remove("sticky");
-    mainWrapper.style.paddingTop = "0";
-  }
-}
-
 const accordion = document.querySelectorAll(".accordion");
 
 accordion.forEach((item, index) => {

@@ -43,7 +43,11 @@
           <li><a class="menu-link" href="./about-us.html">О нас</a></li>
           <li><a class="menu-link" href="./home.html#services">Услуги</a></li>
           <li><a class="menu-link" href="./home.html#specialists">Врачи</a></li>
-          <li><a class="menu-link active" class="active" href="./diagnostics.html">Диагностика</a></li>
+          <li>
+            <a class="menu-link active" class="active" href="./diagnostics.html"
+              >Диагностика</a
+            >
+          </li>
           <li><a class="menu-link" href="./labaratory.html">Лабаратория</a></li>
           <li><a class="menu-link" href="./sales.html">Акции</a></li>
           <li><a class="menu-link" href="./feedback.html">Отзывы</a></li>
@@ -274,6 +278,28 @@
       />
     </div>
 
-    <script src="./js/accardion.js"></script>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      const header = document.getElementById("myHeader");
+      const sticky = header.offsetTop;
+
+      function myFunction() {
+        const mainWrapper = document.querySelector(".main-wrapper");
+        const diagnosticsPage = document.querySelector(
+          ".diagnostics-page__title"
+        );
+
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          diagnosticsPage.style.paddingTop = "65px";
+        } else {
+          header.classList.remove("sticky");
+          diagnosticsPage.style.paddingTop = "0";
+        }
+      }
+    </script>
   </body>
 </html>

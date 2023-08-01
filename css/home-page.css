@@ -141,6 +141,12 @@ button {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   z-index: 99;
 }
+@media screen and (max-width: 1100px) {
+  .header-links__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
 .sticky {
   position: fixed;
@@ -148,11 +154,6 @@ button {
   width: 100%;
   transition: bottom 0.5s ease;
   z-index: 999;
-}
-@media screen and (max-width: 1024px) {
-  .sticky {
-    margin-top: 78px;
-  }
 }
 
 .header-links {
@@ -174,8 +175,8 @@ button {
 }
 @media screen and (max-width: 1100px) {
   .header-links .navigation-links {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
   }
 }
 .header-links .navigation-links li {
@@ -277,6 +278,27 @@ button {
 .header-links .navigation-language img {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.open-menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin-top: 75px;
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.open-menu .navigation-links {
+  margin-left: 20px;
+}
+.open-menu .navigation-links li {
+  margin-top: 20px;
+}
+.open-menu .navigation-input input {
+  width: 200px;
 }
 
 .footer-wrapper {
@@ -570,7 +592,8 @@ button {
 }
 @media screen and (max-width: 500px) {
   .main {
-    height: 500px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .main-content {
@@ -813,27 +836,16 @@ button {
 @media screen and (max-width: 500px) {
   .services-cards .card-wrapper {
     width: 100%;
+    text-align: center;
   }
 }
 .services-cards .card-wrapper a {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 500px) {
-  .services-cards .card-wrapper a {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 .services-cards .card-wrapper svg {
-  width: 70px;
-}
-@media screen and (max-width: 500px) {
-  .services-cards .card-wrapper svg {
-    width: 100%;
-  }
+  width: 90px;
 }
 .services-cards .card-wrapper p {
   font-weight: bold;
@@ -889,6 +901,7 @@ button {
 @media screen and (max-width: 768px) {
   .specialists-wrapper .specialists-text {
     font-size: 18px;
+    line-height: 25px;
   }
 }
 .specialists-wrapper .specialists-types {
@@ -897,17 +910,12 @@ button {
 @media screen and (max-width: 768px) {
   .specialists-wrapper .specialists-types {
     margin-top: 20px;
-    max-width: 500px;
-    display: flex;
-    overflow-y: auto;
   }
 }
 @media screen and (max-width: 500px) {
   .specialists-wrapper .specialists-types {
     margin-top: 20px;
     max-width: 400px;
-    display: flex;
-    overflow-y: auto;
   }
 }
 .specialists-wrapper .specialists-types li {
@@ -923,6 +931,7 @@ button {
     font-size: 20px;
     margin-right: 15px;
     padding-bottom: 10px;
+    line-height: 25px;
   }
 }
 .specialists-wrapper .specialists-image {
@@ -975,6 +984,11 @@ button {
   font-size: 36px;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .advantages-title {
+    font-size: 28px;
+  }
+}
 .advantages-text {
   font-family: Montserrat;
   font-size: 24px;
@@ -987,6 +1001,8 @@ button {
 @media screen and (max-width: 768px) {
   .advantages-text {
     width: 90%;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 .advantages-content {
@@ -1003,16 +1019,11 @@ button {
 .advantages-content__list {
   width: 50%;
 }
-@media screen and (max-width: 500px) {
-  .advantages-content__list {
-    max-width: 300px;
-  }
-}
 @media screen and (max-width: 768px) {
   .advantages-content__list {
-    width: 500px;
+    width: 100%;
     display: flex;
-    overflow-y: auto;
+    flex-direction: column;
   }
 }
 .advantages-content__list li {
@@ -1021,9 +1032,11 @@ button {
   font-weight: 500;
   padding: 20px 0 20px 30px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .advantages-content__list li {
-    padding: 0 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
   }
 }
 .advantages-content__list li p {
@@ -1035,7 +1048,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .advantages-content__list .active {
-    background-color: transparent;
+    border-radius: 10px;
   }
 }
 .advantages-content__text {
@@ -1048,6 +1061,11 @@ button {
   font-family: "Montserrat";
   font-size: 32px;
   font-weight: 700;
+}
+@media screen and (max-width: 500px) {
+  .advantages-content__text h1 {
+    font-size: 28px;
+  }
 }
 @media screen and (max-width: 768px) {
   .advantages-content__text {
@@ -1067,6 +1085,7 @@ button {
 @media screen and (max-width: 768px) {
   .advantages-content__text p {
     width: 100%;
+    font-size: 18px;
   }
 }
 .advantages-content__text img {
@@ -1093,8 +1112,13 @@ button {
   font-size: 36px;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .partners-title {
+    font-size: 28px;
+  }
+}
 .partners-logo {
-  margin-top: 90px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1108,18 +1132,29 @@ button {
 }
 @media screen and (max-width: 500px) {
   .partners-logo {
-    overflow-y: auto;
-    overflow-wrap: normal;
+    margin-top: 20px;
     padding: 30px 0;
   }
 }
 .partners-logo__img {
+  margin-bottom: 30px;
   padding: 25px 140px;
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+@media screen and (max-width: 500px) {
+  .partners-logo__img {
+    margin-bottom: 15px;
+    padding: 20px 100px;
+  }
+}
 .partners-logo__img img {
   width: 96px;
+}
+@media screen and (max-width: 500px) {
+  .partners-logo__img img {
+    width: 60px;
+  }
 }
 
 .licenses {
@@ -1134,6 +1169,11 @@ button {
   font-family: "Montserrat";
   font-size: 36px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .licenses-title {
+    font-size: 28px;
+  }
 }
 .licenses .swiper {
   margin-top: 100px;
@@ -1210,7 +1250,9 @@ button {
 }
 @media screen and (max-width: 768px) {
   .request {
-    height: 320px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 50px;
   }
 }
 .request-content {
@@ -1236,6 +1278,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .request-content__title {
+    font-size: 28px;
     margin-top: 20px;
   }
 }
@@ -1246,6 +1289,12 @@ button {
   line-height: 38px;
   margin-top: 20px;
   color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+  .request-content__subtitle {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 .request-content__btn {
   font-family: "Montserrat";
