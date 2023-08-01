@@ -30,7 +30,7 @@
       </div>
 
       <div class="header-mobicon">
-        <img src="./images/menu.png" alt="menu icon" />
+        <img src="./images/menu.png" onclick="openMenu()" alt="menu icon" />
       </div>
     </div>
   </div>
@@ -365,7 +365,7 @@
     function myFunction() {
       const aboutPage = document.querySelector(".about");
 
-      if (window.pageYOffset > sticky) {
+      if (window.pageYOffset > sticky && window.innerWidth > 1100) {
         header.classList.add("sticky");
         aboutPage.style.paddingTop = "65px";
       } else {

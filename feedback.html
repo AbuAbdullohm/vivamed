@@ -35,7 +35,7 @@
         </div>
 
         <div class="header-mobicon">
-          <img src="./images/menu.png" alt="menu icon" />
+          <img src="./images/menu.png" onclick="openMenu()" alt="menu icon" />
         </div>
       </div>
     </div>
@@ -468,6 +468,7 @@
     </div>
 
     <script src="./js/accardion.js"></script>
+    <script src="./js/mobileMenu.js"></script>
     <script>
       window.onscroll = function () {
         myFunction();
@@ -478,9 +479,7 @@
 
       function myFunction() {
         const mainWrapper = document.querySelector(".main-wrapper");
-        const feedbackPage = document.querySelector(
-          ".feedback-page__title"
-        );
+        const feedbackPage = document.querySelector(".feedback-page__title");
 
         if (window.pageYOffset > sticky) {
           header.classList.add("sticky");
