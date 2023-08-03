@@ -327,7 +327,7 @@
           ".labaratory-page__title"
         );
 
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > sticky && window.innerWidth > 1100) {
           header.classList.add("sticky");
           labaratoryPage.style.paddingTop = "65px";
         } else {

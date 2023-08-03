@@ -53,8 +53,9 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+  overflow: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .header {
     padding: 15px 0;
   }
@@ -65,13 +66,13 @@ button {
 .header-logo img {
   width: 100%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .header-logo img {
     width: 80px;
   }
 }
 .header-contact {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 20px;
   font-weight: bold;
   color: #01a1b7;
@@ -86,8 +87,28 @@ button {
 .header-contact p {
   margin-bottom: 5px;
 }
-.header-buttons {
-  height: 100%;
+@media screen and (max-width: 1100px) {
+  .header .show-contact {
+    display: block flex;
+    position: absolute;
+    width: 90%;
+    transform: translateY(390px);
+    justify-content: space-between;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .show-contact {
+    transform: translateY(510px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .show-contact {
+    transform: translateY(440px);
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 1400px) {
   .header-buttons {
@@ -113,6 +134,42 @@ button {
   .header-buttons a {
     margin-top: 5px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header .show-buttons {
+    width: 90%;
+    display: block flex;
+    position: absolute;
+    transform: translateY(340px);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .show-buttons a {
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .show-buttons {
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: flex-start;
+    width: 95%;
+  }
+  .header .show-buttons a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .show-buttons {
+    transform: translateY(300px);
+  }
+  .header .show-buttons a {
+    padding: 5px;
   }
 }
 .header-mobicon {
@@ -141,6 +198,11 @@ button {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   z-index: 99;
 }
+@media screen and (max-width: 1100px) {
+  .header-links__wrapper {
+    width: 90%;
+  }
+}
 
 .sticky {
   position: fixed;
@@ -160,7 +222,7 @@ button {
 }
 @media screen and (max-width: 1100px) {
   .header-links {
-    flex-direction: column-reverse;
+    display: none;
   }
 }
 .header-links .navigation-links {
@@ -215,8 +277,9 @@ button {
 }
 @media screen and (max-width: 1100px) {
   .header-links .navigation-input {
-    margin-top: 10px;
-    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 10px;
   }
 }
 .header-links .navigation-input img {
@@ -266,7 +329,15 @@ button {
 }
 @media screen and (max-width: 1100px) {
   .header-links .navigation-language {
-    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    left: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-links .navigation-language {
+    font-size: 16px;
+    left: 160px;
   }
 }
 .header-links .navigation-language img {
@@ -277,22 +348,54 @@ button {
 .open-menu {
   position: fixed;
   width: 100%;
+  height: 100%;
   top: 0;
   margin-top: 75px;
   background-color: #ffffff;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: all 1s ease-in-out;
 }
 .open-menu .navigation-links {
-  margin-left: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+@media screen and (max-width: 500px) {
+  .open-menu .navigation-links {
+    margin-left: 15px;
+  }
 }
 .open-menu .navigation-links li {
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 500px) {
+  .open-menu .navigation-links li {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .open-menu .navigation-input {
+    left: 0;
+  }
 }
 .open-menu .navigation-input input {
   width: 200px;
+}
+@media screen and (max-width: 500px) {
+  .open-menu .navigation-input input {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .open-menu .navigation-input input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .open-menu .navigation-input input::placeholder {
+    font-size: 12px;
+  }
 }
 
 .footer-wrapper {
@@ -622,6 +725,11 @@ button {
     line-height: 40px;
   }
 }
+@media screen and (max-width: 500px) {
+  .main-content__title {
+    font-size: 30px;
+  }
+}
 .main-content__text {
   width: 50%;
   margin-top: 20px;
@@ -635,6 +743,7 @@ button {
   .main-content__text {
     width: 95%;
     line-height: 30px;
+    font-size: 20px;
   }
 }
 .main-content .place-for-pagination {
@@ -663,6 +772,16 @@ button {
   font-size: 24px;
   font-weight: 500;
 }
+@media screen and (max-width: 1024px) {
+  .main-content .place-for-pagination p {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-content .place-for-pagination p {
+    font-size: 20px;
+  }
+}
 .main-content .place-for-pagination .line {
   display: block;
   width: 300px;
@@ -678,12 +797,8 @@ button {
 }
 @media screen and (max-width: 768px) {
   .main-content .place-for-pagination .line {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .main-content .place-for-pagination .line {
     width: 100px;
+    margin: 0 10px;
   }
 }
 .main-image {
@@ -756,6 +871,11 @@ button {
   font-weight: 700;
   color: #01a1b7;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .facts-card .card-title {
+    font-size: 26px;
+  }
 }
 .facts-card .card-text {
   font-family: "Montserrat";
@@ -1116,7 +1236,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .partners-logo {
@@ -1131,6 +1251,7 @@ button {
   }
 }
 .partners-logo__img {
+  margin-right: 20px;
   margin-bottom: 30px;
   padding: 25px 140px;
   border-radius: 5px;
@@ -1139,7 +1260,7 @@ button {
 @media screen and (max-width: 500px) {
   .partners-logo__img {
     margin-bottom: 15px;
-    padding: 20px 100px;
+    padding: 20px 90px;
   }
 }
 .partners-logo__img img {
@@ -1172,6 +1293,7 @@ button {
 .licenses .swiper {
   margin-top: 100px;
   width: 100%;
+  padding-bottom: 70px;
 }
 @media screen and (max-width: 768px) {
   .licenses .swiper {
@@ -1179,41 +1301,30 @@ button {
   }
 }
 .licenses .swiper-wrapper {
-  padding: 0 50px;
-  display: flex;
+  padding: 0 45px;
+}
+.licenses .swiper-wrapper .swiper-slide img {
+  width: 75%;
+}
+.licenses .swiper .swiper-horizontal > .swiper-pagination-bullets,
+.licenses .swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.licenses .swiper .swiper-pagination-custom,
+.licenses .swiper .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 20px);
 }
 .licenses .swiper-button-prev, .licenses .swiper-button-next {
   color: #000000;
 }
-.licenses .place-for-pagination {
+.licenses .my-slider-progress {
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1019607843);
+  width: 30%;
 }
-@media screen and (max-width: 500px) {
-  .licenses .place-for-pagination {
-    margin-top: 30px;
-  }
-}
-.licenses .place-for-pagination svg path {
-  stroke: #000000;
-}
-.licenses .place-for-pagination p {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.licenses .place-for-pagination .line {
-  display: block;
-  width: 200px;
-  height: 2px;
+.licenses .my-slider-progress-bar {
   background: #000000;
-  margin-left: 15px;
-  margin-right: 15px;
+  height: 4px;
+  transition: width 400ms ease;
+  width: 20%;
 }
 
 .request-wrapper {
@@ -1325,4 +1436,9 @@ button {
   position: absolute;
   height: 130%;
   bottom: 0;
+}
+@media screen and (max-width: 1000px) {
+  .request-image img {
+    height: 100%;
+  }
 }/*# sourceMappingURL=home-page.css.map */

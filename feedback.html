@@ -481,7 +481,7 @@
         const mainWrapper = document.querySelector(".main-wrapper");
         const feedbackPage = document.querySelector(".feedback-page__title");
 
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > sticky && window.innerWidth > 1100) {
           header.classList.add("sticky");
           feedbackPage.style.paddingTop = "65px";
         } else {

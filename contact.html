@@ -603,7 +603,7 @@
         const mainWrapper = document.querySelector(".main-wrapper");
         const contactPage = document.querySelector(".contact-page__title");
 
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > sticky && window.innerWidth > 1100) {
           header.classList.add("sticky");
           contactPage.style.paddingTop = "65px";
         } else {

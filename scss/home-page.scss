@@ -54,6 +54,9 @@
         font-size: 36px;
         line-height: 40px;
       }
+      @media screen and (max-width: 500px) {
+        font-size: 30px;
+      }
     }
 
     &__text {
@@ -68,6 +71,7 @@
       @media screen and (max-width: 768px) {
         width: 95%;
         line-height: 30px;
+        font-size: 20px;
       }
     }
 
@@ -93,6 +97,14 @@
         align-items: center;
         font-size: 24px;
         font-weight: 500;
+
+        @media screen and (max-width: 1024px) {
+          padding: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
       }
 
       .line {
@@ -107,10 +119,8 @@
           width: 200px;
         }
         @media screen and (max-width: 768px) {
-          width: 200px;
-        }
-        @media screen and (max-width: 1400px) {
           width: 100px;
+          margin: 0 10px;
         }
       }
     }
@@ -185,6 +195,10 @@
       font-weight: 700;
       color: #01a1b7;
       margin-bottom: 10px;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 26px;
+      }
     }
 
     .card-text {
@@ -549,7 +563,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    overflow: hidden;
 
     @media screen and (max-width: 768px) {
       margin-top: 50px;
@@ -562,6 +576,7 @@
     }
 
     &__img {
+      margin-right: 20px;
       margin-bottom: 30px;
       padding: 25px 140px;
       border-radius: 5px;
@@ -569,7 +584,7 @@
 
       @media screen and (max-width: 500px) {
         margin-bottom: 15px;
-        padding: 20px 100px;
+        padding: 20px 90px;
       }
 
       img {
@@ -603,53 +618,45 @@
   .swiper {
     margin-top: 100px;
     width: 100%;
+    padding-bottom: 70px;
 
     @media screen and (max-width: 768px) {
       margin-top: 50px;
     }
 
     &-wrapper {
-      padding: 0 50px;
-      display: flex;
+      padding: 0 45px;
+
+      .swiper-slide {
+        img {
+          width: 75%;
+        }
+      }
     }
 
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: var(--swiper-pagination-bottom, 20px);
+    }
     &-button-prev,
     &-button-next {
       color: #000000;
     }
   }
 
-  .place-for-pagination {
+  .my-slider-progress {
     margin-top: 50px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    cursor: pointer;
+    background: #0000001a;
+    width: 30%;
+  }
 
-    @media screen and (max-width: 500px) {
-      margin-top: 30px;
-    }
-
-    svg path {
-      stroke: #000000;
-    }
-
-    p {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .line {
-      display: block;
-      width: 200px;
-      height: 2px;
-      background: #000000;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
+  .my-slider-progress-bar {
+    background: #000000;
+    height: 4px;
+    transition: width 400ms ease;
+    width: 20%;
   }
 }
 
@@ -754,6 +761,10 @@
       position: absolute;
       height: 130%;
       bottom: 0;
+
+      @media screen and (max-width: 1000px) {
+        height: 100%;
+      }
     }
   }
 }
