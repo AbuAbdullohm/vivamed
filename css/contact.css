@@ -911,6 +911,7 @@ button {
   height: 56px;
   margin-top: 15px;
   font-size: 18px;
+  font-weight: 600;
 }
 .contact-form .form-input input::-moz-placeholder {
   opacity: 0.7;
