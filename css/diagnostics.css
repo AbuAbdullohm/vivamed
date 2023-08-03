@@ -141,7 +141,7 @@ button {
     width: 90%;
     display: block flex;
     position: absolute;
-    transform: translateY(340px);
+    transform: translateY(380px);
     justify-content: space-between;
     align-items: center;
   }
@@ -166,7 +166,7 @@ button {
 }
 @media screen and (max-width: 500px) {
   .header .show-buttons {
-    transform: translateY(300px);
+    transform: translateY(320px);
   }
   .header .show-buttons a {
     padding: 5px;
