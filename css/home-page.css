@@ -141,7 +141,7 @@ button {
     width: 90%;
     display: block flex;
     position: absolute;
-    transform: translateY(380px);
+    transform: translateY(340px);
     justify-content: space-between;
     align-items: center;
   }
@@ -156,7 +156,7 @@ button {
 @media screen and (max-width: 768px) {
   .header .show-buttons {
     flex-direction: column;
-    margin-top: 30px;
+    transform: translateY(400px);
     align-items: flex-start;
     width: 95%;
   }
@@ -166,7 +166,7 @@ button {
 }
 @media screen and (max-width: 500px) {
   .header .show-buttons {
-    transform: translateY(320px);
+    transform: translateY(340px);
   }
   .header .show-buttons a {
     padding: 5px;
@@ -753,7 +753,7 @@ button {
   cursor: pointer;
   margin-top: 320px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .main-content .place-for-pagination {
     margin-top: 50px;
   }

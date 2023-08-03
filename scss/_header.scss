@@ -104,7 +104,7 @@
       width: 90%;
       display: block flex;
       position: absolute;
-      transform: translateY(380px);
+      transform: translateY(340px);
       justify-content: space-between;
       align-items: center;
 
@@ -119,7 +119,7 @@
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      margin-top: 30px;
+      transform: translateY(400px);
       align-items: flex-start;
       width: 95%;
 
@@ -129,7 +129,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      transform: translateY(320px);
+      transform: translateY(340px);
 
       a {
         padding: 5px;
