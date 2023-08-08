@@ -681,8 +681,8 @@
             <ul class="footer-social__links">
               <li><a href="https://www.instagram.com/">Instagram</a></li>
               <li><a href="https://telegram.org/">Telegram</a></li>
-              <li><a href="https://facebook.com/">Facebook</a></li>
-              <li><a href="https://youtube.com/">YouTube</a></li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.youtube.com/">YouTube</a></li>
             </ul>
           </div>
         </div>
@@ -761,17 +761,6 @@
           },
         },
       });
-
-      var splide = new Splide(".swiper");
-      var bar = splide.root.querySelector(".my-slider-progress-bar");
-
-      // Update the bar width:
-      splide.on("mounted move", function () {
-        var end = splide.Components.Controller.getEnd() + 1;
-        bar.style.width = String((100 * (splide.index + 1)) / end) + "%";
-      });
-
-      splide.mount();
     </script>
   </body>
 </html>

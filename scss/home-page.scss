@@ -279,16 +279,17 @@
         align-items: center;
         justify-content: space-evenly;
       }
-
+      
       svg {
         width: 90px;
       }
-
+      
       p {
         font-weight: bold;
         width: 50%;
         font-size: 18px;
         font-weight: 700;
+        transition: all 0.2s ease-out;
 
         @media screen and (max-width: 500px) {
           width: 100%;
