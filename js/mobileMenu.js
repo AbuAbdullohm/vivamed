@@ -24,3 +24,17 @@ function openMenu() {
     ).style.boxShadow = "none");
   }
 }
+
+const listItem = document.querySelectorAll(".list-item");
+
+listItem.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    listItem.forEach((item) => {
+      if (e.target.innerHTML === item.innerHTML) {
+        e.target.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  });
+});

@@ -146,7 +146,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    .button {
+    .filter-btn {
       padding: 10px 20px;
       border-radius: 10px;
       border: 3px solid rgba(0, 0, 0, 0.2);
@@ -223,12 +223,17 @@
   .card {
     margin-top: 30px;
     width: 49%;
-    height: 555px;
-
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
 
+    @media screen and (max-width: 1100px) {
+      min-height: fit-content;
+    }
     @media screen and (max-width: 768px) {
       width: 80%;
       height: fit-content;
@@ -250,6 +255,7 @@
       padding: 20px 40px 0;
       display: flex;
       justify-content: space-between;
+      margin-bottom: auto;
 
       @media screen and (max-width: 1100px) {
         padding: 10px 20px 0;
@@ -293,6 +299,8 @@
       font-size: 14px;
       font-weight: 500;
       line-height: 22px;
+      display: flex;
+      flex-direction: column;
 
       @media screen and (max-width: 1100px) {
         padding: 0 20px 10px;
@@ -304,6 +312,10 @@
 
       p {
         margin-top: 20px;
+
+        &:nth-child(2) {
+          margin-bottom: auto;
+        }
 
         @media screen and (max-width: 768px) {
           margin-top: 20px;

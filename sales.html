@@ -130,17 +130,17 @@
     <div class="sales-card__wrapper">
       <div class="sales-cards container">
         <div class="filter-buttons">
-          <button class="button active">Все акции</button>
-          <button class="button">Диагностика</button>
-          <button class="button">Хирургия</button>
-          <button class="button">Стоматология</button>
-          <button class="button">Педиатрия</button>
-          <button class="button">Урология</button>
-          <button class="button">Педиатрия</button>
-          <button class="button">Урология</button>
-          <button class="button">Диагностика</button>
-          <button class="button">Хирургия</button>
-          <button class="button">Стоматология</button>
+          <button class="filter-btn active">Все акции</button>
+          <button class="filter-btn">Диагностика</button>
+          <button class="filter-btn">Хирургия</button>
+          <button class="filter-btn">Стоматология</button>
+          <button class="filter-btn">Педиатрия</button>
+          <button class="filter-btn">Урология</button>
+          <button class="filter-btn">Кардиология</button>
+          <button class="filter-btn">Неврология</button>
+          <button class="filter-btn">Эндокринология</button>
+          <button class="filter-btn">Кардиоревматология</button>
+          <button class="filter-btn">Невропатология</button>
         </div>
 
         <div class="cards-wrapper">
@@ -508,6 +508,20 @@
           salesPage.style.paddingTop = "0";
         }
       }
+
+      const filterBtn = document.querySelectorAll(".filter-btn");
+
+      filterBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          filterBtn.forEach((item) => {
+            if (e.target.innerHTML === item.innerHTML) {
+              e.target.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>

@@ -375,7 +375,7 @@
           height: 20px;
           border-radius: 5px;
           background: #01a1b7;
-          transition: all 0.5s linear;
+          transition: all 0.3s linear;
 
           @media screen and (max-width: 768px) {
             width: 3px;
@@ -401,9 +401,9 @@
   &-content {
     position: relative;
     overflow: hidden;
-    transition: all 0.5s ease;
     height: 0;
     width: 55%;
+    transition: all 0.3s ease;
 
     @media screen and (max-width: 768px) {
       width: 100%;
