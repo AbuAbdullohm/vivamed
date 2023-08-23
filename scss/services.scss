@@ -153,7 +153,7 @@
           height: 20px;
           border-radius: 5px;
           background: #01a1b7;
-          transition: all 0.5s linear;
+          transition: all 0.3s linear;
 
           @media screen and (max-width: 768px) {
             width: 3px;
@@ -183,7 +183,7 @@
     height: 0;
     transition: 0.3s;
     padding-left: 60px;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     @media screen and (max-width: 768px) {
       width: 100%;

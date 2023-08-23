@@ -283,11 +283,12 @@
   }
 
   .navigation-language {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    position: relative;
     margin-left: auto;
-    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Montserrat";
     font-size: 18px;
     font-weight: 500;
 
@@ -302,9 +303,36 @@
       left: 160px;
     }
 
-    img {
-      margin-left: 5px;
-      margin-right: 5px;
+    .default-language {
+      display: flex;
+      align-items: center;
+      user-select: none;
+
+      img {
+        margin: 0 5px;
+      }
+    }
+
+    .other-languages {
+      position: absolute;
+      overflow-y: none;
+      display: none;
+      width: 150px;
+      border-radius: 5px;
+      margin-top: 40px;
+      background-color: #fff;
+      padding: 5px 5px 10px 8px;
+      box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
+
+      a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        img {
+          margin: 0 5px;
+        }
+      }
     }
   }
 }

@@ -2,6 +2,19 @@ const headerLinks = document.querySelector(".header-links");
 const mobIcon = document.querySelector(".header-mobicon");
 const headerContact = document.querySelector(".header-contact");
 const headerButtons = document.querySelector(".header-buttons");
+const defLanguage = document.querySelector(".default-language");
+const otherLanguage = document.querySelector(".other-languages");
+
+const specialists = document.querySelectorAll(".list-item");
+
+for (let i = 0; i < specialists.length; i++) {
+  specialists[i].addEventListener("click", () => {
+    const randomNum = Math.floor(Math.random() * 12 + 1);
+    document.getElementById(
+      "specialist-colleague"
+    ).src = `../images/home/image-${randomNum}.png`;
+  });
+}
 
 function openMenu() {
   if (headerLinks.classList.contains("open-menu")) {
@@ -24,6 +37,27 @@ function openMenu() {
     ).style.boxShadow = "none");
   }
 }
+
+defLanguage.addEventListener("click", () => {
+  if (otherLanguage.classList.contains("active")) {
+    otherLanguage.classList.remove("active");
+
+    otherLanguage.style.display = "none";
+    console.log("first");
+  } else {
+    otherLanguage.classList.add("active");
+    otherLanguage.style.display = "block";
+    console.log("second");
+  }
+});
+
+window.onclick = function (e) {
+  if (e.target != defLanguage && e.target != otherLanguage) {
+    otherLanguage.classList.remove("active");
+    otherLanguage.style.display = "none";
+    console.log("third");
+  }
+};
 
 const listItem = document.querySelectorAll(".list-item");
 

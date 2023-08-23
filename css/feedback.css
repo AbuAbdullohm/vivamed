@@ -16,6 +16,11 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
     width: 95%;
   }
 }
@@ -321,11 +326,12 @@ button {
   }
 }
 .header-links .navigation-language {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  position: relative;
   margin-left: auto;
-  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 500;
 }
@@ -342,9 +348,34 @@ button {
     left: 160px;
   }
 }
-.header-links .navigation-language img {
-  margin-left: 5px;
-  margin-right: 5px;
+.header-links .navigation-language .default-language {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header-links .navigation-language .default-language img {
+  margin: 0 5px;
+}
+.header-links .navigation-language .other-languages {
+  position: absolute;
+  overflow-y: none;
+  display: none;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 5px 5px 10px 8px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
+}
+.header-links .navigation-language .other-languages a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.header-links .navigation-language .other-languages a img {
+  margin: 0 5px;
 }
 
 .open-menu {

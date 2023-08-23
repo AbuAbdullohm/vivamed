@@ -16,6 +16,11 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
     width: 95%;
   }
 }
@@ -321,11 +326,12 @@ button {
   }
 }
 .header-links .navigation-language {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  position: relative;
   margin-left: auto;
-  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 500;
 }
@@ -342,9 +348,34 @@ button {
     left: 160px;
   }
 }
-.header-links .navigation-language img {
-  margin-left: 5px;
-  margin-right: 5px;
+.header-links .navigation-language .default-language {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header-links .navigation-language .default-language img {
+  margin: 0 5px;
+}
+.header-links .navigation-language .other-languages {
+  position: absolute;
+  overflow-y: none;
+  display: none;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 5px 5px 10px 8px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
+}
+.header-links .navigation-language .other-languages a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.header-links .navigation-language .other-languages a img {
+  margin: 0 5px;
 }
 
 .open-menu {
@@ -672,7 +703,7 @@ button {
 }
 
 .main {
-  height: 800px;
+  height: 90vh;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -681,11 +712,6 @@ button {
 @media screen and (max-width: 1100px) {
   .main {
     padding-top: 100px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main {
-    height: 400px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -700,7 +726,7 @@ button {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .main-content {
     padding-top: 50px;
   }
@@ -754,9 +780,9 @@ button {
   cursor: pointer;
   margin-top: 320px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1400px) {
   .main-content .place-for-pagination {
-    margin-top: 50px;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -829,7 +855,7 @@ button {
 }
 @media screen and (max-width: 1400px) {
   .main-image__img img {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -1055,7 +1081,11 @@ button {
 }
 .specialists-wrapper .specialists-image {
   width: 100%;
+  height: 0;
   align-self: center;
+  padding-bottom: 56.6%;
+  position: relative;
+  transition: all 1s ease;
 }
 @media screen and (max-width: 768px) {
   .specialists-wrapper .specialists-image {
@@ -1064,7 +1094,16 @@ button {
   }
 }
 .specialists-wrapper .specialists-image img {
+  position: absolute;
+  left: 0;
+  top: 100px;
   width: 100%;
+  height: 70%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: center;
+  -o-object-position: center;
+  border-radius: 10px;
 }
 
 .advantages-wrapper {
@@ -1221,6 +1260,8 @@ button {
 
 .partners {
   margin-top: 100px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
   .partners {
@@ -1237,26 +1278,24 @@ button {
     font-size: 28px;
   }
 }
-.partners-logo {
+.partners-slide {
+  display: inline-block;
   margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
+  animation: 30s slide infinite linear;
 }
 @media screen and (max-width: 768px) {
-  .partners-logo {
+  .partners-slide {
     margin-top: 50px;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 500px) {
-  .partners-logo {
+  .partners-slide {
     margin-top: 20px;
     padding: 30px 0;
   }
 }
-.partners-logo__img {
+.partners-slide img {
   margin-right: 20px;
   margin-bottom: 30px;
   padding: 25px 140px;
@@ -1264,20 +1303,28 @@ button {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @media screen and (max-width: 500px) {
-  .partners-logo__img {
+  .partners-slide img {
     margin-bottom: 15px;
     padding: 20px 90px;
   }
 }
-.partners-logo__img img {
+.partners-slide img img {
   width: 96px;
 }
 @media screen and (max-width: 500px) {
-  .partners-logo__img img {
+  .partners-slide img img {
     width: 60px;
   }
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .licenses {
   margin-top: 100px;
 }

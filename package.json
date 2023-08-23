@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jquery-input-mask-phone-number": "^1.0.15"
+  }
+}
