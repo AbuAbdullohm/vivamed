@@ -366,13 +366,13 @@ button {
   border-radius: 5px;
   margin-top: 40px;
   background-color: #fff;
-  padding: 5px 5px 10px 8px;
+  padding: 5px 5px 0 8px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
 }
 .header-links .navigation-language .other-languages a {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;

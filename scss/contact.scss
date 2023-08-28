@@ -25,34 +25,15 @@
 
 .contact-map {
   position: relative;
-  margin-top: 120px;
+  margin-top: 70px;
 
   @media screen and (max-width: 768px) {
     margin-top: 30px;
   }
-
-  &__card {
-    transform: scale(0);
-    transition: all 1s ease;
-
-    @media screen and (max-width: 768px) {
-      transform: translateY(120px) scale(1);
-    }
-  }
-
-  &:hover .contact-map__card {
-    transform: translateY(-450px) scale(1);
-
-    @media screen and (max-width: 768px) {
-      transform: translateY(120px) scale(1);
-    }
-  }
 }
 
 .contact-map__card .card {
-  position: absolute;
-  top: -90px;
-  left: 50px;
+  margin-top: 50px;
   width: 495px;
   height: 625px;
   border-radius: 10px;
@@ -92,16 +73,25 @@
   &-social {
     a {
       margin-right: 30px;
+    }
 
-      &:hover svg path {
-        fill: blue;
-      }
+    .telegram:hover svg path {
+      fill: #56a0d3;
+    }
+    .instagram:hover svg path {
+      fill: #e1306c;
+    }
+    .facebook:hover svg path {
+      fill: blue;
+    }
+    .youtube:hover svg path {
+      fill: red;
     }
   }
 }
 
 .contact {
-  margin-top: 185px;
+  margin-top: 100px;
   margin-bottom: 110px;
   display: flex;
   justify-content: space-between;

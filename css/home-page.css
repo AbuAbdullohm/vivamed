@@ -366,13 +366,13 @@ button {
   border-radius: 5px;
   margin-top: 40px;
   background-color: #fff;
-  padding: 5px 5px 10px 8px;
+  padding: 5px 5px 0 8px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
 }
 .header-links .navigation-language .other-languages a {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;
@@ -1020,6 +1020,7 @@ button {
   .specialists-wrapper {
     flex-direction: column;
     margin-top: 50px;
+    align-items: flex-start;
   }
 }
 .specialists-wrapper .specialists-title {
@@ -1067,6 +1068,8 @@ button {
   font-weight: 500;
   line-height: 49px;
   cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
 }
 @media screen and (max-width: 768px) {
   .specialists-wrapper .specialists-types .list-item {
@@ -1076,10 +1079,14 @@ button {
     line-height: 25px;
   }
 }
+.specialists-wrapper .specialists-types .list-item:hover {
+  color: #01a1b7;
+}
 .specialists-wrapper .specialists-types .active {
   color: blue;
 }
 .specialists-wrapper .specialists-image {
+  top: 100px;
   width: 100%;
   height: 0;
   align-self: center;
@@ -1090,13 +1097,12 @@ button {
 @media screen and (max-width: 768px) {
   .specialists-wrapper .specialists-image {
     width: 90%;
-    margin-top: 20px;
+    top: 30px;
   }
 }
 .specialists-wrapper .specialists-image img {
   position: absolute;
   left: 0;
-  top: 100px;
   width: 100%;
   height: 70%;
   object-fit: cover;
@@ -1152,7 +1158,7 @@ button {
   font-size: 24px;
   font-weight: 500;
   line-height: 38px;
-  width: 35%;
+  width: 50%;
   margin-top: 20px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -1212,8 +1218,8 @@ button {
 }
 .advantages-content__text {
   position: relative;
-  width: 65%;
-  padding: 50px 30px 0 30px;
+  width: 80%;
+  padding: 20px 30px 0 30px;
   background-color: #ffffff;
 }
 .advantages-content__text h1 {
@@ -1241,7 +1247,7 @@ button {
   line-height: 31px;
   margin-top: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .advantages-content__text p {
     width: 100%;
     font-size: 18px;
@@ -1281,7 +1287,7 @@ button {
 .partners-slide {
   display: inline-block;
   margin-top: 60px;
-  animation: 30s slide infinite linear;
+  animation: 25s slide infinite linear;
 }
 @media screen and (max-width: 768px) {
   .partners-slide {

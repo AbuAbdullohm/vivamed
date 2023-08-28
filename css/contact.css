@@ -366,13 +366,13 @@ button {
   border-radius: 5px;
   margin-top: 40px;
   background-color: #fff;
-  padding: 5px 5px 10px 8px;
+  padding: 5px 5px 0 8px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
 }
 .header-links .navigation-language .other-languages a {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;
@@ -720,35 +720,16 @@ button {
 
 .contact-map {
   position: relative;
-  margin-top: 120px;
+  margin-top: 70px;
 }
 @media screen and (max-width: 768px) {
   .contact-map {
     margin-top: 30px;
   }
 }
-.contact-map__card {
-  transform: scale(0);
-  transition: all 1s ease;
-}
-@media screen and (max-width: 768px) {
-  .contact-map__card {
-    transform: translateY(120px) scale(1);
-  }
-}
-.contact-map:hover .contact-map__card {
-  transform: translateY(-450px) scale(1);
-}
-@media screen and (max-width: 768px) {
-  .contact-map:hover .contact-map__card {
-    transform: translateY(120px) scale(1);
-  }
-}
 
 .contact-map__card .card {
-  position: absolute;
-  top: -90px;
-  left: 50px;
+  margin-top: 50px;
   width: 495px;
   height: 625px;
   border-radius: 10px;
@@ -788,12 +769,21 @@ button {
 .contact-map__card .card-social a {
   margin-right: 30px;
 }
-.contact-map__card .card-social a:hover svg path {
+.contact-map__card .card-social .telegram:hover svg path {
+  fill: #56a0d3;
+}
+.contact-map__card .card-social .instagram:hover svg path {
+  fill: #e1306c;
+}
+.contact-map__card .card-social .facebook:hover svg path {
   fill: blue;
+}
+.contact-map__card .card-social .youtube:hover svg path {
+  fill: red;
 }
 
 .contact {
-  margin-top: 185px;
+  margin-top: 100px;
   margin-bottom: 110px;
   display: flex;
   justify-content: space-between;

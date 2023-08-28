@@ -366,13 +366,13 @@ button {
   border-radius: 5px;
   margin-top: 40px;
   background-color: #fff;
-  padding: 5px 5px 10px 8px;
+  padding: 5px 5px 0 8px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 5px;
 }
 .header-links .navigation-language .other-languages a {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;
@@ -704,6 +704,7 @@ button {
   font-family: "Montserrat" sans-serif;
   font-size: 16px;
   font-weight: 500;
+  position: relative;
 }
 @media screen and (max-width: 1100px) {
   .sales-page__title {
@@ -715,7 +716,8 @@ button {
   display: inline;
 }
 .sales-page__title .page-title {
-  margin-top: 30px;
+  position: absolute;
+  margin-top: 50px;
   font-size: 36px;
   font-family: "Montserrat" sans-serif;
   font-weight: 700;
@@ -729,7 +731,7 @@ button {
 .sales-main {
   display: flex;
   padding: 30px 0 40px;
-  margin-top: 50px;
+  margin-top: 125px;
 }
 @media screen and (max-width: 768px) {
   .sales-main {
