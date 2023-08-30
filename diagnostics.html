@@ -7,13 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
-    />
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/diagnostics.css" />
     <title>Document</title>
   </head>
+
   <body>
-    
     <div class="header-wrapper">
       <div class="header container">
         <div class="header-logo">
@@ -54,43 +56,34 @@
           <li><a class="menu-link" href="./feedback.html">Отзывы</a></li>
           <li><a class="menu-link" href="./contact.html">Контакты</a></li>
         </ul>
+
         <div class="navigation-input">
           <img src="./images/icon-search.png" alt="search icon" />
           <input type="text" placeholder="Поиск по сайту" />
         </div>
-        <div class="navigation-language" >
+        <div class="navigation-language">
           <div class="default-language">
-            <a href="#"><img src="./images/icon-flag-ru.png" alt="icon-language" />
-              Русский</a>
+            <img src="./images/icon-flag-ru.png" alt="icon-language" />
+            Русский
             <img
               src="./images/vector-to-bottom.png"
-              alt="vector to vector-to-bottom"
-            />
+              alt="vector to vector-to-bottom" />
           </div>
-          <div class="navigation-language" >
-            <div class="default-language">
-              <img src="./images/icon-flag-ru.png" alt="icon-language" />
-                Русский
-              <img
-                src="./images/vector-to-bottom.png"
-                alt="vector to vector-to-bottom"
-              />
-            </div>
-            <div class="other-languages">
-              <ul>
-                <li class="language">
-                  <a href="#"
-                    ><img src="./images/icon-flag-uzb.png" alt="icon-language" />
-                    O'zbek
-                </li>
-                <li class="language">
-                  <a href="#"
-                    ><img src="./images/icon-flag-eng.png" alt="icon-language" />
-                    English</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <div class="other-languages">
+            <ul>
+              <li class="language">
+                <a href="#"
+                  ><img src="./images/icon-flag-uzb.png" alt="icon-language" />
+                  O'zbek</a
+                >
+              </li>
+              <li class="language">
+                <a href="#"
+                  ><img src="./images/icon-flag-eng.png" alt="icon-language" />
+                  English</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -108,8 +101,7 @@
         <div class="inform-image">
           <img
             src="./images/diagnostics/diagnostics-image-1.png"
-            alt="diagnostics-image-1"
-          />
+            alt="diagnostics-image-1" />
         </div>
         <div class="inform-content">
           <h1 class="inform-content__title">
@@ -183,45 +175,48 @@
       </div>
     </div>
 
-    <div class="licenses container">
+    <div class="licenses container swiper">
       <h1 class="licenses-title">Лицензии и сертификаты</h1>
-      <div class="licenses-content">
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-        <img src="./images/home/certificate.png" alt="certificate" />
-      </div>
-      <div class="place-for-pagination">
-        <svg
-          width="14"
-          height="22"
-          viewBox="0 0 14 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="Vector 2"
-            d="M12 2L3 11L12 20"
-            stroke="white"
-            stroke-width="3"
-          />
-        </svg>
 
-        <p>12 <span class="line"></span>19</p>
-        <svg
-          width="14"
-          height="22"
-          viewBox="0 0 14 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="Vector 3"
-            d="M2 2L11 11L2 20"
-            stroke="white"
-            stroke-width="3"
-          />
-        </svg>
+      <div class="slide-content mySwiper">
+        <div class="card-wrapper swiper-wrapper">
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -302,10 +297,10 @@
       <img
         class="background-image"
         src="./images/logo-viva-background.png"
-        alt="logo background"
-      />
+        alt="logo background" />
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/mobileMenu.js"></script>
     <script>
       window.onscroll = function () {
@@ -329,6 +324,35 @@
           diagnosticsPage.style.paddingTop = "0";
         }
       }
+
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        freeMode: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          500: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1360: {
+            slidesPerView: 4,
+          },
+        },
+      });
     </script>
   </body>
 </html>

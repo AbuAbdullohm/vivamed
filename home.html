@@ -549,51 +549,49 @@
       </div>
     </div>
 
-    <div class="licenses container">
+    <div class="licenses container swiper">
       <h1 class="licenses-title">Лицензии и сертификаты</h1>
 
-      <div class="swiper mySwiper">
-        <div class="slide-content">
-          <div class="card-wrapper">
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-            <img class="swiper-slide" src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <!-- <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/home/certificate.png" alt="certificate" />
-          </div> -->
+      <div class="slide-content mySwiper">
+        <div class="card-wrapper swiper-wrapper">
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
+          <img
+            class="swiper-slide"
+            src="./images/home/certificate.png"
+            alt="certificate" />
         </div>
 
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-      <!-- <div class="my-slider-progress">
-        <div class="my-slider-progress-bar"></div>
-      </div> -->
     </div>
 
     <div class="request-wrapper">
@@ -717,14 +715,13 @@
         }
       }
 
-      const swiper = new Swiper(".swiper", {
-        loop: true,
+      const swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         freeMode: true,
+        loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-          dynamicBullets: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
