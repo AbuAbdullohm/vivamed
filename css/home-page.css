@@ -372,7 +372,7 @@ button {
 .header-links .navigation-language .other-languages a {
   display: flex;
   align-items: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;
@@ -1353,16 +1353,25 @@ button {
   margin-top: 100px;
   width: 100%;
   padding-bottom: 70px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .licenses .swiper {
     margin-top: 50px;
   }
 }
-.licenses .swiper-wrapper {
+.licenses .swiper .slide-content {
   padding: 0 45px;
 }
-.licenses .swiper-wrapper .swiper-slide img {
+.licenses .swiper .slide-content .card-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+.licenses .swiper .slide-content .swiper-slide {
+  width: 25%;
+}
+.licenses .swiper .slide-content .swiper-slide img {
   width: 75%;
 }
 .licenses .swiper .swiper-horizontal > .swiper-pagination-bullets,
@@ -1372,18 +1381,7 @@ button {
   bottom: var(--swiper-pagination-bottom, 20px);
 }
 .licenses .swiper-button-prev, .licenses .swiper-button-next {
-  color: #000000;
-}
-.licenses .my-slider-progress {
-  margin-top: 50px;
-  background: rgba(0, 0, 0, 0.1019607843);
-  width: 30%;
-}
-.licenses .my-slider-progress-bar {
-  background: #000000;
-  height: 4px;
-  transition: width 400ms ease;
-  width: 20%;
+  color: #007aff;
 }
 
 .request-wrapper {
