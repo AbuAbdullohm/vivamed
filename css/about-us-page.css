@@ -1043,7 +1043,8 @@ button {
 
 .gallery {
   margin-top: 80px;
-  margin-bottom: 90px;
+  padding-bottom: 50px;
+  position: relative;
 }
 @media screen and (max-width: 1100px) {
   .gallery {
@@ -1061,134 +1062,120 @@ button {
     font-size: 24px;
   }
 }
-.gallery .place-for-pagination {
-  margin-top: 110px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  cursor: pointer;
+.gallery .swiper-button-next,
+.gallery .swiper-button-prev {
+  font-weight: bold;
+  top: var(--swiper-navigation-top-offset, 100%);
 }
-@media screen and (max-width: 768px) {
-  .gallery .place-for-pagination {
-    margin-top: 50px;
-  }
-}
-.gallery .place-for-pagination svg path {
-  stroke: #000000;
-}
-.gallery .place-for-pagination p {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.gallery .place-for-pagination .line {
-  display: block;
-  width: 300px;
-  height: 2px;
-  background: #000000;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-@media screen and (max-width: 500px) {
-  .gallery .place-for-pagination .line {
-    width: 100px;
-  }
+.gallery .swiper-pagination {
+  width: 200px;
+  height: 50px;
+  z-index: 99;
 }
 
-.gallery-images {
+.slide-content-gallery {
+  width: 100%;
   margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 1100px) {
-  .gallery-images {
+  .slide-content-gallery {
     margin-top: 50px;
   }
 }
 @media screen and (max-width: 500px) {
-  .gallery-images {
+  .slide-content-gallery {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
   }
 }
-.gallery-images .image-wrapper1 {
+.slide-content-gallery .gallery-images {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .slide-content-gallery .gallery-images {
+    flex-direction: column;
+  }
+}
+.slide-content-gallery .gallery-images .image-wrapper1 {
   width: 50%;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper1 {
+  .slide-content-gallery .gallery-images .image-wrapper1 {
     width: 100%;
     margin-bottom: 10px;
   }
 }
-.gallery-images .image-wrapper1 img {
+.slide-content-gallery .gallery-images .image-wrapper1 img {
   width: 95%;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper1 img {
+  .slide-content-gallery .gallery-images .image-wrapper1 img {
     width: 100%;
   }
 }
-.gallery-images .image-wrapper2 {
+.slide-content-gallery .gallery-images .image-wrapper2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper2 {
+  .slide-content-gallery .gallery-images .image-wrapper2 {
     width: 100%;
   }
 }
-.gallery-images .image-wrapper2 .image-wrapper__child1 {
+.slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child1 {
   display: flex;
   justify-content: flex-end;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper2 .image-wrapper__child1 {
+  .slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child1 {
     margin-bottom: 10px;
   }
 }
-.gallery-images .image-wrapper2 .image-wrapper__child1 img {
+.slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child1 img {
   width: 100%;
 }
-.gallery-images .image-wrapper2 .image-wrapper__child2 {
+.slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper2 .image-wrapper__child2 {
+  .slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child2 {
     flex-direction: column;
     align-items: center;
   }
 }
-.gallery-images .image-wrapper2 .image-wrapper__child2 img {
+.slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child2 img {
   width: 48%;
   height: 95%;
 }
 @media screen and (max-width: 500px) {
-  .gallery-images .image-wrapper2 .image-wrapper__child2 img {
+  .slide-content-gallery .gallery-images .image-wrapper2 .image-wrapper__child2 img {
     width: 100%;
     margin-bottom: 10px;
   }
 }
 
 .recomendation-wrapper {
-  padding-top: 100px;
-  padding-bottom: 80px;
   width: 100%;
+  margin-top: 100px;
+  padding-top: 100px;
   background: rgba(197, 198, 198, 0.1);
 }
+
 @media screen and (max-width: 1100px) {
-  .recomendation-wrapper {
+  .recomendation {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 }
-
 .recomendation-title {
   font-family: "Montserrat" sans-serif;
   font-size: 36px;
@@ -1206,11 +1193,10 @@ button {
 }
 .recomendation .slide-content {
   width: 90%;
-  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 10px;
-  margin-bottom: 30px;
+  padding: 80px 10px;
+  overflow: hidden;
 }
 .recomendation .slide-content .card-wrapper {
   display: flex;
@@ -1225,12 +1211,10 @@ button {
 }
 @media screen and (max-width: 768px) {
   .recomendation .slide-content .card-wrapper {
-    flex-direction: column;
     margin-top: 10px;
   }
 }
 .recomendation .slide-content .card-wrapper .card {
-  width: 32%;
   padding: 30px 30px 50px;
   display: flex;
   flex-direction: column;
@@ -1238,16 +1222,11 @@ button {
   justify-content: center;
   border-radius: 10px;
   background: #fff;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 @media screen and (max-width: 768px) {
   .recomendation .slide-content .card-wrapper .card {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .recomendation .slide-content .card-wrapper .card {
-    width: 95%;
+    padding: 20px 10px;
+    margin-top: 20px;
   }
 }
 .recomendation .slide-content .card-wrapper .card-name {
@@ -1273,10 +1252,16 @@ button {
   font-weight: 500;
   line-height: 22px;
 }
+@media screen and (max-width: 500px) {
+  .recomendation .slide-content .card-wrapper .card-text {
+    width: 95%;
+  }
+}
 .recomendation .swiper-button-lock {
   display: block;
 }
 .recomendation .swiper-button-next,
 .recomendation .swiper-button-prev {
   font-weight: bold;
+  top: var(--swiper-navigation-top-offset, 60%);
 }/*# sourceMappingURL=about-us-page.css.map */

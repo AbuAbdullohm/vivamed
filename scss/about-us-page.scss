@@ -353,7 +353,8 @@
 
 .gallery {
   margin-top: 80px;
-  margin-bottom: 90px;
+  padding-bottom: 50px;
+  position: relative;
 
   @media screen and (max-width: 1100px) {
     margin-top: 50px;
@@ -370,48 +371,24 @@
     }
   }
 
-  .place-for-pagination {
-    margin-top: 110px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    cursor: pointer;
-
-    @media screen and (max-width: 768px) {
-      margin-top: 50px;
-    }
-
-    svg path {
-      stroke: #000000;
-    }
-
-    p {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .line {
-      display: block;
-      width: 300px;
-      height: 2px;
-      background: #000000;
-      margin-left: 15px;
-      margin-right: 15px;
-
-      @media screen and (max-width: 500px) {
-        width: 100px;
-      }
-    }
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-weight: bold;
+    top: var(--swiper-navigation-top-offset, 100%);
+  }
+  .swiper-pagination {
+    width: 200px;
+    height: 50px;
+    z-index: 99;
   }
 }
 
-.gallery-images {
+.slide-content-gallery {
+  width: 100%;
   margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (max-width: 1100px) {
     margin-top: 50px;
@@ -423,64 +400,73 @@
     margin-top: 20px;
   }
 
-  .image-wrapper1 {
-    width: 50%;
+  .gallery-images {
+    width: 100%;
+    display: flex;
 
     @media screen and (max-width: 500px) {
-      width: 100%;
-      margin-bottom: 10px;
+      flex-direction: column;
     }
 
-    img {
-      width: 95%;
+    .image-wrapper1 {
+      width: 50%;
 
       @media screen and (max-width: 500px) {
         width: 100%;
-      }
-    }
-  }
-
-  .image-wrapper2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 50%;
-
-    @media screen and (max-width: 500px) {
-      width: 100%;
-    }
-
-    .image-wrapper__child1 {
-      display: flex;
-      justify-content: flex-end;
-
-      @media screen and (max-width: 500px) {
         margin-bottom: 10px;
       }
 
       img {
-        width: 100%;
-      }
-    }
-
-    .image-wrapper__child2 {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      @media screen and (max-width: 500px) {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      img {
-        width: 48%;
-        height: 95%;
+        width: 95%;
 
         @media screen and (max-width: 500px) {
           width: 100%;
+        }
+      }
+    }
+
+    .image-wrapper2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 50%;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
+
+      .image-wrapper__child1 {
+        display: flex;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 500px) {
           margin-bottom: 10px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .image-wrapper__child2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media screen and (max-width: 500px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        img {
+          width: 48%;
+          height: 95%;
+
+          @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -488,18 +474,18 @@
 }
 
 .recomendation-wrapper {
-  padding-top: 100px;
-  padding-bottom: 80px;
   width: 100%;
+  margin-top: 100px;
+  padding-top: 100px;
   background: rgba(197, 198, 198, 0.1);
+}
 
+.recomendation {
   @media screen and (max-width: 1100px) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-}
 
-.recomendation {
   &-title {
     font-family: "Montserrat" sans-serif;
     font-size: 36px;
@@ -516,11 +502,10 @@
 
   .slide-content {
     width: 90%;
-    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 10px;
-    margin-bottom: 30px;
+    padding: 80px 10px;
+    overflow: hidden;
 
     .card-wrapper {
       display: flex;
@@ -533,12 +518,11 @@
       }
 
       @media screen and (max-width: 768px) {
-        flex-direction: column;
+        // flex-direction: column;
         margin-top: 10px;
       }
 
       .card {
-        width: 32%;
         padding: 30px 30px 50px;
         display: flex;
         flex-direction: column;
@@ -546,14 +530,11 @@
         justify-content: center;
         border-radius: 10px;
         background: #fff;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
         @media screen and (max-width: 768px) {
-          width: 80%;
-        }
-
-        @media screen and (max-width: 500px) {
-          width: 95%;
+          padding: 20px 10px;
+          margin-top: 20px;
         }
 
         &-name {
@@ -580,6 +561,10 @@
           font-size: 14px;
           font-weight: 500;
           line-height: 22px;
+
+          @media screen and (max-width: 500px) {
+            width: 95%;
+          }
         }
       }
     }
@@ -590,7 +575,8 @@
   }
 
   .swiper-button-next,
-  .swiper-button-prev{
+  .swiper-button-prev {
     font-weight: bold;
+    top: var(--swiper-navigation-top-offset, 60%);
   }
 }
