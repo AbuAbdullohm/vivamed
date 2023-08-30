@@ -933,6 +933,8 @@ button {
 @media screen and (max-width: 500px) {
   .form-button__submit button {
     padding: 20px 30px;
+    width: 100%;
+    justify-content: center;
   }
 }
 .form-button__file {
@@ -950,8 +952,8 @@ button {
   .form-button__file {
     margin-top: 20px;
     margin-left: 0;
-    width: 45%;
-    text-align: center;
+    width: 100%;
+    justify-content: center;
   }
 }
 .form-button__file input {
