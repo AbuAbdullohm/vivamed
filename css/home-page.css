@@ -702,6 +702,21 @@ button {
   transition: all 1 linear;
 }
 
+.mySwiper1 {
+  overflow: hidden;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main {
   height: 90vh;
   position: relative;
@@ -758,7 +773,7 @@ button {
   }
 }
 .main-content__text {
-  width: 50%;
+  width: 55%;
   margin-top: 20px;
   font-family: Montserrat;
   font-size: 24px;
@@ -778,11 +793,16 @@ button {
   align-items: center;
   color: #ffffff;
   cursor: pointer;
-  margin-top: 320px;
+  margin-top: 120px;
 }
 @media screen and (max-width: 1400px) {
   .main-content .place-for-pagination {
     margin-top: 100px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main-content .place-for-pagination {
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -793,21 +813,49 @@ button {
   }
 }
 .main-content .place-for-pagination p {
-  padding: 10px 20px;
+  padding: 13px 50px;
   display: flex;
   align-items: center;
   font-size: 24px;
   font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
-  .main-content .place-for-pagination p {
-    padding: 10px;
-  }
-}
 @media screen and (max-width: 768px) {
   .main-content .place-for-pagination p {
     font-size: 20px;
+    padding: 16px 50px;
   }
+}
+.main-content .place-for-pagination .swiper-button-next,
+.main-content .place-for-pagination .swiper-button-prev {
+  color: white;
+  animation: 5s opacity infinite linear;
+  top: unset;
+}
+.main-content .place-for-pagination .swiper-button-prev {
+  margin-top: 3px;
+}
+.main-content .place-for-pagination .swiper-button-prev::after {
+  font-size: 25px;
+  font-weight: bold;
+}
+.main-content .place-for-pagination .swiper-button-next {
+  right: auto;
+  margin-top: 3px;
+  margin-left: 480px;
+}
+@media screen and (max-width: 1000px) {
+  .main-content .place-for-pagination .swiper-button-next {
+    margin-left: 380px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-content .place-for-pagination .swiper-button-next {
+    margin-left: 320px;
+  }
+}
+.main-content .place-for-pagination .swiper-button-next::after {
+  font-size: 25px;
+  font-weight: bold;
 }
 .main-content .place-for-pagination .line {
   display: block;
@@ -816,15 +864,15 @@ button {
   background: #ffffff;
   margin-left: 30px;
   margin-right: 40px;
+  animation: 5s opacity infinite linear;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .main-content .place-for-pagination .line {
     width: 200px;
   }
 }
 @media screen and (max-width: 768px) {
   .main-content .place-for-pagination .line {
-    width: 100px;
     margin: 0 10px;
   }
 }
@@ -845,7 +893,7 @@ button {
   display: flex;
   justify-content: flex-end;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .main-image__img {
     display: none;
   }
@@ -856,6 +904,11 @@ button {
 @media screen and (max-width: 1400px) {
   .main-image__img img {
     width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-image__img img {
+    width: 100%;
   }
 }
 
@@ -1367,6 +1420,7 @@ button {
 .licenses .slide-content .swiper-pagination-custom,
 .licenses .slide-content .swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 20px);
+  animation: 2s opacity infinite linear;
 }
 .licenses .slide-content .swiper-wrapper {
   display: flex;
@@ -1374,6 +1428,12 @@ button {
 }
 .licenses .slide-content .swiper-slide {
   padding: 15px;
+}
+.licenses .slide-content .swiper-button-prev,
+.licenses .slide-content .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 55%);
+  animation: 2s opacity infinite linear;
+  transition: opacity 0.3s ease;
 }
 
 .request-wrapper {
@@ -1439,7 +1499,7 @@ button {
 .request-content__subtitle {
   font-family: "Montserrat";
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 38px;
   margin-top: 20px;
   color: rgba(0, 0, 0, 0.5);
@@ -1460,8 +1520,9 @@ button {
   border-radius: 10px;
   color: #ffffff;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   cursor: pointer;
+  animation: 1.5s opacity infinite linear;
 }
 @media screen and (max-width: 768px) {
   .request-content__btn {
