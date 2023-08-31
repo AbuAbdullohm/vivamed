@@ -91,49 +91,74 @@
       </div>
     </div>
 
-    <div class="main-wrapper">
-      <div class="main container">
-        <div class="main-content">
-          <h1 class="main-content__title">
-            Бесплатная консультация до анализов всех видов
-          </h1>
-          <p class="main-content__text">
-            По всем направлением наши спецалисты готовы помочь и ответить на все
-            ваши вопросы
-          </p>
+    <div class="main-wrapper swiper">
+      <div class="container mySwiper1">
+        <div class="swiper-wrapper">
+          <div class="main swiper-slide">
+            <div class="main-content">
+              <h1 class="main-content__title">
+                Бесплатная консультация до анализов всех видов
+              </h1>
+              <p class="main-content__text">
+                По всем направлением наши спецалисты готовы помочь и ответить на
+                все ваши вопросы
+              </p>
 
-          <div class="place-for-pagination">
-            <svg
-              width="14"
-              height="22"
-              viewBox="0 0 14 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                id="Vector 2"
-                d="M12 2L3 11L12 20"
-                stroke="white"
-                stroke-width="3" />
-            </svg>
-
-            <p>12 <span class="line"></span>19</p>
-            <svg
-              width="14"
-              height="22"
-              viewBox="0 0 14 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                id="Vector 3"
-                d="M2 2L11 11L2 20"
-                stroke="white"
-                stroke-width="3" />
-            </svg>
+              <div class="place-for-pagination">
+                <div class="swiper-button-prev"></div>
+                <p>12 <span class="line"></span>19</p>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="main-image">
+              <div class="main-image__img">
+                <img src="./images/home/image-main.png" alt="image 1" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="main-image">
-          <div class="main-image__img">
-            <img src="./images/home/image-main.png" alt="image 1" />
+          <div class="main swiper-slide">
+            <div class="main-content">
+              <h1 class="main-content__title">
+                Бесплатная консультация до анализов всех видов
+              </h1>
+              <p class="main-content__text">
+                По всем направлением наши спецалисты готовы помочь и ответить на
+                все ваши вопросы
+              </p>
+
+              <div class="place-for-pagination">
+                <div class="swiper-button-prev"></div>
+                <p>12 <span class="line"></span>19</p>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="main-image">
+              <div class="main-image__img">
+                <img src="./images/home/image-main.png" alt="image 1" />
+              </div>
+            </div>
+          </div>
+          <div class="main swiper-slide">
+            <div class="main-content">
+              <h1 class="main-content__title">
+                Бесплатная консультация до анализов всех видов
+              </h1>
+              <p class="main-content__text">
+                По всем направлением наши спецалисты готовы помочь и ответить на
+                все ваши вопросы
+              </p>
+
+              <div class="place-for-pagination">
+                <div class="swiper-button-prev"></div>
+                <p>12 <span class="line"></span>19</p>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="main-image">
+              <div class="main-image__img">
+                <img src="./images/home/image-main.png" alt="image 1" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -552,7 +577,7 @@
     <div class="licenses container swiper">
       <h1 class="licenses-title">Лицензии и сертификаты</h1>
 
-      <div class="slide-content mySwiper">
+      <div class="slide-content mySwiper2">
         <div class="card-wrapper swiper-wrapper">
           <img
             class="swiper-slide"
@@ -715,7 +740,22 @@
         }
       }
 
-      const swiper = new Swiper(".mySwiper", {
+      const swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        freeMode: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 1,
         freeMode: true,
         loop: true,
