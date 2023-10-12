@@ -209,7 +209,7 @@
       bottom: var(--swiper-pagination-bottom, 20px);
     }
 
-    .swiper-slide{
+    .swiper-slide {
       padding: 15px;
     }
   }
@@ -427,6 +427,7 @@
   margin-top: 102px;
   margin-bottom: 100px;
 
+
   @media screen and (max-width: 768px) {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -441,13 +442,14 @@
   }
 
   .items-wrapper {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 100px;
 
     @media screen and (max-width: 768px) {
-      flex-direction: column;
+      
       margin-top: 50px;
     }
 
@@ -456,7 +458,8 @@
       border-radius: 10px;
       background: #fff;
       padding: 30px;
-      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+      border: 1px solid #00000014;
 
       @media screen and (max-width: 768px) {
         width: 70%;
@@ -464,7 +467,7 @@
       }
 
       @media screen and (max-width: 500px) {
-        width: 100%;
+        width: 90%;
       }
 
       &-image {
@@ -539,6 +542,35 @@
     align-items: center;
     color: #000000;
     cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000000;
+    }
+
+    .swiper-button-prev {
+      &::after {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+    .swiper-button-next {
+      right: auto;
+      margin-left: 300px;
+      @media screen and (max-width: 1000px) {
+        margin-left: 380px;
+      }
+      @media screen and (max-width: 500px) {
+        margin-left: 200px;
+      }
+
+      &::after {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
 
     @media screen and (max-width: 768px) {
       margin-top: 20px;

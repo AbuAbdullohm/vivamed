@@ -10,5 +10,6 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
   "notebook.formatOnCellExecution": true,
-  "notebook.formatOnSave.enabled": true
+  "notebook.formatOnSave.enabled": true,
+  "liveServer.settings.port": 5502
 }

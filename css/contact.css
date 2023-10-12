@@ -109,7 +109,7 @@ button {
 }
 @media screen and (max-width: 500px) {
   .header .show-contact {
-    transform: translateY(440px);
+    transform: translateY(480px);
     font-size: 16px;
     flex-direction: column;
     align-items: center;
@@ -171,7 +171,7 @@ button {
 }
 @media screen and (max-width: 500px) {
   .header .show-buttons {
-    transform: translateY(340px);
+    transform: translateY(380px);
   }
   .header .show-buttons a {
     padding: 5px;
@@ -273,6 +273,9 @@ button {
   }
 }
 .header-links .navigation-links li:hover a {
+  color: #01a1b7;
+}
+.header-links .navigation-links li .active {
   color: #01a1b7;
 }
 .header-links .navigation-links .active.menu-link::before {
@@ -377,6 +380,11 @@ button {
 .header-links .navigation-language .other-languages a img {
   margin: 0 5px;
 }
+@media screen and (max-width: 500px) {
+  .header-links .navigation-language .other-languages a img {
+    margin: 0 9px;
+  }
+}
 
 .open-menu {
   position: fixed;
@@ -402,11 +410,6 @@ button {
 .open-menu .navigation-links li {
   font-size: 16px;
   margin-top: 10px;
-}
-@media screen and (max-width: 500px) {
-  .open-menu .navigation-links li {
-    margin-top: 5px;
-  }
 }
 @media screen and (max-width: 500px) {
   .open-menu .navigation-input {

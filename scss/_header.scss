@@ -66,7 +66,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      transform: translateY(440px);
+      transform: translateY(480px);
       font-size: 16px;
       flex-direction: column;
       align-items: center;
@@ -129,7 +129,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      transform: translateY(340px);
+      transform: translateY(380px);
 
       a {
         padding: 5px;
@@ -232,6 +232,10 @@
       &:hover a {
         color: #01a1b7;
       }
+      
+      .active{
+        color: #01a1b7;
+      }
     }
 
     .active.menu-link::before {
@@ -331,6 +335,10 @@
 
         img {
           margin: 0 5px;
+          
+          @media screen and (max-width: 500px) {
+            margin: 0 9px;
+          }
         }
       }
     }
@@ -360,10 +368,6 @@
     li {
       font-size: 16px;
       margin-top: 10px;
-
-      @media screen and (max-width: 500px) {
-        margin-top: 5px;
-      }
     }
   }
 

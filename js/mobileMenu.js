@@ -31,7 +31,7 @@ function openMenu() {
     headerContact.classList.add("show-contact");
     headerButtons.classList.add("show-buttons");
     headerLinks.style.display = "block";
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = "scroll";
     let headerWrapper = (document.querySelector(
       ".header-wrapper"
     ).style.boxShadow = "none");
@@ -41,7 +41,6 @@ function openMenu() {
 defLanguage.addEventListener("click", () => {
   if (otherLanguage.classList.contains("active")) {
     otherLanguage.classList.remove("active");
-
     otherLanguage.style.display = "none";
   } else {
     otherLanguage.classList.add("active");

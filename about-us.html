@@ -229,7 +229,7 @@
 
     <div class="gallery container">
       <h1 class="gallery-title">Галерея</h1>
-      <div class="slide-content-gallery" navigation="true" pagination="true">
+      <div id="gallery" class="slide-content-gallery" navigation="true" pagination="true">
         <div class="swiper-wrapper">
           <div class="gallery-images swiper-slide">
             <div class="image-wrapper1">
@@ -300,8 +300,8 @@
         </div>
       </div>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next g-next-btn"></div>
+      <div class="swiper-button-prev g-prev-btn"></div>
       <div class="swiper-pagination"></div>
     </div>
 
@@ -309,7 +309,7 @@
       <div class="recomendation container swiper">
         <h1 class="recomendation-title">Рекомендации наших пациентов</h1>
 
-        <div class="slide-content">
+        <div id="recomendation" class="slide-content">
           <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
               <div class="card-image">
@@ -494,8 +494,8 @@
           </div>
         </div>
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next rec-next-btn"></div>
+        <div class="swiper-button-prev rec-prev-btn"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -606,7 +606,7 @@
         }
       }
 
-      const swiper1 = new Swiper(".slide-content-gallery", {
+      const swiper1 = new Swiper("#gallery", {
         slidesPerView: 1,
 
         watchOverflow: false,
@@ -620,12 +620,12 @@
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".g-next-btn",
+          prevEl: ".g-prev-btn",
         },
       });
 
-      const swiper2 = new Swiper(".slide-content", {
+      const swiper2 = new Swiper("#recomendation", {
         slidesPerView: 1,
 
         watchOverflow: false,
@@ -639,8 +639,8 @@
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".rec-next-btn",
+          prevEl: ".rec-prev-btn",
         },
 
         breakpoints: {
@@ -650,6 +650,7 @@
           },
           1024: {
             slidesPerView: 3,
+            spaceBetween: 20,
           },
         },
       });
